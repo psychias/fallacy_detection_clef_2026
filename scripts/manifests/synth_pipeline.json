@@ -1,0 +1,34 @@
+{
+  "description": "The synthetic-data generation experiments that produce data_synth/. Default reproduction uses the committed batches; rerun via reproduce_synth.py only when investigating prompt/model variation. Each step requires OPENROUTER_API_KEY in the environment.",
+  "requires_env": ["OPENROUTER_API_KEY"],
+  "steps": [
+    {
+      "exp_id": "exp_0025",
+      "kind": "contrastive_pairs",
+      "produces": "data_synth/synth_v002_st1st2",
+      "description": "ST1/ST2 contrastive-pair batch (130 pairs across the eight ST2 fallacy types). Backs §3.4 of the paper."
+    },
+    {
+      "exp_id": "exp_0030",
+      "kind": "contrastive_pairs",
+      "produces": "data_synth/synth_v002_st3",
+      "description": "ST3 cross-scheme contrastive-pair batch (110 pairs)."
+    },
+    {
+      "exp_id": "exp_0036",
+      "kind": "contrastive_pairs",
+      "produces": "data_synth/synth_v003_st3",
+      "description": "ST3 rare-class top-up (pi-targeted, smaller batch)."
+    },
+    {
+      "exp_id": "exp_0103",
+      "kind": "pe_targeted",
+      "produces": "data_synth/pe_synth_v001_st3",
+      "description": "pe-targeted batch (50 per label, openai/gpt-4o-mini, T=0.9). Backs Appendix A Prompt 3."
+    }
+  ],
+  "pseudo_labels": {
+    "description": "Pseudo-labelling does not use an LLM API. The shared/pseudo_label.py CLI takes a trained checkpoint and emits top-K confident predictions on the unlabelled pool. The committed pseudo_v001_st{1,2,3} batches were produced from the leak-audited exp_0081 checkpoint at tau=0.9.",
+    "invocation_template": "python shared/pseudo_label.py --exp_dir experiments/exp_0081 --top_k 30 --output data_synth/pseudo_v001_stN/data.jsonl"
+  }
+}

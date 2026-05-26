@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0066",
+  "idea_ref": "[R2.KITCHEN] ST3 enhanced + synth_v002 + pseudo_v001 @ max_len=384",
+  "phase": "2",
+  "hypothesis": "Kitchen sink: combine best ST3 enhanced (exp_0066@384) with synth + pseudo labels. Real-only 0066 hit 0.719; adding synth+pseudo should push higher.",
+  "depends_on": ["exp_0070"],
+  "time_budget_s": 1800,
+  "subtask": "st3",
+  "track": "enhanced",
+  "backbone": "roberta-large",
+  "data": {"real": true, "synth_versions": ["synth_v002_st3", "pseudo_v001_st3"], "mix_ratio": "real_plus_synth"},
+  "train": {"lr": 1e-5, "max_len": 384, "batch_size": 8, "epochs": 15, "synth_weight": 0.3, "loss": "weighted_ce", "patience": 3}
+}

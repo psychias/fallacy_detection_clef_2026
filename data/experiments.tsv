@@ -1,0 +1,167 @@
+﻿exp_id	parent	kind	phase	subtask	track	backbone	lr	epochs	loss	synth	synth_weight	precision	recall	f1_macro	wall_clock_s	best_train_loss	nan_batches	epochs_done	status	flags	description
+exp_0001	-	train	0	st1	base	deberta-v3-base	2e-5	10	ce	-	-	0.639	0.625	0.615	344.5	0.594	0	10	done		Baseline: DeBERTa-v3-base ST1 binary fallacy detection
+exp_0002	-	train	0	st2	base	deberta-v3-base	2e-5	10	ce	-	-	0.273	0.311	0.273	237.3	1.605	0	10	done		Baseline: DeBERTa-v3-base ST2 8-way fallacy classification
+exp_0003	-	train	0	st3	base	deberta-v3-base	2e-5	10	weighted_ce	-	-	0.261	0.301	0.277	232.8	1.325	0	10	done		Baseline: DeBERTa-v3-base ST3 4-way scheme classification
+exp_0004	-	train	0	st1	base	roberta-base	2e-5	10	ce	-	-	0.696	0.691	0.689	254.7	0.005	0	10	done		Baseline: RoBERTa-base ST1 binary fallacy detection
+exp_0005	-	train	0	st2	base	roberta-base	2e-5	10	ce	-	-	0.679	0.662	0.656	147.5	0.229	0	10	done		Baseline: RoBERTa-base ST2 8-way fallacy classification
+exp_0006	-	train	0	st3	base	roberta-base	2e-5	10	weighted_ce	-	-	0.416	0.471	0.433	114.9	0.363	0	10	done		Baseline: RoBERTa-base ST3 4-way scheme classification
+exp_0007	-	train	0	st1	base	deberta-v3-large	1e-5	8	ce	-	-	0.754	0.507	0.351	486.2	0.693	0	6	done	time_exceeded	Baseline: DeBERTa-v3-large ST1 (barely trained, time exceeded)
+exp_0008	-	train	0	st2	base	deberta-v3-large	1e-5	8	ce	-	-	0.017	0.125	0.030	397.2	2.081	0	8	done		Baseline: DeBERTa-v3-large ST2 (catastrophic failure)
+exp_0009	-	train	0	st3	base	deberta-v3-large	1e-5	8	weighted_ce	-	-	0.174	0.250	0.205	392.8	1.332	0	8	done		Baseline: DeBERTa-v3-large ST3 (barely trained)
+exp_0010	exp_0001	train	0	st1	base	deberta-v3-base	5e-5	20	weighted_ce	-	-	0.252	0.500	0.335	606.5	0.693	0	20	done		Higher LR retry for DeBERTa-v3-base ST1 â€” worse than exp_0001
+exp_0011	exp_0002	train	0	st2	base	deberta-v3-base	5e-5	20	weighted_ce	-	-	0.156	0.196	0.145	302.9	2.023	0	20	done		Higher LR retry for DeBERTa-v3-base ST2 â€” worse than exp_0002
+exp_0012	exp_0003	train	0	st3	base	deberta-v3-base	5e-5	20	weighted_ce	-	-	0.174	0.250	0.205	307.3	0.915	0	20	done		Higher LR retry for DeBERTa-v3-base ST3 â€” worse than exp_0003
+exp_0013	exp_0004	train	0	st1	base	roberta-large	1e-5	10	ce	-	-	0.733	0.720	0.716	664.3	0.001	0	10	done	time_exceeded	Scale up: RoBERTa-large ST1 (+0.027 over base)
+exp_0014	exp_0005	train	0	st2	base	roberta-large	1e-5	10	weighted_ce	-	-	0.727	0.710	0.711	404.3	0.004	0	10	done		Scale up: RoBERTa-large ST2 (+0.055 over base)
+exp_0015	exp_0006	train	0	st3	base	roberta-large	1e-5	10	weighted_ce	-	-	0.513	0.504	0.508	464.9	0.090	0	10	done		Scale up: RoBERTa-large ST3 (+0.075 over base)
+exp_0016	exp_0004	train	1	st1	enhanced	roberta-base	2e-5	10	ce	-	-	0.893	0.892	0.892	205.2	0.000	0	10	done		Enhanced track: RoBERTa-base ST1 (huge boost from enhanced fields)
+exp_0017	exp_0005	train	1	st2	enhanced	roberta-base	2e-5	10	weighted_ce	-	-	0.928	0.925	0.925	115.4	0.019	0	10	done		Enhanced track: RoBERTa-base ST2 (huge boost from enhanced fields)
+exp_0018	exp_0006	train	1	st3	enhanced	roberta-base	2e-5	10	weighted_ce	-	-	0.680	0.673	0.675	121.9	0.032	0	10	done		Enhanced track: RoBERTa-base ST3 (huge boost from enhanced fields)
+exp_0019	exp_0004	train	1	st1	base	roberta-base	3e-5	20	ce	-	-	0.713	0.712	0.712	390.6	0.000	0	20	done		Recipe tune: RoBERTa-base ST1 lr=3e-5 ep=20 (+0.023 over default)
+exp_0020	exp_0005	train	1	st2	base	roberta-base	3e-5	20	weighted_ce	-	-	0.668	0.651	0.652	204.9	0.003	0	20	done		Recipe tune: RoBERTa-base ST2 lr=3e-5 ep=20 (no improvement)
+exp_0021	exp_0006	train	1	st3	base	roberta-base	3e-5	20	weighted_ce	-	-	0.462	0.445	0.443	207.2	0.001	0	20	done		Recipe tune: RoBERTa-base ST3 lr=3e-5 ep=20 (marginal +0.01)
+exp_0022	exp_0013	train	1	st1	enhanced	roberta-large	1e-5	10	ce	-	-	0.900	0.899	0.899	664.7	0.000	0	9	done	time_exceeded	Enhanced track: RoBERTa-large ST1 (best ST1 enhanced real-only)
+exp_0023	exp_0014	train	1	st2	enhanced	roberta-large	1e-5	10	weighted_ce	-	-	0.936	0.923	0.923	358.5	0.002	0	10	done		Enhanced track: RoBERTa-large ST2 (best ST2 enhanced real-only)
+exp_0024	exp_0015	train	1	st3	enhanced	roberta-large	1e-5	10	weighted_ce	-	-	0.722	0.679	0.694	360.8	0.003	0	10	done		Enhanced track: RoBERTa-large ST3 (best ST3 enhanced real-only)
+exp_0025	-	synth	1	st1+st2	-	-	-	-	-	-	-	-	-	-	-	-	-	-	done		Synth generation: contrastive pairs for ST1/ST2 fallacies (130 pairs)
+exp_0026	exp_0015	train	1	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3	0.5	0.627	0.507	0.514	663.2	0.000	0	11	done	time_exceeded	Synth test: RoBERTa-large ST3 base + synth sw=0.5 (+0.006 over real-only)
+exp_0027	-	ensemble	2	st1	base	-	-	-	-	-	-	0.713	0.712	0.712	-	-	-	-	done		Ensemble: majority vote RoBERTa-base+large ST1 base (no gain)
+exp_0028	-	ensemble	2	st2	base	-	-	-	-	-	-	0.679	0.662	0.656	-	-	-	-	done		Ensemble: majority vote RoBERTa-base+large ST2 base (no gain)
+exp_0029	-	ensemble	2	st3	base	-	-	-	-	-	-	0.416	0.471	0.433	-	-	-	-	done		Ensemble: majority vote RoBERTa-base+large ST3 base (no gain)
+exp_0030	-	synth	1	st3	-	-	-	-	-	-	-	-	-	-	-	-	-	-	done		Synth generation: contrastive pairs for ST3 schemes (110 pairs)
+exp_0031	exp_0019	train	1	st1	base	roberta-base	3e-5	20	ce	synth_v002_st1st2	0.5	0.679	0.677	0.675	542.4	0.000	0	20	done		Synth test: RoBERTa-base ST1 base + synth sw=0.5 (âˆ’0.037 vs real-only)
+exp_0032	exp_0014	train	1	st2	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st1st2	0.5	0.746	0.728	0.730	662.8	0.001	0	13	done	time_exceeded	Synth test: RoBERTa-large ST2 base + synth sw=0.5 (+0.019 over real-only)
+exp_0033	exp_0013	train	1	st1	base	roberta-large	1e-5	15	ce	synth_v002_st1st2	0.5	0.734	0.734	0.734	664.5	0.106	0	7	done	time_exceeded	Synth test: RoBERTa-large ST1 base + synth sw=0.5 (+0.018 over real-only)
+exp_0034	exp_0020	train	1	st2	base	roberta-base	3e-5	20	weighted_ce	synth_v002_st1st2	0.5	0.718	0.667	0.678	247.8	0.002	0	20	done		Synth test: RoBERTa-base ST2 base + synth sw=0.5 (+0.026 over real-only)
+exp_0035	exp_0022	train	1	st1	enhanced	roberta-large	1e-5	12	ce	synth_v002_st1st2	0.5	0.917	0.914	0.914	664.8	0.090	0	7	done	time_exceeded	â˜… BEST ST1: RoBERTa-large ST1 enhanced + synth sw=0.5 (+0.015 over real-only)
+exp_0036	exp_0023	train	1	st2	enhanced	roberta-large	1e-5	12	weighted_ce	synth_v002_st1st2	0.5	0.949	0.937	0.937	663.0	0.002	0	12	done		â˜… BEST ST2: RoBERTa-large ST2 enhanced + synth sw=0.5 (+0.014 over real-only)
+exp_0037	exp_0021	train	1	st3	base	roberta-base	3e-5	20	weighted_ce	synth_v002_st3	0.5	0.516	0.486	0.474	370.1	0.001	0	20	done		Synth test: RoBERTa-base ST3 base + synth sw=0.5 (+0.031 over real-only)
+exp_0038	exp_0024	train	1	st3	enhanced	roberta-large	1e-5	12	weighted_ce	synth_v002_st3	0.5	0.722	0.679	0.694	662.9	0.177	0	12	done	time_exceeded	Synth test: RoBERTa-large ST3 enhanced + synth sw=0.5 (flat vs real-only)
+exp_0039	exp_0018	train	1	st3	enhanced	roberta-base	3e-5	15	weighted_ce	synth_v002_st3	0.5	0.722	0.679	0.694	244.9	0.169	0	15	done		Synth test: RoBERTa-base ST3 enhanced + synth sw=0.5 (+0.019 over real-only)
+exp_0040	exp_0009	train	2	st3	base	deberta-v3-large	1e-5	12	weighted_ce	-	-	0.174	0.250	0.205	573.1	1.316	0	12	done		DeBERTa-v3-large ST3 real-only baseline (collapsed to majority class)
+exp_0041	exp_0007	train	2	st1	base	deberta-v3-large	1e-5	12	ce	synth_v002_st1st2	0.5	-	-	0.0	37.4	-1.0	51	1	done	excessive_nan	DeBERTa-v3-large ST1 + synth (NaN explosion after 1 epoch)
+exp_0042	exp_0008	train	2	st2	base	deberta-v3-large	1e-5	12	weighted_ce	synth_v002_st1st2	0.5	-	-	0.0	37.1	-1.0	51	1	done	excessive_nan	DeBERTa-v3-large ST2 + synth (NaN explosion after 1 epoch)
+exp_0043	exp_0009	train	2	st3	base	deberta-v3-large	1e-5	12	weighted_ce	synth_v002_st3	0.3	-	-	0.0	19.6	-1.0	51	1	done	excessive_nan	DeBERTa-v3-large ST3 + synth sw=0.3 (NaN explosion after 1 epoch)
+exp_0044	exp_0009	train	2	st3	base	deberta-v3-large	1e-5	12	weighted_ce	synth_v002_st3	0.5	-	-	0.0	21.7	-1.0	51	1	done	excessive_nan	DeBERTa-v3-large ST3 + synth sw=0.5 (NaN explosion after 1 epoch)
+exp_0045	exp_0026	train	3	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3	0.5	fp32	0.45965	0.47816	609.3	0.00028	0	-	done		5-seed ST3 base variance estimation (seed=1)
+exp_0046	exp_0026	train	3	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3	0.5	fp32	0.45965	0.48944	871.3	0.00021	0	-	done		5-seed ST3 base variance estimation (seed=2)
+exp_0047	exp_0026	train	3	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3	0.5	-	-	-	-	-	-	-	skipped		5-seed ST3 base variance estimation (seed=3) â€” DROPPED: 2 seeds enough
+exp_0048	exp_0026	train	3	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3	0.5	-	-	-	-	-	-	-	skipped		5-seed ST3 base variance estimation (seed=4) â€” DROPPED: 2 seeds enough
+exp_0049	exp_0007	train	3	st1	base	deberta-v3-large	5e-6	12	ce	-	-	bf16	-	0.0	21.1	-1.0	51	-	done		DeBERTa-v3-large ST1 bf16 + lr=5e-6 (unlock DeBERTa class)
+exp_0050	exp_0049	train	3	st2	base	deberta-v3-large	5e-6	12	weighted_ce	-	-	bf16	0.125	0.02667	28.6	2.08167	51	-	done		DeBERTa-v3-large ST2 bf16 + lr=5e-6 (depends on exp_0049)
+exp_0051	exp_0049	train	3	st3	base	deberta-v3-large	5e-6	12	weighted_ce	synth_v002_st3	0.5	bf16	-	0.0	22.2	-1.0	51	-	done		DeBERTa-v3-large ST3 bf16 + synth (depends on exp_0049)
+exp_0052	-	ensemble	3	st3	base	-	-	-	-	-	-	-	-	-	-	-	-	-	skipped		Soft-vote ensemble: 5 RoBERTa-large ST3 seeds
+exp_0053	exp_0026	train	3	st3	base	roberta-large	1e-5	15	focal	synth_v002_st3	0.5	fp32	0.4929	0.50519	473.7	0.00137	0	-	done		Focal loss gamma=2 ST3 base + synth (vs weighted_ce)
+exp_0054	-	train	3	joint_st1st2	base	roberta-large	1e-5	12	weighted_ce	synth_v002_st1st2	0.5	-	-	-	-	-	-	-	skipped		9-way joint ST1+ST2 head â€” PARKED: too much engineering for value
+exp_0055	exp_0024	train	3	st3	concat	roberta-large	1e-5	12	weighted_ce	synth_v002_st3	0.5	-	-	-	-	-	-	-	skipped		Concat input for ST3 â€” PARKED: only if R1b shows enhanced is real signal
+exp_0056	exp_0030	synth	3	st3	-	-	-	-	-	-	-	-	-	-	-	-	-	-	done		Synth generation: rare-class top-up ee=100, pe=50 pairs (synth_v003_st3)
+exp_0057	exp_0056	train	3	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3,synth_v003_st3	0.5	fp32	0.45965	0.48956	750.3	0.00021	0	-	done		ST3 base + v002 + rare-class top-up v003 (weighted_ce)
+exp_0058	exp_0015	train	3	st3	base	roberta-large	1e-5	15	weighted_ce	-	-	fp32	0.45559	0.43575	297.0	0.51564	0	-	done		RoBERTa-large ST3 base real-only baseline (epochs=15, matched hparams to exp_0026)
+exp_0059	exp_0056	train	3	st3	base	roberta-large	1e-5	15	ce	synth_v002_st3,synth_v003_st3	0.5	fp32	0.49044	0.48189	771.6	0.00345	0	-	done		ST3 base + v002 + v003 with plain CE (augmentation already rebalances)
+exp_0060	exp_0026	train	3	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3	0.5	fp32	0.47367	0.48399	405.4	0.02567	0	-	done		Retrain exp_0026 with budget=1500 + patience=3 (clean baseline for synth comparison)
+exp_0061	-	diagnostic	3	all	-	-	-	-	-	-	-	-	-	-	-	-	-	-	done		R1a: Token length diagnostic â€” check truncation at max_len=256
+exp_0062	exp_0036	train	3	st2	enhanced	roberta-large	1e-5	12	weighted_ce	synth_v002_st1st2	0.5	0.95	0.93651	0.93741	537.3	0.00269	0	-	done		R1b: Leakage diagnostic â€” regex-mask fallacy words in enhanced text
+exp_0063	-	diagnostic	3	all	-	-	-	-	-	-	-	-	-	-	-	-	-	-	done		R1c: Submission format smoke test â€” predict + format + validate
+exp_0064	exp_0035	train	2	st1	enhanced	roberta-large	1e-5	12	ce	synth_v002_st1st2	0.5	0.90048	0.89948	0.89923	1460.1	0.08583	0	-	done		[R2.MAXLEN] ST1 enhanced + synth_v002 with max_len=384
+exp_0065	exp_0036	train	2	st2	enhanced	roberta-large	1e-5	12	weighted_ce	synth_v002_st1st2	0.5	0.94325	0.94048	0.93966	757.6	0.00142	0	-	done		[R2.MAXLEN] ST2 enhanced + synth_v002 with max_len=384
+exp_0066	exp_0024	train	2	st3	enhanced	roberta-large	1e-5	12	weighted_ce	-	-	0.72704	0.71429	0.71893	714.8	0.00059	-	-	done		[R2.MAXLEN] ST3 enhanced real-only with max_len=384
+exp_0067	exp_0038	train	2	st3	enhanced	roberta-large	1e-5	12	weighted_ce	synth_v002_st3	0.5	0.72214	0.67857	0.69397	1037.1	0.17212	0	-	done		[R2.MAXLEN] ST3 enhanced + synth_v002 with max_len=384
+exp_0068	exp_0057	train	2	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3,synth_v003_st3	0.5	fp32	0.45965	0.47816	586.4	0.0621	0	-	done		[R2.MAXLEN] ST3 base + synth_v002+v003 with max_len=384
+exp_0069	exp_0060	train	2	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3	0.5	fp32	0.51213	0.52299	808.4	0.00061	0	-	done		[R2.MAXLEN] ST3 base + synth_v002 only with max_len=384 (v003 ablation control)
+exp_0070	-	pipeline	2	all	-	-	-	-	-	-	-	-	-	-	-	-	-	-	done		[R2.PSEUDO+CALIB] Pseudo-label test + calibrate best models
+exp_0071	exp_0035	train	2	st1	enhanced	roberta-large	1e-5	12	ce	synth_v002_st1st2,pseudo_v001_st1	0.7	0.90713	0.90663	0.90646	1087.7	0.08062	0	-	done		[R2.KITCHEN] ST1 enhanced + synth + pseudo @ 256
+exp_0077	exp_0068	train	2	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3	0.5	-	-	-	-	-	-	queued	skipped	[R2.ENSEMBLE] ST3 base seed=2025, v002-only @ 384
+exp_0072	exp_0065	train	2	st2	enhanced	roberta-large	1e-5	12	weighted_ce	synth_v002_st1st2,pseudo_v001_st2	0.7	0.97049	0.97222	0.97042	1050.6	0.00072	0	-	done		[R2.KITCHEN] ST2 enhanced + synth + pseudo @ 384
+exp_0073	exp_0066	train	2	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth_v002_st3,pseudo_v001_st3	0.7	0.73214	0.73958	0.73542	1404.0	0.28199	-	-	done		[R2.KITCHEN] ST3 enhanced + synth + pseudo @ 384
+exp_0074	exp_0057	train	2	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3,synth_v003_st3,pseudo_v001_st3	0.7	fp32	0.48523	0.47205	644.1	0.06353	0	-	done		[R2.KITCHEN] ST3 base + all synth + pseudo @ 384
+exp_0075	exp_0068	train	2	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3,synth_v003_st3	0.5	0.52476	0.47888	0.49368	-	-	-	-	done		[R2.ENSEMBLE] ST3 base seed=99 @ 384
+exp_0076	exp_0068	train	2	st3	base	roberta-large	1e-5	15	ce	synth_v002_st3,synth_v003_st3	0.5	-	-	-	-	-	-	queued	skipped	[R2.ENSEMBLE] ST3 base seed=7, plain CE @ 384
+exp_0078	exp_0066	train	2	st3	enhanced	roberta-large	1e-5	12	weighted_ce	-	-	0.72704	0.71429	0.71893	-	-	-	queued	done	[R2.VERIFY] ST3 enh real-only@384 seed=99 (ee jump verification)
+exp_0079	exp_0068	train	2	st3	base	roberta-large	1e-5	15	weighted_ce	-	-	fp32	0.47642	0.4737	597.1	0.06132	0	queued	done	[R2.DIAG] ST3 base @384 real-only (synth-at-384 isolation)
+exp_0080	exp_0068	train	2	st3	base	roberta-large	5e-6	20	weighted_ce	synth_v002_st3,synth_v003_st3	0.5	-	-	-	-	-	-	queued	crashed	[R2.DIAG] ST3 base @384 lr=5e-6 patience=5 (LR-too-high test)
+exp_0081	-	diagnostic	3	all	-	-	-	-	-	-	-	-	-	-	-	-	-	-	done		[P1.GATE] Leak audit: NO leak detected. Pseudo R2 unblocked.
+exp_0082	-	diagnostic	3	st3	enhanced	-	-	-	-	-	-	-	-	0.528	-	-	-	-	done		[P1.GATE] NLI basis: pe-F1=0.25 (<0.40), pe synth PROCEEDS. Best basis acc=79.7%
+exp_0084	-	train	3	st1	enhanced	ModernBERT-large	1e-5	12	ce	synth_v002_st1st2	0.5	0.832	0.827	0.827	1164.8	0.315	0	4	done	time_exceeded	[P1.BACKBONE] ModernBERT ST1 enh: F1=0.827 (vs RoBERTa 0.914). -8.7pts, too slow on T4
+exp_0085	-	train	3	st2	enhanced	ModernBERT-large	1e-5	12	weighted_ce	synth_v002_st1st2	0.5	0.920	0.909	0.911	1149.6	0.256	0	5	done	time_exceeded	[P1.BACKBONE] ModernBERT ST2 enh: F1=0.911 (vs RoBERTa 0.937). -2.6pts, too slow on T4
+exp_0086	-	train	3	st3	enhanced	ModernBERT-large	1e-5	15	weighted_ce	synth_v002_st3	0.5	0.72704	0.71429	0.71893	1150.8	0.48901	-	-	done		[P1.BACKBONE] ModernBERT ST3 enh max_len=1024 (running)
+exp_0090	exp_0035	diagnostic	3	st1	enhanced	-	-	-	-	-	-	-	-	0.921	79.9	-	-	-	done		[P1.DIAG] Threshold sweep: best_t=0.65 F1=0.921 (+0.7pp over default 0.914)
+exp_0091	-	diagnostic	3	all	both	Qwen2.5-3B	-	-	-	-	-	-	-	-	103.9	-	-	-	done		[P1.LLM] Qwen 3B zero-shot: ST3=0.467 (pe=0.0), ST2=0.625, ST1=0.596. Basis acc=85.5%
+exp_0092	exp_0091	diagnostic	3	st3	enhanced	Qwen2.5-3B	-	-	-	-	-	-	-	0.398	139.5	-	-	-	done		[P1.LLM] Qwen 3B few-shot ST3: F1=0.398 (worse than zero-shot). Basis acc=81.2%
+exp_0093	exp_0073	train	3	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth_v002_st3,pseudo_v001_st3	0.5	-	-	-	-	-	-	-	queued		[P2.AUX] ST3 enh + resembles_fallacy aux head, aux_weight=0.3
+exp_0094	exp_0069	train	3	st3	base	roberta-large	1e-5	15	weighted_ce	synth_v002_st3,synth_v003_st3	0.5	-	-	-	-	-	-	-	queued		[P2.AUX] ST3 base + resembles_fallacy aux head, aux_weight=0.3
+exp_0095	exp_0035	train	3	st1	enhanced	roberta-large	1e-5	12	ce	synth_v002_st1st2	0.5	-	-	-	-	-	-	-	queued		[P2.AUX] ST1 enh + resembles_fallacy aux head, aux_weight=0.2
+exp_0096	exp_0035	train	3	st1	enhanced	roberta-large	1e-5	12	ce	synth_v002_st1st2	0.5	-	-	-	-	-	-	-	queued		[P2.LLRD] ST1 enh + LLRD decay=0.9, top_lr=1e-5
+exp_0097	exp_0073	train	3	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth_v002_st3,pseudo_v001_st3	0.5	-	-	-	-	-	-	-	queued		[P2.LLRD] ST3 enh + LLRD decay=0.9, top_lr=1e-5
+exp_0098	-	train	3	st1	concat	roberta-large	1e-5	12	ce	synth_v002_st1st2	0.5	-	-	-	-	-	-	-	queued		[P2.CTX] ST1 base concat (title+raw+base), max_len=1024
+exp_0099	-	train	3	st3	concat	roberta-large	1e-5	15	weighted_ce	synth_v002_st3,synth_v003_st3	0.5	-	-	-	-	-	-	-	queued		[P2.CTX] ST3 base concat all fields, max_len=1024
+exp_0103	-	diagnostic	3	st3	enhanced	-	-	-	-	-	-	-	-	-	-	-	-	-	done	100 synth (pe+pa)	[P2.PE] pe synth generation via LLM API (gate: 0091 pe=0.0 <0.40 -> synth pipeline)
+exp_0104	exp_0073	train	3	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pe_synth	0.5	-	-	-	-	-	-	-	queued		[P2.PE] ST3 enh retrain with pe-synth, k-fold slot 0
+exp_0105	exp_0069	train	3	st3	base	roberta-large	1e-5	15	weighted_ce	synth+pe_synth	0.5	-	-	-	-	-	-	-	queued		[P2.PE] ST3 base retrain with pe-synth, k-fold slot 0
+exp_0106	-	diagnostic	3	all	both	Qwen2.5-7B	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.LLM] Qwen 7B zero-shot all subtasks
+exp_0107	exp_0092	diagnostic	3	st3	enhanced	Qwen2.5-7B	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.LLM] Qwen 7B few-shot ST3 kNN
+exp_0108	-	train	3	st3	enhanced	Qwen2.5-7B	2e-4	3	-	synth+pseudo	-	-	-	-	-	-	-	-	blocked		[P3.QLORA] Qwen 7B QLoRA ST3 enh, r=16 alpha=32
+exp_0109	exp_0123	train	3	st3	enhanced	Qwen2.5-7B	1e-4	3	-	synth+pseudo+cot	-	-	-	-	-	-	-	-	blocked		[P3.COT] Qwen 7B QLoRA + CoT ST3 enh
+exp_0110	exp_0123	train	3	st3	base	Qwen2.5-7B	1e-4	3	-	synth+cot	-	-	-	-	-	-	-	-	blocked		[P3.COT] Qwen 7B QLoRA + CoT ST3 base
+exp_0111	-	train	3	st3	enhanced	electra-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P3.DIV] ELECTRA-large ST3 enh (ensemble diversity)
+exp_0112	-	train	3	st1	enhanced	electra-large	1e-5	12	ce	synth_v002_st1st2	0.5	-	-	-	-	-	-	-	queued		[P3.DIV] ELECTRA-large ST1 enh (ensemble diversity)
+exp_0113	-	train	3	st3	enhanced	[BEST]	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.SEED] 5-seed run #1 (seed=42) â€” awaits Phase 2 winner
+exp_0114	-	train	3	st3	enhanced	[BEST]	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.SEED] 5-seed run #2 (seed=123)
+exp_0115	-	train	3	st3	enhanced	[BEST]	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.SEED] 5-seed run #3 (seed=456)
+exp_0116	-	train	3	st3	enhanced	[BEST]	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.PSEUDO] Pseudo-labels R2 ST3 enh (gate: 0081 PASSED)
+exp_0117	-	train	3	st1	enhanced	[BEST]	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.PSEUDO] Pseudo-labels R2 ST1 enh (gate: 0081 PASSED)
+exp_0118	-	diagnostic	3	all	both	-	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.ENS] Final ensemble: temp-calibrated logit average
+exp_0119	-	diagnostic	3	all	both	-	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.ENS] Majority vote baseline for comparison
+exp_0120	-	diagnostic	3	all	both	-	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.ENS] Encoder + QLoRA hybrid ensemble (conditional)
+exp_0121	-	diagnostic	3	all	both	-	-	-	-	-	-	-	-	-	206.8	-	-	-	done		[P1.ENS] Post-hoc ensemble: ST1=0.914, ST2=0.970, ST3=0.735 (no gain, single-source)
+exp_0122	-	diagnostic	3	all	both	-	-	-	-	-	-	-	-	-	29.8	-	-	-	done		[P1.SUB] Submission dry-run: format verified, 29.8s
+exp_0123	-	diagnostic	3	st3	-	gemini-2.0-flash	-	-	-	-	-	-	-	-	-	-	-	-	done		[P1.COT] CoT supervision generated via Gemini Flash. Unblocks 0109/0110.
+exp_0124	-	diagnostic	3	st3	-	-	-	-	-	-	-	-	-	-	-	-	-	-	done		[P1.CV] Stratified 5-fold CV splits: 473 examples, 5 folds. Output: shared/kfold_splits_st3.json
+exp_0125	exp_0072	train	3	st2	enhanced	roberta-large	1e-5	12	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P2.DEF] ST2 enh + prepend fallacy definitions (protect 0.970)
+exp_0126	exp_0073	train	3	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P2.DEF] ST3 enh + prepend scheme definitions
+exp_0127	exp_0073	train	3	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P2.SWA] ST3 enh + SWA (start epoch 8)
+exp_0128	exp_0035	train	3	st1	enhanced	roberta-large	1e-5	12	ce	synth_v002_st1st2	0.5	-	-	-	-	-	-	-	queued		[P2.SWA] ST1 enh + SWA (start epoch 6)
+exp_0129	exp_0072	train	3	st2	enhanced	roberta-large	1e-5	12	weighted_ce	synth+pseudo	0.3	-	-	-	-	-	-	-	queued		[P2.EMA] ST2 enh + EMA decay=0.999 (protect 0.970)
+exp_0130	exp_0073	train	3	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P2.RDROP] ST3 enh + R-Drop alpha=1.0
+exp_0131	exp_0072	train	3	st2	enhanced	roberta-large	1e-5	12	weighted_ce	synth+pseudo	0.3	-	-	-	-	-	-	-	queued		[P2.FGM] ST2 enh + FGM epsilon=1.0 (protect 0.970)
+exp_0132	-	diagnostic	3	st3	enhanced	-	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.STACK] Logistic regression stacker on dev-fold logits
+exp_0133	-	diagnostic	3	st3	enhanced	[BEST]	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.CV] Full 5-fold CV evaluation ST3 enh
+exp_0134	-	diagnostic	3	st3	base	[BEST]	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.CV] Full 5-fold CV evaluation ST3 base
+exp_0135	-	train	3	st3	enhanced	[BEST]	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.FINAL] Final model: train on ALL data, ST3 enh
+exp_0136	-	train	3	st3	base	[BEST]	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.FINAL] Final model: train on ALL data, ST3 base
+exp_0137	-	diagnostic	3	all	both	-	-	-	-	-	-	-	-	-	-	-	-	-	blocked		[P3.SUBMIT] Final submission generation â€” all 6 slots, TIRA format
+exp_0138	-	diagnostic	2	all	enhanced	BAAI/bge-large-en-v1.5	-	-	-	-	-	-	-	-	-	-	-	-	done		[P2.EMB] bge-large embedding index done: 1876 embeddings, shape (1876,1024). Unblocks 0143/0144.
+exp_0143	exp_0091	diagnostic	3	st3	enhanced	Qwen/Qwen2.5-3B-Instruct	-	-	-	-	-	0.52947	0.52587	0.52947	-	-	-	-	done	kNN few-shot F1=0.529; ee=0.53 ei=0.89 pe=0.0 pi=0.70; 7.4GB VRAM	[P3.kNN] Qwen-3B kNN-retrieval few-shot ST3 enhanced
+exp_0144	exp_0091	diagnostic	3	st3	base	Qwen/Qwen2.5-3B-Instruct	-	-	-	-	-	-	-	-	-	-	-	-	done	done but no metrics saved (write_metrics path bug); low priority	[P3.kNN] Qwen-3B kNN-retrieval few-shot ST3 base
+exp_0145	exp_0073	diagnostic	2	st3	enhanced	-	-	-	-	-	-	0.76173	-	-	16.3	-	-	-	done	grid best: ee=0.1 ei=0.1 pe=0.05 pi=0.4 â†’ +2.6pp over argmax	[P2.THRESH] Per-class threshold sweep on ST3 dev probs - target pe recovery
+exp_0146	exp_0073	diagnostic	3	st3	enhanced	-	-	-	-	-	-	0.73542	-	-	1.2	-	-	-	done	no improvement; best=weighted_avg(w=0.1)=encoder-only; logreg=0.684; rule=0.536	[P3.META] LLM basis-axis meta-learner: 0073 logits + 0091 basis prediction
+exp_0147	-	diagnostic	2	st3	-	-	-	-	-	-	-	-	-	-	0	-	-	-	done	SYSTEM_PROMPT_DIFFERS, RESPONSE_INSTRUCTION_DIFFERS; no per-example comparison (0092 lacks st3_details)	[P2.DIAG] Prompt drift analysis: 0091 zero-shot vs 0092 few-shot side-by-side
+exp_0148	exp_0073	diagnostic	2	st3	enhanced	-	-	-	-	-	-	-	-	-	-	-	-	-	queued		[P2.LOGADJ] Post-hoc logit adjustment on 0073 ST3 enh dev probs - class-prior correction (tau sweep)
+exp_0149	exp_0069	diagnostic	2	st3	base	-	-	-	-	-	-	-	-	-	-	-	-	-	queued		[P2.LOGADJ] Post-hoc logit adjustment on 0069 ST3 base dev logits - class-prior correction (tau sweep)
+exp_0150	exp_0073	train	2	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo+pe_synth	0.5	-	-	-	-	-	-	-	queued		[P2.COMBO] ST3 enh: aux head + pe synth combined ï¿½ stack independent interventions
+exp_0151	exp_0104	diagnostic	2	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo+pe_synth	0.5	-	-	0.840	3978.4	-	-	-	done		[P2.CV] 5-fold CV of 0104 (pe synth ST3 enh) - pe F1 mean +/- std
+exp_0152	exp_0105	diagnostic	2	st3	base	roberta-large	1e-5	15	weighted_ce	synth+pseudo+pe_synth	0.5	-	-	-	-	-	-	-	queued		[P2.CV] 5-fold CV of 0105 (pe synth ST3 base) - pe F1 mean +/- std
+exp_0153	exp_0073	diagnostic	2	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	0.875	4141.0	-	-	-	done		[P2.CV] 5-fold CV baseline (no pe synth) ST3 enh - pe F1 baseline distribution
+exp_0154	exp_0104	train	2	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo+pe_synth	0.5	-	-	-	-	-	-	-	queued		[P2.PE+] pe synth + pe oversampling (every batch) + 10x pe loss weight
+exp_0155	exp_0138	diagnostic	2	st3	-	-	-	-	-	-	-	-	-	-	-	-	-	-	queued		[P2.AUDIT] Synth quality: bge cosine sim 100 synth pe vs 8 real pe
+exp_0156	exp_0148	diagnostic	2	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P2.CV] 5-fold CV logit adjustment ST3 enh - was LA rejected on pessimistic dev?
+exp_0157	exp_0145	diagnostic	2	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P2.CV] 5-fold CV per-class threshold ST3 enh - do dev thresholds transfer?
+exp_0158	exp_0149	diagnostic	2	st3	base	roberta-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P2.CV] 5-fold CV logit adjustment ST3 base - was base pe really intractable?
+exp_0159	exp_0093	diagnostic	2	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P2.CV] 5-fold CV aux head (resembles_fallacy) ST3 enh - honest pe validation
+exp_0160	exp_0154	diagnostic	2	st3	enhanced	roberta-large	1e-5	15	weighted_ce	synth+pseudo	0.5	-	-	-	-	-	-	-	queued		[P2.CV] 5-fold CV pe oversampling + 10x weight ST3 enh - honest comparison
+exp_0180	-	cv_validation	3	st3	enhanced	Qwen/Qwen2.5-7B-Instruct	2e-4	3	ce	-	-	-	-	0.851	4769.5	-	0	5	done		[H100] Qwen-7B CoT-LoRA 5-fold CV ST3 enh (kNN-3, r=32) â€” CV F1=0.851Â±0.114
+exp_0182	-	train	3	st3	enhanced	Qwen/Qwen2.5-32B-Instruct	1e-4	2	ce	-	-	-	-	0.626	3674.5	-	0	2	done		[H100] Qwen-32B CoT-LoRA full train ST3 enh â€” undertrained (25 steps only)
+exp_0203	exp_0180	cv_validation	4	st3	base	Qwen/Qwen2.5-7B-Instruct	2e-4	3	ce	-	-	-	-	-	-	-	-	-	crashed		[L4] Qwen-7B CoT-LoRA 5-fold CV ST3 base â€” timed out
+exp_0207	exp_0182	train	4	st3	enhanced	Qwen/Qwen2.5-32B-Instruct	2e-4	3	ce	-	-	-	-	0.841	5526.1	-	0	3	done		[H100] Qwen-32B CoT-LoRA ST3 enh â€” hyperparam fix: grad_accum=4, lr=2e-4
+exp_0208	exp_0207	cv_validation	4	st3	enhanced	Qwen/Qwen2.5-32B-Instruct	2e-4	3	ce	-	-	-	-	-	-	-	-	-	stale		[H100] Qwen-32B CoT-LoRA 5-fold CV â€” decisive comparison with 0180
+exp_0209	exp_0180	cv_validation	4	st1	enhanced	Qwen/Qwen2.5-7B-Instruct	2e-4	3	ce	-	-	-	-	-	-	-	-	-	running		Q2: Qwen-7B CoT-LoRA ST1 enhanced â€” binary fallacy detection
+exp_0210	exp_0180	cv_validation	4	st1	base	Qwen/Qwen2.5-7B-Instruct	2e-4	3	ce	-	-	-	-	-	-	-	-	-	queued		Q3: Qwen-7B CoT-LoRA ST1 base â€” no CoT data
+exp_0211	exp_0180	cv_validation	4	st2	enhanced	Qwen/Qwen2.5-7B-Instruct	2e-4	3	ce	-	-	-	-	-	-	-	-	-	queued		Q4: Qwen-7B CoT-LoRA ST2 enhanced â€” 8-way fallacy typing
+exp_0212	exp_0180	cv_validation	4	st2	base	Qwen/Qwen2.5-7B-Instruct	2e-4	3	ce	-	-	-	-	-	-	-	-	-	queued		Q5: Qwen-7B CoT-LoRA ST2 base â€” no CoT data
+exp_0213	exp_0180	cv_validation	4	st3	enhanced	Qwen/Qwen2.5-7B-Instruct	2e-4	3	ce	-	-	-	-	-	-	-	-	-	queued		Q6: Qwen-7B CoT-LoRA ST3 enh seed=123 â€” variance reduction
+exp_0214	exp_0180	cv_validation	4	st3	enhanced	Qwen/Qwen2.5-7B-Instruct	2e-4	3	ce	-	-	-	-	-	-	-	-	-	queued		Q7: Qwen-7B CoT-LoRA ST3 enh lora_r=64 â€” ensemble diversity
+exp_0215	exp_0180	cv_validation	4	st3	enhanced	Qwen/Qwen2.5-7B-Instruct	2e-4	3	ce	-	-	-	-	-	-	-	-	-	queued		Q8: Qwen-7B CoT-LoRA ST3 enh knn_k=5 â€” ensemble diversity
+exp_0216	exp_0207	train	4	st3	enhanced	Qwen/Qwen2.5-32B-Instruct	1e-4	4	ce	-	-	-	-	0.841	15004.7	-	0	4	done		[H100] Qwen-32B CoT-LoRA OPTIMISED: r=64, cosine, kNN-8, paged_adamw_8bit
+exp_0217	exp_0180	cv_validation	4	st2	enhanced	Qwen/Qwen3-4B-Thinking-2507	2e-4	3	ce	-	-	-	-	0.963	4845	-	0	3	done		★1: Qwen3-4B-Thinking bf16+LoRA ST2 enh — CV F1=0.963, massive jump from 0.851
+exp_0218	exp_0180	cv_validation	4	st3	base	Qwen/Qwen3-4B-Thinking-2507	2e-4	3	ce	-	-	-	-	0.448	6211	-	0	3	done		★3: Qwen3-4B-Thinking bf16+LoRA ST3 base — CV F1=0.448, below RoBERTa baseline (0.523)
+exp_0219	exp_0180	cv_validation	4	st1	enhanced	Qwen/Qwen3-4B-Thinking-2507	2e-4	3	ce	-	-	-	-	--	-	-	-	-	queued		★2: Qwen3-4B-Thinking bf16+LoRA ST1 enh — binary fallacy detection
+exp_0220	-	submission	4	all	both	roberta-large	-	-	-	-	-	-	-	-	-	-	-	-	queued		[TIRA-S1] First full submission: 6 slots all RoBERTa-large. ST3-enh=0073(CV=0.875) chosen over Qwen-32B(CV stale, full=0.841). Non-routed inference, per-subtask files.

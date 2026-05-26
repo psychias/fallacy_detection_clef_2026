@@ -1,0 +1,1702 @@
+{
+  "st3": {
+    "f1_macro": 0.46711,
+    "f1_per_class": {
+      "epistemic-external": 0.42105,
+      "epistemic-internal": 0.83871,
+      "practical-external": 0.0,
+      "practical-internal": 0.6087
+    },
+    "parse_failures": 0,
+    "n_dev": 69
+  },
+  "st3_details": [
+    {
+      "id": "informal_fallacies:853",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1117",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1333",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1389",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1342",
+      "true": "practical-internal",
+      "raw_pred": "practical-external",
+      "parsed_pred": "practical-external"
+    },
+    {
+      "id": "informal_fallacies:1252",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1195",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:1236",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1353",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1179",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:963",
+      "true": "practical-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    },
+    {
+      "id": "informal_fallacies:1017",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:833",
+      "true": "epistemic-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    },
+    {
+      "id": "informal_fallacies:1084",
+      "true": "epistemic-external",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:1196",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:1133",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:733",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:857",
+      "true": "epistemic-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    },
+    {
+      "id": "informal_fallacies:993",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:970",
+      "true": "epistemic-external",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:1417",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1171",
+      "true": "practical-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    },
+    {
+      "id": "informal_fallacies:1300",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:976",
+      "true": "practical-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:996",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1298",
+      "true": "practical-internal",
+      "raw_pred": "practical-external",
+      "parsed_pred": "practical-external"
+    },
+    {
+      "id": "informal_fallacies:1073",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1041",
+      "true": "epistemic-external",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:1382",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1318",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:887",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1369",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1229",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1335",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:912",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1189",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:933",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1095",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:916",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1269",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1146",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1202",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1132",
+      "true": "practical-internal",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:866",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1331",
+      "true": "epistemic-external",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:797",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:955",
+      "true": "practical-internal",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:958",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:1404",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:792",
+      "true": "epistemic-external",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1224",
+      "true": "practical-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1052",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1199",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:960",
+      "true": "practical-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    },
+    {
+      "id": "informal_fallacies:1217",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1396",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:748",
+      "true": "epistemic-external",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:816",
+      "true": "epistemic-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    },
+    {
+      "id": "informal_fallacies:961",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1049",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1249",
+      "true": "practical-external",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1438",
+      "true": "practical-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    },
+    {
+      "id": "informal_fallacies:1406",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:1092",
+      "true": "epistemic-external",
+      "raw_pred": "epistemic-external",
+      "parsed_pred": "epistemic-external"
+    },
+    {
+      "id": "informal_fallacies:1043",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:939",
+      "true": "epistemic-internal",
+      "raw_pred": "epistemic-internal",
+      "parsed_pred": "epistemic-internal"
+    },
+    {
+      "id": "informal_fallacies:871",
+      "true": "practical-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    },
+    {
+      "id": "informal_fallacies:1291",
+      "true": "practical-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    },
+    {
+      "id": "informal_fallacies:1191",
+      "true": "practical-internal",
+      "raw_pred": "practical-internal",
+      "parsed_pred": "practical-internal"
+    }
+  ],
+  "st1": {
+    "f1_macro": 0.59628,
+    "f1_per_class": {
+      "non-fallacy": 0.6747,
+      "fallacy": 0.51786
+    },
+    "parse_failures": 0,
+    "n_dev": 139
+  },
+  "st1_details": [
+    {
+      "id": "informal_fallacies:731",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:61",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:253",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1154",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:889",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1201",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:511",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:330",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:802",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:808",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:575",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:205",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:743",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1413",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:138",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:968",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1211",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:289",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:251",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:176",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:320",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1033",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:629",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:669",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:872",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:79",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:504",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:518",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1098",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1307",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:858",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:505",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:261",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:3",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:567",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:203",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:787",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1431",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1360",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:146",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:144",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:438",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1383",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:215",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:21",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:336",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:591",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:635",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:987",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1224",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:851",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:145",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:742",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:816",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1132",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:790",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1295",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:733",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:440",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1353",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1367",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1223",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1186",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:616",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1116",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:68",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:282",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:902",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:838",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1217",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:784",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1018",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:306",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:11",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:419",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:281",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:605",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1266",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:839",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1309",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:997",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1369",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:240",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1198",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1325",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:936",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:481",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:803",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:617",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:472",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:993",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1039",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:701",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:980",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1216",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:874",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:247",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:8",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:451",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:334",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:294",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:33",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1091",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:588",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:503",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:994",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:568",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1265",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:423",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:632",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:424",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1195",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:749",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1064",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:887",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:56",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1317",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1208",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1373",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:91",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:554",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:272",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1182",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:286",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:297",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1047",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:459",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:492",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1357",
+      "true": "non-fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:467",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    },
+    {
+      "id": "informal_fallacies:1013",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:893",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1438",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:298",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:117",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1054",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:1093",
+      "true": "non-fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:684",
+      "true": "fallacy",
+      "raw_pred": "non-fallacy",
+      "parsed_pred": "non-fallacy"
+    },
+    {
+      "id": "informal_fallacies:482",
+      "true": "fallacy",
+      "raw_pred": "fallacy",
+      "parsed_pred": "fallacy"
+    }
+  ],
+  "st2": {
+    "f1_macro": 0.62516,
+    "f1_per_class": {
+      "authority": 0.8,
+      "black-white": 0.54545,
+      "hasty_generalization": 0.22222,
+      "natural": 0.57143,
+      "population": 0.6,
+      "slippery_slope": 0.85714,
+      "tradition": 0.88889,
+      "worse_problems": 0.51613
+    },
+    "parse_failures": 4,
+    "n_dev": 67
+  },
+  "st2_details": [
+    {
+      "id": "informal_fallacies:648",
+      "true": "worse_problems",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:333",
+      "true": "natural",
+      "raw_pred": "nature",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:32",
+      "true": "authority",
+      "raw_pred": "authority",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:389",
+      "true": "population",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:588",
+      "true": "tradition",
+      "raw_pred": "natural",
+      "parsed_pred": "natural"
+    },
+    {
+      "id": "informal_fallacies:524",
+      "true": "slippery_slope",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:579",
+      "true": "tradition",
+      "raw_pred": "tradition",
+      "parsed_pred": "tradition"
+    },
+    {
+      "id": "informal_fallacies:432",
+      "true": "population",
+      "raw_pred": "population",
+      "parsed_pred": "population"
+    },
+    {
+      "id": "informal_fallacies:504",
+      "true": "slippery_slope",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:358",
+      "true": "natural",
+      "raw_pred": "natural",
+      "parsed_pred": "natural"
+    },
+    {
+      "id": "informal_fallacies:592",
+      "true": "tradition",
+      "raw_pred": "tradition",
+      "parsed_pred": "tradition"
+    },
+    {
+      "id": "informal_fallacies:589",
+      "true": "tradition",
+      "raw_pred": "tradition",
+      "parsed_pred": "tradition"
+    },
+    {
+      "id": "informal_fallacies:331",
+      "true": "natural",
+      "raw_pred": "natural",
+      "parsed_pred": "natural"
+    },
+    {
+      "id": "informal_fallacies:225",
+      "true": "hasty_generalization",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:296",
+      "true": "natural",
+      "raw_pred": "natural",
+      "parsed_pred": "natural"
+    },
+    {
+      "id": "informal_fallacies:118",
+      "true": "black-white",
+      "raw_pred": "black-white",
+      "parsed_pred": "black-white"
+    },
+    {
+      "id": "informal_fallacies:538",
+      "true": "slippery_slope",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:311",
+      "true": "natural",
+      "raw_pred": "nature",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:662",
+      "true": "worse_problems",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:330",
+      "true": "natural",
+      "raw_pred": "nature",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:688",
+      "true": "worse_problems",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:559",
+      "true": "tradition",
+      "raw_pred": "tradition",
+      "parsed_pred": "tradition"
+    },
+    {
+      "id": "informal_fallacies:21",
+      "true": "authority",
+      "raw_pred": "authority",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:177",
+      "true": "black-white",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:328",
+      "true": "natural",
+      "raw_pred": "tradition",
+      "parsed_pred": "tradition"
+    },
+    {
+      "id": "informal_fallacies:563",
+      "true": "tradition",
+      "raw_pred": "tradition",
+      "parsed_pred": "tradition"
+    },
+    {
+      "id": "informal_fallacies:27",
+      "true": "authority",
+      "raw_pred": "authority",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:258",
+      "true": "hasty_generalization",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:165",
+      "true": "black-white",
+      "raw_pred": "black-white",
+      "parsed_pred": "black-white"
+    },
+    {
+      "id": "informal_fallacies:352",
+      "true": "natural",
+      "raw_pred": "nature",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:35",
+      "true": "authority",
+      "raw_pred": "authority",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:79",
+      "true": "authority",
+      "raw_pred": "authority",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:713",
+      "true": "worse_problems",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:162",
+      "true": "black-white",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:67",
+      "true": "authority",
+      "raw_pred": "authority",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:247",
+      "true": "hasty_generalization",
+      "raw_pred": "hasty_generalization",
+      "parsed_pred": "hasty_generalization"
+    },
+    {
+      "id": "informal_fallacies:584",
+      "true": "tradition",
+      "raw_pred": "tradition",
+      "parsed_pred": "tradition"
+    },
+    {
+      "id": "informal_fallacies:199",
+      "true": "hasty_generalization",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:717",
+      "true": "worse_problems",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:455",
+      "true": "slippery_slope",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:544",
+      "true": "tradition",
+      "raw_pred": "tradition",
+      "parsed_pred": "tradition"
+    },
+    {
+      "id": "informal_fallacies:80",
+      "true": "authority",
+      "raw_pred": "authority",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:222",
+      "true": "hasty_generalization",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:398",
+      "true": "population",
+      "raw_pred": "population",
+      "parsed_pred": "population"
+    },
+    {
+      "id": "informal_fallacies:382",
+      "true": "population",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:426",
+      "true": "population",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:254",
+      "true": "hasty_generalization",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:337",
+      "true": "natural",
+      "raw_pred": "natural",
+      "parsed_pred": "natural"
+    },
+    {
+      "id": "informal_fallacies:608",
+      "true": "tradition",
+      "raw_pred": "tradition",
+      "parsed_pred": "tradition"
+    },
+    {
+      "id": "informal_fallacies:108",
+      "true": "black-white",
+      "raw_pred": "black-white",
+      "parsed_pred": "black-white"
+    },
+    {
+      "id": "informal_fallacies:674",
+      "true": "worse_problems",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:117",
+      "true": "black-white",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:482",
+      "true": "slippery_slope",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:533",
+      "true": "slippery_slope",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:709",
+      "true": "worse_problems",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:465",
+      "true": "slippery_slope",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:646",
+      "true": "worse_problems",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:191",
+      "true": "hasty_generalization",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:92",
+      "true": "black-white",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:481",
+      "true": "slippery_slope",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    },
+    {
+      "id": "informal_fallacies:85",
+      "true": "authority",
+      "raw_pred": "authority",
+      "parsed_pred": "authority"
+    },
+    {
+      "id": "informal_fallacies:130",
+      "true": "black-white",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:238",
+      "true": "hasty_generalization",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:421",
+      "true": "population",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:416",
+      "true": "population",
+      "raw_pred": "population",
+      "parsed_pred": "population"
+    },
+    {
+      "id": "informal_fallacies:656",
+      "true": "worse_problems",
+      "raw_pred": "worse_problems",
+      "parsed_pred": "worse_problems"
+    },
+    {
+      "id": "informal_fallacies:508",
+      "true": "slippery_slope",
+      "raw_pred": "slippery_slope",
+      "parsed_pred": "slippery_slope"
+    }
+  ],
+  "st3_basis_only": {
+    "accuracy": 0.8551,
+    "correct": 59,
+    "total": 69
+  },
+  "backbone": "Qwen/Qwen2.5-3B-Instruct",
+  "track": "enhanced",
+  "peak_vram_mb": 5990.2,
+  "wall_clock_s": 103.9
+}

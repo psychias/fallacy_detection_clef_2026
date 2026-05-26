@@ -1,0 +1,37 @@
+﻿{
+    "kind":  "train",
+    "parent_id":  "exp_0182",
+    "idea_ref":  "[H100] Qwen2.5-32B ST3 enh â€” hyperparam fix: more optimizer steps",
+    "phase":  "4",
+    "hypothesis":  "exp_0182 scored 0.626 with grad_accum=32 (only ~25 steps). Fix: grad_accum=4 (gives ~300 steps), lr=2e-4, 3 epochs. Match 7B recipe but with 32B capacity.",
+    "depends_on":  [
+                       "exp_0180"
+                   ],
+    "time_budget_s":  21600,
+    "priority":  53,
+    "subtask":  "st3",
+    "track":  "enhanced",
+    "backbone":  "Qwen/Qwen2.5-32B-Instruct",
+    "data":  {
+                 "real":  true,
+                 "synth_versions":  [
+
+                                    ],
+                 "cot_data":  "cot_v001_st3/data_enhanced.jsonl",
+                 "use_knn_retrieval":  true,
+                 "knn_k":  3
+             },
+    "train":  {
+                  "lr":  0.0002,
+                  "max_len":  1536,
+                  "batch_size":  1,
+                  "grad_accum":  4,
+                  "epochs":  3,
+                  "lora_r":  32,
+                  "lora_alpha":  64,
+                  "lora_dropout":  0.05,
+                  "compute_dtype":  "bf16",
+                  "patience":  2
+              },
+    "min_vram_gb":  60
+}

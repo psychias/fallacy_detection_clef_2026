@@ -1,0 +1,3075 @@
+{
+  "st1": {
+    "f1_macro": 0.91356,
+    "f1_per_class": {
+      "non-fallacy": 0.91045,
+      "fallacy": 0.91667
+    },
+    "temperatures": [
+      {
+        "exp": "exp_0035",
+        "temperature": 2.1221
+      }
+    ],
+    "n_sources": 1,
+    "dev_calibrated": [
+      {
+        "id": "informal_fallacies:731",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9296073244449845,
+          0.07039267555501548
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:61",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01839680817021893,
+          0.981603191829781
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:253",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.498396002889806,
+          0.5016039971101939
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1154",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.4994252703058864,
+          0.5005747296941135
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:889",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.6795204301046041,
+          0.32047956989539594
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1201",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5191553028543299,
+          0.48084469714567013
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:511",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01595648835825249,
+          0.9840435116417476
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:330",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.019306906274998027,
+          0.980693093725002
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:802",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9011369100405998,
+          0.09886308995940021
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:808",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8698222638591058,
+          0.13017773614089412
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:575",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.014633508271189411,
+          0.9853664917288106
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:205",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.06236364251326124,
+          0.9376363574867388
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:743",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9010938813762185,
+          0.0989061186237814
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1413",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8977398588422437,
+          0.10226014115775638
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:138",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.019843407893746157,
+          0.9801565921062538
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:968",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.026624439540006796,
+          0.9733755604599931
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1211",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9530295936195403,
+          0.04697040638045979
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:289",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.015128761123490968,
+          0.984871238876509
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:251",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01831385195786343,
+          0.9816861480421367
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:176",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.018067036314122684,
+          0.9819329636858775
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:320",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.029339566785059955,
+          0.97066043321494
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1033",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8705732416401885,
+          0.1294267583598116
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:629",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01734753973986196,
+          0.982652460260138
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:669",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.4655529795971037,
+          0.5344470204028964
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:872",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9619588863889902,
+          0.03804111361100978
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:79",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.06856918560434515,
+          0.9314308143956548
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:504",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.017345348856330944,
+          0.982654651143669
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:518",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.04992618431654972,
+          0.9500738156834504
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1098",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9027588340169932,
+          0.09724116598300672
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1307",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8928522877134136,
+          0.10714771228658634
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:858",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5744923483969419,
+          0.4255076516030582
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:505",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.016561137397666632,
+          0.9834388626023333
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:261",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.026604318511711005,
+          0.9733956814882889
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:3",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.020954158758542854,
+          0.9790458412414572
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:567",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.016902308284647848,
+          0.9830976917153521
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:203",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.818276861300687,
+          0.18172313869931297
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:787",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.7028108911597933,
+          0.29718910884020666
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1431",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.7524999755501892,
+          0.24750002444981076
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1360",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9686741777893331,
+          0.03132582221066692
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:146",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.017413398566364292,
+          0.9825866014336356
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:144",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.015887663834311498,
+          0.9841123361656884
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:438",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.015048980123014132,
+          0.984951019876986
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1383",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5114772937572045,
+          0.4885227062427956
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:215",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.0167965138727842,
+          0.9832034861272158
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:21",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.09006255018961247,
+          0.9099374498103876
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:336",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.02582122601024283,
+          0.9741787739897572
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:591",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.40887064846637555,
+          0.5911293515336243
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:635",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.014494068195035873,
+          0.985505931804964
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:987",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.09233187805640271,
+          0.9076681219435974
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1224",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.4318910853480785,
+          0.5681089146519216
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:851",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9689756521371977,
+          0.031024347862802216
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:145",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.021297294236081087,
+          0.9787027057639189
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:742",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9295037222585408,
+          0.07049627774145906
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:816",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9515746930050651,
+          0.04842530699493473
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1132",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.867539012842835,
+          0.132460987157165
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:790",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9482403307215971,
+          0.05175966927840306
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1295",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8234857401025278,
+          0.1765142598974722
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:733",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9558832603838474,
+          0.04411673961615252
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:440",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.06396201054634931,
+          0.9360379894536506
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1353",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8140364336154764,
+          0.1859635663845236
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1367",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.941554793877466,
+          0.05844520612253388
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1223",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9025833010168195,
+          0.09741669898318045
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1186",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9327943765536704,
+          0.06720562344632962
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:616",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.015435031615792063,
+          0.984564968384208
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1116",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9344082426691535,
+          0.06559175733084652
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:68",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.04669344916612548,
+          0.9533065508338745
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:282",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.016889903361788416,
+          0.9831100966382116
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:902",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5272965420127974,
+          0.4727034579872026
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:838",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8102917548431652,
+          0.18970824515683482
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1217",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5583464319778402,
+          0.4416535680221598
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:784",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8938458343946989,
+          0.10615416560530111
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1018",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9389750771751341,
+          0.06102492282486601
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:306",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.0330337195439548,
+          0.9669662804560453
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:11",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.2445275400187549,
+          0.7554724599812452
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:419",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.015583625825298878,
+          0.9844163741747012
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:281",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.024532324419240432,
+          0.9754676755807595
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:605",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.022646743077217413,
+          0.9773532569227826
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1266",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.844802380811346,
+          0.15519761918865413
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:839",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5370314528259196,
+          0.4629685471740804
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1309",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.4325245480302744,
+          0.5674754519697257
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:997",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.018127345521330964,
+          0.9818726544786689
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1369",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.20075113893680518,
+          0.7992488610631948
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:240",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.02277567490687565,
+          0.9772243250931243
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1198",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9546577148464377,
+          0.04534228515356221
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1325",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.50650513821177,
+          0.49349486178822993
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:936",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9419994159800693,
+          0.058000584019930725
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:481",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.23308703710423653,
+          0.7669129628957635
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:803",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.536888821484574,
+          0.463111178515426
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:617",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.017463300315866886,
+          0.9825366996841332
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:472",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.13320619035092898,
+          0.866793809649071
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:993",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.18660895623339366,
+          0.8133910437666064
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1039",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9524826944376523,
+          0.04751730556234775
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:701",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.020432058552759754,
+          0.9795679414472402
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:980",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.6020290410215561,
+          0.397970958978444
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1216",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5181135886089377,
+          0.48188641139106225
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:874",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.027869644191653258,
+          0.9721303558083467
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:247",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.1353266925894881,
+          0.864673307410512
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:8",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.5275456950397193,
+          0.4724543049602808
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:451",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01573594193452134,
+          0.9842640580654787
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:334",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.016387074700628182,
+          0.9836129252993717
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:294",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.014891878655527503,
+          0.9851081213444725
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:33",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.029906837088584725,
+          0.9700931629114153
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1091",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.6058849957138737,
+          0.3941150042861263
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:588",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01661832982522983,
+          0.9833816701747701
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:503",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01794821812620321,
+          0.9820517818737968
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:994",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8925001179051015,
+          0.10749988209489847
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:568",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01640257463769365,
+          0.9835974253623064
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1265",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9499558162094721,
+          0.05004418379052802
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:423",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.3510140026176276,
+          0.6489859973823724
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:632",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.016953861906829695,
+          0.9830461380931702
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:424",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.14339709764701689,
+          0.8566029023529832
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1195",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5855187232526682,
+          0.4144812767473317
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:749",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5274223729852932,
+          0.4725776270147069
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1064",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5248942979473481,
+          0.4751057020526519
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:887",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.955666504539727,
+          0.04433349546027303
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:56",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.5664091706761907,
+          0.4335908293238094
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1317",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.888622961463894,
+          0.11137703853610598
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1208",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9372280804764823,
+          0.06277191952351774
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1373",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9076409723637144,
+          0.09235902763628565
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:91",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01827634741350758,
+          0.9817236525864925
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:554",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.036813693467639685,
+          0.9631863065323604
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:272",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.02479466654886706,
+          0.975205333451133
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1182",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.6311052779556077,
+          0.3688947220443924
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:286",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01855079352572102,
+          0.981449206474279
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:297",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.014772761955137758,
+          0.9852272380448622
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1047",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.7893745536298621,
+          0.2106254463701379
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:459",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01778405542482557,
+          0.9822159445751746
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:492",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.017573960458904917,
+          0.9824260395410951
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1357",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5511217207141325,
+          0.4488782792858676
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:467",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.015961965185202532,
+          0.9840380348147975
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1013",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.9306024939055944,
+          0.06939750609440568
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:893",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8930501611118139,
+          0.10694983888818603
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1438",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.5617255182821472,
+          0.43827448171785277
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:298",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.02616633322662421,
+          0.9738336667733758
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:117",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.40778388509914143,
+          0.5922161149008585
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:1054",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.889399963827434,
+          0.11060003617256602
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:1093",
+        "true_label": "non-fallacy",
+        "avg_probs": [
+          0.8933157137301745,
+          0.1066842862698256
+        ],
+        "pred_label": "non-fallacy"
+      },
+      {
+        "id": "informal_fallacies:684",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.01796554037357751,
+          0.9820344596264224
+        ],
+        "pred_label": "fallacy"
+      },
+      {
+        "id": "informal_fallacies:482",
+        "true_label": "fallacy",
+        "avg_probs": [
+          0.018595017030093232,
+          0.9814049829699067
+        ],
+        "pred_label": "fallacy"
+      }
+    ]
+  },
+  "st2": {
+    "f1_macro": 0.97042,
+    "f1_per_class": {
+      "authority": 1.0,
+      "black-white": 1.0,
+      "hasty_generalization": 1.0,
+      "natural": 0.94118,
+      "population": 0.93333,
+      "slippery_slope": 1.0,
+      "tradition": 0.88889,
+      "worse_problems": 1.0
+    },
+    "temperatures": [
+      {
+        "exp": "exp_0072",
+        "temperature": 1.4977
+      }
+    ],
+    "n_sources": 1,
+    "dev_calibrated": [
+      {
+        "id": "informal_fallacies:648",
+        "true_label": "worse_problems",
+        "avg_probs": [
+          0.002175313987773494,
+          0.0026401166527814557,
+          0.002012107178229147,
+          0.0025358556438682023,
+          0.0015359326151709474,
+          0.0020760118056154056,
+          0.001883010642515115,
+          0.9851416514740462
+        ],
+        "pred_label": "worse_problems"
+      },
+      {
+        "id": "informal_fallacies:333",
+        "true_label": "natural",
+        "avg_probs": [
+          0.002424004872036006,
+          0.0028630328962786535,
+          0.0016269017330176926,
+          0.9858994166504987,
+          0.0019491772665434777,
+          0.0018244336922962222,
+          0.0017246889709806265,
+          0.0016883439183487082
+        ],
+        "pred_label": "natural"
+      },
+      {
+        "id": "informal_fallacies:32",
+        "true_label": "authority",
+        "avg_probs": [
+          0.9837145695516921,
+          0.0024502038463092815,
+          0.001357025037760734,
+          0.003298115040948816,
+          0.002131019355087362,
+          0.003088766613863539,
+          0.0016059578696948232,
+          0.0023543426846435256
+        ],
+        "pred_label": "authority"
+      },
+      {
+        "id": "informal_fallacies:389",
+        "true_label": "population",
+        "avg_probs": [
+          0.0031837119073359404,
+          0.0019696321936187138,
+          0.01473065994705673,
+          0.003347984876440658,
+          0.9677264259787939,
+          0.0028804778136054428,
+          0.003193853593393516,
+          0.0029672536897551137
+        ],
+        "pred_label": "population"
+      },
+      {
+        "id": "informal_fallacies:588",
+        "true_label": "tradition",
+        "avg_probs": [
+          0.0019231335114455292,
+          0.002275478800651026,
+          0.0029308616142467016,
+          0.009471516050775964,
+          0.0021052289346616105,
+          0.0031785756374716296,
+          0.975652605775943,
+          0.002462599674804471
+        ],
+        "pred_label": "tradition"
+      },
+      {
+        "id": "informal_fallacies:524",
+        "true_label": "slippery_slope",
+        "avg_probs": [
+          0.0020216531944463605,
+          0.001841908825470731,
+          0.0029994508284038207,
+          0.0013606467228273863,
+          0.0021114180677398254,
+          0.985465039680256,
+          0.0025182594972187142,
+          0.0016816231836370757
+        ],
+        "pred_label": "slippery_slope"
+      },
+      {
+        "id": "informal_fallacies:579",
+        "true_label": "tradition",
+        "avg_probs": [
+          0.002693661020679376,
+          0.0018933459315664813,
+          0.002368380267570444,
+          0.002889656477125154,
+          0.0025414613551409076,
+          0.0026780231579632335,
+          0.9826247571670808,
+          0.0023107146228734487
+        ],
+        "pred_label": "tradition"
+      },
+      {
+        "id": "informal_fallacies:432",
+        "true_label": "population",
+        "avg_probs": [
+          0.0025279494646216825,
+          0.0021255689956520126,
+          0.0025746481451606215,
+          0.002717192125559117,
+          0.9839083263864284,
+          0.0019215414355986211,
+          0.0023387994803418517,
+          0.0018859739666376204
+        ],
+        "pred_label": "population"
+      },
+      {
+        "id": "informal_fallacies:504",
+        "true_label": "slippery_slope",
+        "avg_probs": [
+          0.0017955172039714837,
+          0.002163363364573948,
+          0.0023983764701531623,
+          0.0014448756093137743,
+          0.002146934028239258,
+          0.9854893647405751,
+          0.0027846137937188272,
+          0.001776954789454388
+        ],
+        "pred_label": "slippery_slope"
+      },
+      {
+        "id": "informal_fallacies:358",
+        "true_label": "natural",
+        "avg_probs": [
+          0.0035180749037843112,
+          0.002416270964225931,
+          0.0035365888998516383,
+          0.9814755763394843,
+          0.002346934637292347,
+          0.002179767330999841,
+          0.002684030462026613,
+          0.001842756462334648
+        ],
+        "pred_label": "natural"
+      },
+      {
+        "id": "informal_fallacies:592",
+        "true_label": "tradition",
+        "avg_probs": [
+          0.001783961113218024,
+          0.002158776742734018,
+          0.0023776746644916537,
+          0.0048696649170202775,
+          0.0018719096391345475,
+          0.002773968336512575,
+          0.9818979502009458,
+          0.0022660943859432944
+        ],
+        "pred_label": "tradition"
+      },
+      {
+        "id": "informal_fallacies:589",
+        "true_label": "tradition",
+        "avg_probs": [
+          0.005970810966454615,
+          0.003262742852480594,
+          0.0037527526734635946,
+          0.0069959015804181525,
+          0.9421120440338081,
+          0.004028970572430399,
+          0.031222795689484845,
+          0.0026539816314597353
+        ],
+        "pred_label": "population"
+      },
+      {
+        "id": "informal_fallacies:331",
+        "true_label": "natural",
+        "avg_probs": [
+          0.002903306758657577,
+          0.0027864547159622602,
+          0.0016655649641212481,
+          0.9853932384372315,
+          0.0018449164115465133,
+          0.001961137352389456,
+          0.001876533632895328,
+          0.0015688477271962621
+        ],
+        "pred_label": "natural"
+      },
+      {
+        "id": "informal_fallacies:225",
+        "true_label": "hasty_generalization",
+        "avg_probs": [
+          0.002909795911284053,
+          0.0020127387021163577,
+          0.9828479486381835,
+          0.0020873935116825365,
+          0.0023810376948402018,
+          0.003133753004153425,
+          0.002678903933977338,
+          0.0019484286037626658
+        ],
+        "pred_label": "hasty_generalization"
+      },
+      {
+        "id": "informal_fallacies:296",
+        "true_label": "natural",
+        "avg_probs": [
+          0.0025665596649773114,
+          0.0031258751594798045,
+          0.0016478975013232088,
+          0.9853494727609643,
+          0.0020597596877375574,
+          0.0017433042026774785,
+          0.00171483576683479,
+          0.0017922952560055071
+        ],
+        "pred_label": "natural"
+      },
+      {
+        "id": "informal_fallacies:118",
+        "true_label": "black-white",
+        "avg_probs": [
+          0.002813388014084804,
+          0.9815935822587485,
+          0.002903240236173169,
+          0.002891953293000847,
+          0.001815103003034311,
+          0.0024245349807252028,
+          0.0022831260888744537,
+          0.003275072125358678
+        ],
+        "pred_label": "black-white"
+      },
+      {
+        "id": "informal_fallacies:538",
+        "true_label": "slippery_slope",
+        "avg_probs": [
+          0.0017740050343449695,
+          0.002108233104599562,
+          0.002118305907509611,
+          0.0014649560700065608,
+          0.0020526318774472347,
+          0.9861985996154904,
+          0.002482252741218845,
+          0.0018010156493827683
+        ],
+        "pred_label": "slippery_slope"
+      },
+      {
+        "id": "informal_fallacies:311",
+        "true_label": "natural",
+        "avg_probs": [
+          0.002531157757234081,
+          0.002495139862211031,
+          0.0015996579414235105,
+          0.9861807205946226,
+          0.0020403145756229123,
+          0.0015988502568042603,
+          0.001914412419736563,
+          0.0016397465923451069
+        ],
+        "pred_label": "natural"
+      },
+      {
+        "id": "informal_fallacies:662",
+        "true_label": "worse_problems",
+        "avg_probs": [
+          0.00214445171713385,
+          0.0028242597496797406,
+          0.0019577481161612213,
+          0.002128030999651237,
+          0.001655800700709589,
+          0.002127687348620272,
+          0.001821712190781458,
+          0.9853403091772627
+        ],
+        "pred_label": "worse_problems"
+      },
+      {
+        "id": "informal_fallacies:330",
+        "true_label": "natural",
+        "avg_probs": [
+          0.002662993942075364,
+          0.0027071003232634,
+          0.0013657349667031717,
+          0.9862645972337708,
+          0.0021058760114466943,
+          0.001532788596497771,
+          0.001671770107545105,
+          0.001689138818697733
+        ],
+        "pred_label": "natural"
+      },
+      {
+        "id": "informal_fallacies:688",
+        "true_label": "worse_problems",
+        "avg_probs": [
+          0.008255578658932514,
+          0.011254727474605208,
+          0.012792550872870371,
+          0.026968661794083422,
+          0.006749663272466574,
+          0.01317995079089912,
+          0.26983619243812657,
+          0.650962674698016
+        ],
+        "pred_label": "worse_problems"
+      },
+      {
+        "id": "informal_fallacies:559",
+        "true_label": "tradition",
+        "avg_probs": [
+          0.001884334214518052,
+          0.0020687740503816925,
+          0.002707734668263105,
+          0.0032719886625293126,
+          0.0022044656711256976,
+          0.0024612293451904245,
+          0.9832114915971205,
+          0.002189981790871215
+        ],
+        "pred_label": "tradition"
+      },
+      {
+        "id": "informal_fallacies:21",
+        "true_label": "authority",
+        "avg_probs": [
+          0.9857278402130502,
+          0.002093247619080213,
+          0.0015036545078746756,
+          0.002548671625939561,
+          0.0029094159403657,
+          0.0020445925222694265,
+          0.0014600165681434324,
+          0.0017125610032769798
+        ],
+        "pred_label": "authority"
+      },
+      {
+        "id": "informal_fallacies:177",
+        "true_label": "black-white",
+        "avg_probs": [
+          0.0022785369953530724,
+          0.9838938061419663,
+          0.0026605996374962776,
+          0.0029302516607617067,
+          0.0017969663487872282,
+          0.0020706170861916045,
+          0.0021209083635845057,
+          0.002248313765859256
+        ],
+        "pred_label": "black-white"
+      },
+      {
+        "id": "informal_fallacies:328",
+        "true_label": "natural",
+        "avg_probs": [
+          0.0019037136280117232,
+          0.0021427857105680457,
+          0.0024520205378984355,
+          0.0027600013712765813,
+          0.002452529012869096,
+          0.002640945905781521,
+          0.9833793164023827,
+          0.0022686874312119938
+        ],
+        "pred_label": "tradition"
+      },
+      {
+        "id": "informal_fallacies:563",
+        "true_label": "tradition",
+        "avg_probs": [
+          0.00456407185879379,
+          0.002937807006280472,
+          0.003942164508598832,
+          0.0034536965328551177,
+          0.0062657070201174335,
+          0.0033162945919527334,
+          0.9726938022969117,
+          0.00282645618448988
+        ],
+        "pred_label": "tradition"
+      },
+      {
+        "id": "informal_fallacies:27",
+        "true_label": "authority",
+        "avg_probs": [
+          0.9850157755363161,
+          0.002126638516559398,
+          0.0017610539463568467,
+          0.002524631977925747,
+          0.0025169364446652335,
+          0.002596086028895662,
+          0.0014360802144122865,
+          0.0020227973348687298
+        ],
+        "pred_label": "authority"
+      },
+      {
+        "id": "informal_fallacies:258",
+        "true_label": "hasty_generalization",
+        "avg_probs": [
+          0.0027464389013286366,
+          0.0019267960663115874,
+          0.9811047109927792,
+          0.0019837742489314325,
+          0.0040538819289998185,
+          0.003776079387234348,
+          0.002451359885421362,
+          0.0019569585889938276
+        ],
+        "pred_label": "hasty_generalization"
+      },
+      {
+        "id": "informal_fallacies:165",
+        "true_label": "black-white",
+        "avg_probs": [
+          0.002541619775603212,
+          0.982850906166249,
+          0.0022710760063921307,
+          0.003833708341570997,
+          0.0017920408139584904,
+          0.002358529283762791,
+          0.0019251011677149034,
+          0.0024270184447486446
+        ],
+        "pred_label": "black-white"
+      },
+      {
+        "id": "informal_fallacies:352",
+        "true_label": "natural",
+        "avg_probs": [
+          0.002603638883714769,
+          0.002851890593725829,
+          0.0013558409817419328,
+          0.986165995165202,
+          0.0019369130800844497,
+          0.0016012515172152406,
+          0.001724357553320854,
+          0.001760112224994919
+        ],
+        "pred_label": "natural"
+      },
+      {
+        "id": "informal_fallacies:35",
+        "true_label": "authority",
+        "avg_probs": [
+          0.9847610437867325,
+          0.0017964490678759933,
+          0.00200818545006524,
+          0.002303645287112236,
+          0.0028604200536549262,
+          0.002492626420037274,
+          0.001870057484531428,
+          0.0019075724499903331
+        ],
+        "pred_label": "authority"
+      },
+      {
+        "id": "informal_fallacies:79",
+        "true_label": "authority",
+        "avg_probs": [
+          0.9850240974242911,
+          0.0022178396600212764,
+          0.00130382793136395,
+          0.0028158806362868333,
+          0.0028568135165081055,
+          0.0018720001678498833,
+          0.002151619444983845,
+          0.0017579212186951414
+        ],
+        "pred_label": "authority"
+      },
+      {
+        "id": "informal_fallacies:713",
+        "true_label": "worse_problems",
+        "avg_probs": [
+          0.002058130419261766,
+          0.0023984115774126503,
+          0.0026391403949539926,
+          0.0019810035848589124,
+          0.001641842912422487,
+          0.0021802909736658867,
+          0.002059542700101955,
+          0.9850416374373223
+        ],
+        "pred_label": "worse_problems"
+      },
+      {
+        "id": "informal_fallacies:162",
+        "true_label": "black-white",
+        "avg_probs": [
+          0.0026205012690836407,
+          0.9826248692191245,
+          0.002764406766895989,
+          0.0030962959176574004,
+          0.0022807776408903142,
+          0.0021864777310315014,
+          0.002381557065616931,
+          0.002045114389699786
+        ],
+        "pred_label": "black-white"
+      },
+      {
+        "id": "informal_fallacies:67",
+        "true_label": "authority",
+        "avg_probs": [
+          0.9859435230017206,
+          0.0020375520290820195,
+          0.0015273528870334084,
+          0.0025310300016372356,
+          0.0026587078445751092,
+          0.0021003261303899163,
+          0.0015458032418316325,
+          0.0016557048637299294
+        ],
+        "pred_label": "authority"
+      },
+      {
+        "id": "informal_fallacies:247",
+        "true_label": "hasty_generalization",
+        "avg_probs": [
+          0.0027694002579400643,
+          0.0020774420841758235,
+          0.9830040383880363,
+          0.0020156310769393207,
+          0.0019859603396086885,
+          0.003268195862394809,
+          0.0027055766948194575,
+          0.0021737552960855873
+        ],
+        "pred_label": "hasty_generalization"
+      },
+      {
+        "id": "informal_fallacies:584",
+        "true_label": "tradition",
+        "avg_probs": [
+          0.0018416848000849897,
+          0.001894450617243287,
+          0.0026304889433886743,
+          0.002706977003468322,
+          0.0021479057036420173,
+          0.0021971567207132187,
+          0.9842026508794726,
+          0.00237868533198708
+        ],
+        "pred_label": "tradition"
+      },
+      {
+        "id": "informal_fallacies:199",
+        "true_label": "hasty_generalization",
+        "avg_probs": [
+          0.0025735836529309107,
+          0.0019233701916108938,
+          0.9832691721828359,
+          0.002127495908983635,
+          0.0018008934926448516,
+          0.0035649181278787547,
+          0.002453783131718132,
+          0.002286783311396981
+        ],
+        "pred_label": "hasty_generalization"
+      },
+      {
+        "id": "informal_fallacies:717",
+        "true_label": "worse_problems",
+        "avg_probs": [
+          0.0022262037906879166,
+          0.003058670081652389,
+          0.004728530805429802,
+          0.0018757466293149306,
+          0.0016727727068449893,
+          0.002331566703429428,
+          0.001985808959281358,
+          0.9821207003233592
+        ],
+        "pred_label": "worse_problems"
+      },
+      {
+        "id": "informal_fallacies:455",
+        "true_label": "slippery_slope",
+        "avg_probs": [
+          0.0018729693887095398,
+          0.0019198365274438222,
+          0.002436668526067245,
+          0.0014408908596888013,
+          0.002110756056450759,
+          0.9859010446575065,
+          0.0025587357550973877,
+          0.0017590982290358697
+        ],
+        "pred_label": "slippery_slope"
+      },
+      {
+        "id": "informal_fallacies:544",
+        "true_label": "tradition",
+        "avg_probs": [
+          0.0018914710782800528,
+          0.0020041692620726454,
+          0.0026606053799880904,
+          0.002748199863598023,
+          0.001834486625901233,
+          0.002686696107738086,
+          0.9837444812404876,
+          0.0024298904419342883
+        ],
+        "pred_label": "tradition"
+      },
+      {
+        "id": "informal_fallacies:80",
+        "true_label": "authority",
+        "avg_probs": [
+          0.9854754577420468,
+          0.0022092724836376364,
+          0.0012269537358505372,
+          0.00231181549165735,
+          0.00341574180179449,
+          0.0020572683860086,
+          0.001711942101547384,
+          0.0015915482574574043
+        ],
+        "pred_label": "authority"
+      },
+      {
+        "id": "informal_fallacies:222",
+        "true_label": "hasty_generalization",
+        "avg_probs": [
+          0.0026415281902769194,
+          0.0019394052644642634,
+          0.982701094043396,
+          0.0024412790911176414,
+          0.0021686523787789722,
+          0.002973193400048769,
+          0.00294833082282829,
+          0.0021865168090889264
+        ],
+        "pred_label": "hasty_generalization"
+      },
+      {
+        "id": "informal_fallacies:398",
+        "true_label": "population",
+        "avg_probs": [
+          0.002526398649822793,
+          0.002095542612047596,
+          0.0029080885349125583,
+          0.002720831908179476,
+          0.9831689460749891,
+          0.0018680703374864104,
+          0.0025857901556418255,
+          0.0021263317269204344
+        ],
+        "pred_label": "population"
+      },
+      {
+        "id": "informal_fallacies:382",
+        "true_label": "population",
+        "avg_probs": [
+          0.020977441046833037,
+          0.002474252070454315,
+          0.003923355265695065,
+          0.0034054475824630255,
+          0.9617386047081763,
+          0.0026003197204937014,
+          0.0026945161074769467,
+          0.0021860634984074514
+        ],
+        "pred_label": "population"
+      },
+      {
+        "id": "informal_fallacies:426",
+        "true_label": "population",
+        "avg_probs": [
+          0.019295483886787257,
+          0.10471715796233022,
+          0.02856684449673259,
+          0.011297458981836947,
+          0.5790400207377885,
+          0.23708134646627527,
+          0.012481114759281873,
+          0.007520572708967399
+        ],
+        "pred_label": "population"
+      },
+      {
+        "id": "informal_fallacies:254",
+        "true_label": "hasty_generalization",
+        "avg_probs": [
+          0.005880205573964386,
+          0.004696042993144001,
+          0.7676548684797623,
+          0.004362766361420392,
+          0.1970456762967124,
+          0.008997586949912147,
+          0.005393908617881419,
+          0.0059689447272029085
+        ],
+        "pred_label": "hasty_generalization"
+      },
+      {
+        "id": "informal_fallacies:337",
+        "true_label": "natural",
+        "avg_probs": [
+          0.0026151910522730112,
+          0.0025006503561011,
+          0.0014931511398776584,
+          0.9862720998548519,
+          0.0018993068640754847,
+          0.0017530589455657555,
+          0.001834847738800702,
+          0.001631694048454568
+        ],
+        "pred_label": "natural"
+      },
+      {
+        "id": "informal_fallacies:608",
+        "true_label": "tradition",
+        "avg_probs": [
+          0.0025940465750502553,
+          0.0020450057173616765,
+          0.0030659240325298866,
+          0.0021137090774515444,
+          0.002619778088248819,
+          0.0031750306200413504,
+          0.9819400686885087,
+          0.0024464372008078214
+        ],
+        "pred_label": "tradition"
+      },
+      {
+        "id": "informal_fallacies:108",
+        "true_label": "black-white",
+        "avg_probs": [
+          0.002122236020296793,
+          0.9836258543409713,
+          0.0026779369501499523,
+          0.0029501045915302283,
+          0.002189276555348448,
+          0.002152976183915806,
+          0.002135761453502582,
+          0.002145853904284931
+        ],
+        "pred_label": "black-white"
+      },
+      {
+        "id": "informal_fallacies:674",
+        "true_label": "worse_problems",
+        "avg_probs": [
+          0.0017923142980352412,
+          0.0027836120180184153,
+          0.002016534358671028,
+          0.0023971931619929166,
+          0.001578962363364031,
+          0.002203456663819251,
+          0.0019464135015634207,
+          0.9852815136345356
+        ],
+        "pred_label": "worse_problems"
+      },
+      {
+        "id": "informal_fallacies:117",
+        "true_label": "black-white",
+        "avg_probs": [
+          0.002339265353862809,
+          0.9826762019881494,
+          0.002578738008065395,
+          0.003578583673388229,
+          0.0021283885609243445,
+          0.002081602872847081,
+          0.0021528219002768635,
+          0.0024643976424858272
+        ],
+        "pred_label": "black-white"
+      },
+      {
+        "id": "informal_fallacies:482",
+        "true_label": "slippery_slope",
+        "avg_probs": [
+          0.0019485508290566149,
+          0.0018594428074460024,
+          0.002517732720773565,
+          0.0014995395347837813,
+          0.0021715285951171477,
+          0.9854608963655761,
+          0.002785013574197873,
+          0.0017572955730489022
+        ],
+        "pred_label": "slippery_slope"
+      },
+      {
+        "id": "informal_fallacies:533",
+        "true_label": "slippery_slope",
+        "avg_probs": [
+          0.0019253142748496563,
+          0.002150935928953288,
+          0.002268948930733235,
+          0.0015116935991584199,
+          0.0022789221999727884,
+          0.9856895260577495,
+          0.0026592444741922587,
+          0.0015154145343907683
+        ],
+        "pred_label": "slippery_slope"
+      },
+      {
+        "id": "informal_fallacies:709",
+        "true_label": "worse_problems",
+        "avg_probs": [
+          0.002275051924681609,
+          0.0022843369732814703,
+          0.002433446312322756,
+          0.0019958573276136677,
+          0.0019367356408437459,
+          0.0019369268048772,
+          0.002245428731262197,
+          0.9848922162851174
+        ],
+        "pred_label": "worse_problems"
+      },
+      {
+        "id": "informal_fallacies:465",
+        "true_label": "slippery_slope",
+        "avg_probs": [
+          0.0016864155805067875,
+          0.0021344471227317968,
+          0.0021169693597473073,
+          0.0013067653783242553,
+          0.002027145314108307,
+          0.9859882955053593,
+          0.002698005214228338,
+          0.002041956524993786
+        ],
+        "pred_label": "slippery_slope"
+      },
+      {
+        "id": "informal_fallacies:646",
+        "true_label": "worse_problems",
+        "avg_probs": [
+          0.0020247338881124698,
+          0.0026596275258178345,
+          0.001869737544214605,
+          0.0022344510340748767,
+          0.0016687178148423617,
+          0.002321867833834355,
+          0.0021690229124407393,
+          0.9850518414466629
+        ],
+        "pred_label": "worse_problems"
+      },
+      {
+        "id": "informal_fallacies:191",
+        "true_label": "hasty_generalization",
+        "avg_probs": [
+          0.0025511489705095495,
+          0.0020124295583968744,
+          0.9831353484034799,
+          0.0018610447770054275,
+          0.0021513704447996456,
+          0.003721310730053512,
+          0.0024589160171794872,
+          0.0021084310985755505
+        ],
+        "pred_label": "hasty_generalization"
+      },
+      {
+        "id": "informal_fallacies:92",
+        "true_label": "black-white",
+        "avg_probs": [
+          0.0033196967034900523,
+          0.9750631812415946,
+          0.004569263546941558,
+          0.004290835268791459,
+          0.003527971508810468,
+          0.002886622143686508,
+          0.0027597372986596217,
+          0.0035826922880258473
+        ],
+        "pred_label": "black-white"
+      },
+      {
+        "id": "informal_fallacies:481",
+        "true_label": "slippery_slope",
+        "avg_probs": [
+          0.006851101684559031,
+          0.18819338119374687,
+          0.007954097316560028,
+          0.0066937501853080806,
+          0.00815484733239132,
+          0.7638266532003098,
+          0.009640954411476001,
+          0.008685214675648931
+        ],
+        "pred_label": "slippery_slope"
+      },
+      {
+        "id": "informal_fallacies:85",
+        "true_label": "authority",
+        "avg_probs": [
+          0.8612467388525297,
+          0.006553817315764383,
+          0.004779152171828313,
+          0.008140897192465343,
+          0.01814695829077681,
+          0.013090232588050298,
+          0.0819861695138332,
+          0.006056034074751954
+        ],
+        "pred_label": "authority"
+      },
+      {
+        "id": "informal_fallacies:130",
+        "true_label": "black-white",
+        "avg_probs": [
+          0.00238847787844578,
+          0.9823621346982538,
+          0.002408145469968424,
+          0.0034429269248647263,
+          0.002620425209591329,
+          0.0023767400933534465,
+          0.002010551706648125,
+          0.0023905980188743212
+        ],
+        "pred_label": "black-white"
+      },
+      {
+        "id": "informal_fallacies:238",
+        "true_label": "hasty_generalization",
+        "avg_probs": [
+          0.007034292158422234,
+          0.0055157384725749116,
+          0.7605413599020775,
+          0.004488659576711612,
+          0.20022735724891633,
+          0.010714627440925347,
+          0.0051607151364451345,
+          0.006317250063926984
+        ],
+        "pred_label": "hasty_generalization"
+      },
+      {
+        "id": "informal_fallacies:421",
+        "true_label": "population",
+        "avg_probs": [
+          0.0028596712963008717,
+          0.0022901496643277976,
+          0.0022910416789787055,
+          0.0026371456632663082,
+          0.9833061036808237,
+          0.001968386474302959,
+          0.002511787805344144,
+          0.0021357137366554237
+        ],
+        "pred_label": "population"
+      },
+      {
+        "id": "informal_fallacies:416",
+        "true_label": "population",
+        "avg_probs": [
+          0.0022677536522170967,
+          0.002075399079656528,
+          0.004319009202074199,
+          0.002460035826702795,
+          0.9826192170059025,
+          0.002134801023943593,
+          0.0022982755229984993,
+          0.0018255086865047634
+        ],
+        "pred_label": "population"
+      },
+      {
+        "id": "informal_fallacies:656",
+        "true_label": "worse_problems",
+        "avg_probs": [
+          0.0020311657193912308,
+          0.0024586010042885764,
+          0.0020534173593939357,
+          0.0018092926293712813,
+          0.0017589594652710218,
+          0.0020504715918027504,
+          0.002098775895514241,
+          0.9857393163349669
+        ],
+        "pred_label": "worse_problems"
+      },
+      {
+        "id": "informal_fallacies:508",
+        "true_label": "slippery_slope",
+        "avg_probs": [
+          0.0018959455184729777,
+          0.002226287991700791,
+          0.002375873259208482,
+          0.0015507878803713393,
+          0.002125666185467521,
+          0.9858827131984426,
+          0.002421040042248964,
+          0.0015216859240873132
+        ],
+        "pred_label": "slippery_slope"
+      }
+    ]
+  },
+  "st3": {
+    "f1_macro": 0.73542,
+    "f1_per_class": {
+      "epistemic-external": 1.0,
+      "epistemic-internal": 0.97872,
+      "practical-external": 0.0,
+      "practical-internal": 0.96296
+    },
+    "temperatures": [
+      {
+        "exp": "exp_0073",
+        "temperature": 1.2784
+      }
+    ],
+    "n_sources": 1,
+    "dev_calibrated": [
+      {
+        "id": "informal_fallacies:853",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.02354159354104337,
+          0.9691894297405108,
+          0.005907809009121119,
+          0.0013611677093247764
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1117",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.016680415867005784,
+          0.05841545990068741,
+          0.9202803194776173,
+          0.00462380475468944
+        ],
+        "pred_label": "practical-external"
+      },
+      {
+        "id": "informal_fallacies:1333",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.003162410893348269,
+          0.9943727633319587,
+          0.0016775180832452731,
+          0.000787307691447962
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1389",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0036680513558417023,
+          0.9942502658768231,
+          0.0011858442058547602,
+          0.0008958385614804685
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1342",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.0010969922881211291,
+          0.001790586503782425,
+          0.006740209472197647,
+          0.9903722117358988
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1252",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0033920362336875994,
+          0.9938622147996962,
+          0.00144888313536919,
+          0.0012968658312469063
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1195",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.014029208603642217,
+          0.9749211727163263,
+          0.010162394804768302,
+          0.000887223875263153
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1236",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0023182386027223866,
+          0.9953066842092985,
+          0.0013753684099770188,
+          0.0009997087780020985
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1353",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0027391680337549833,
+          0.9950620653882141,
+          0.001283493627533662,
+          0.0009152729504973176
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1179",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.002851452699911832,
+          0.9903258139160261,
+          0.005659689021637826,
+          0.0011630443624239776
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:963",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.0010373123354361904,
+          0.0016413127441895017,
+          0.004754895622651281,
+          0.9925664792977229
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1017",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0044622869594364185,
+          0.991885278560858,
+          0.0029579878421643834,
+          0.0006944466375411945
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:833",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.05999549023357316,
+          0.12406295887523668,
+          0.8084677702288754,
+          0.007473780662314781
+        ],
+        "pred_label": "practical-external"
+      },
+      {
+        "id": "informal_fallacies:1084",
+        "true_label": "epistemic-external",
+        "avg_probs": [
+          0.9835078360647613,
+          0.005947654165655849,
+          0.009243094128867209,
+          0.001301415640715655
+        ],
+        "pred_label": "epistemic-external"
+      },
+      {
+        "id": "informal_fallacies:1196",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0027853486890461535,
+          0.9942178067298081,
+          0.0019428064598218165,
+          0.0010540381213239227
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1133",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.002326373541920711,
+          0.9943378959178624,
+          0.0024714657225104746,
+          0.000864264817706403
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:733",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0029617414458663637,
+          0.9912109023873893,
+          0.004664452797268402,
+          0.001162903369475809
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:857",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0024295464547753757,
+          0.9948814054044552,
+          0.0016014263101123874,
+          0.0010876218306568456
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:993",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0024301540163633095,
+          0.994304277318822,
+          0.0022372096306245343,
+          0.0010283590341902595
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:970",
+        "true_label": "epistemic-external",
+        "avg_probs": [
+          0.9917631074851639,
+          0.0038978935811082725,
+          0.0032805130113498257,
+          0.0010584859223779922
+        ],
+        "pred_label": "epistemic-external"
+      },
+      {
+        "id": "informal_fallacies:1417",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.005690565968610387,
+          0.9821752991575804,
+          0.011125973885871228,
+          0.0010081609879380074
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1171",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.0013623508090583744,
+          0.0018022549500436543,
+          0.021658194309868383,
+          0.9751771999310296
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1300",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.007210909001328619,
+          0.9741773810219915,
+          0.01729188133592732,
+          0.0013198286407524764
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:976",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.0014058202523802286,
+          0.0029014254990168196,
+          0.0034316371930194186,
+          0.9922611170555834
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:996",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0022324548855317664,
+          0.9944864458758904,
+          0.0024735507020332303,
+          0.0008075485365447993
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1298",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.0022480011114311767,
+          0.001670095904847977,
+          0.29241444831456326,
+          0.7036674546691576
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1073",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.003055578941087864,
+          0.9920391189835668,
+          0.004067037559821379,
+          0.000838264515524002
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1041",
+        "true_label": "epistemic-external",
+        "avg_probs": [
+          0.9944052837399433,
+          0.0035610587003821947,
+          0.0009864095675035738,
+          0.001047247992170902
+        ],
+        "pred_label": "epistemic-external"
+      },
+      {
+        "id": "informal_fallacies:1382",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.003295399775355575,
+          0.9946097966615965,
+          0.001337231112756714,
+          0.000757572450291031
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1318",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0025457084140317753,
+          0.9954131463945561,
+          0.0011184173635647768,
+          0.0009227278278473739
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:887",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.003599853318454216,
+          0.9939711844387606,
+          0.0015382909490261562,
+          0.0008906712937588977
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1369",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.00272757962658004,
+          0.9942486749272962,
+          0.0022355690666648956,
+          0.0007881763794590504
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1229",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0018879485575287135,
+          0.9939885954476425,
+          0.003197017330649061,
+          0.0009264386641798792
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1335",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.005123993651307691,
+          0.9887270597881803,
+          0.005069788061192127,
+          0.0010791584993199255
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:912",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.002958181473544253,
+          0.9947724216138951,
+          0.0010410859302910458,
+          0.0012283109822696973
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1189",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0037448645300450054,
+          0.9833194633415603,
+          0.011904577640350224,
+          0.0010310944880443926
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:933",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.004867262813968325,
+          0.9913368703212847,
+          0.0030217077602740115,
+          0.000774159104472912
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1095",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0027164496333018707,
+          0.9952010131000034,
+          0.0009909728920605885,
+          0.0010915643746341555
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:916",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.003335235535412456,
+          0.9940378525354847,
+          0.002037843999085499,
+          0.0005890679300171347
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1269",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.002231018182081135,
+          0.9947178023257749,
+          0.0021346442623086893,
+          0.0009165352298353179
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1146",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.003464113903826436,
+          0.9910237921285688,
+          0.004751825300766519,
+          0.0007602686668379592
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1202",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.008492472615427606,
+          0.9023268112344421,
+          0.08627784807156035,
+          0.0029028680785698428
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1132",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.002027162538042117,
+          0.0027918387163062843,
+          0.14992085662340146,
+          0.8452601421222501
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:866",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0021762478063246434,
+          0.9954425019598249,
+          0.0013827312855418184,
+          0.0009985189483088471
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1331",
+        "true_label": "epistemic-external",
+        "avg_probs": [
+          0.9833401320372221,
+          0.007837161147805022,
+          0.007027054012066193,
+          0.0017956528029065342
+        ],
+        "pred_label": "epistemic-external"
+      },
+      {
+        "id": "informal_fallacies:797",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.005836686012398874,
+          0.9889285573881101,
+          0.004186601834821021,
+          0.0010481547646699746
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:955",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.0019548915305477726,
+          0.002303857038785028,
+          0.2729441340722699,
+          0.7227971173583972
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:958",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.002844762578295712,
+          0.994103808412802,
+          0.0022344728696272425,
+          0.0008169561392750908
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1404",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.002186843098186432,
+          0.9945614197397512,
+          0.002506552626652768,
+          0.0007451845354093958
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:792",
+        "true_label": "epistemic-external",
+        "avg_probs": [
+          0.9912077432892735,
+          0.006172421835730656,
+          0.0017528815858715394,
+          0.0008669532891245221
+        ],
+        "pred_label": "epistemic-external"
+      },
+      {
+        "id": "informal_fallacies:1224",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.0013438197545603341,
+          0.0026145679686222765,
+          0.0038470105628942413,
+          0.992194601713923
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1052",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.015372892604459735,
+          0.9351012594459601,
+          0.04629743991674504,
+          0.0032284080328351676
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1199",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.004797692038209874,
+          0.9822134531827168,
+          0.01206473763084033,
+          0.0009241171482329572
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:960",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.000862023901465581,
+          0.0013779408520629556,
+          0.006831940649069379,
+          0.9909280945974022
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1217",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.02435217424001289,
+          0.9550025504031199,
+          0.019543555332967012,
+          0.0011017200239002963
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1396",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0031958922143678885,
+          0.9945148322728786,
+          0.0015485448179575422,
+          0.0007407306947958065
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:748",
+        "true_label": "epistemic-external",
+        "avg_probs": [
+          0.861168804159297,
+          0.11863885337285814,
+          0.01814660773503926,
+          0.002045734732805465
+        ],
+        "pred_label": "epistemic-external"
+      },
+      {
+        "id": "informal_fallacies:816",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.016576151029278903,
+          0.7567239361291304,
+          0.20726451302656607,
+          0.019435399815024616
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:961",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.006079026193640361,
+          0.9920134764323788,
+          0.0009604448945869779,
+          0.0009470524793937741
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1049",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0021345972229958586,
+          0.9939232442833928,
+          0.0028548476712196747,
+          0.0010873108223915387
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1249",
+        "true_label": "practical-external",
+        "avg_probs": [
+          0.0020087087317251597,
+          0.0021125566446111126,
+          0.14224791516359298,
+          0.8536308194600708
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1438",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.001001988650253957,
+          0.0013917334438485417,
+          0.015432683496222194,
+          0.9821735944096753
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1406",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.0020998867150131377,
+          0.9956101969218095,
+          0.0014450772542914444,
+          0.0008448391088857906
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:1092",
+        "true_label": "epistemic-external",
+        "avg_probs": [
+          0.44692833422012496,
+          0.414496698900274,
+          0.13353947694226828,
+          0.005035489937332836
+        ],
+        "pred_label": "epistemic-external"
+      },
+      {
+        "id": "informal_fallacies:1043",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.003609336653428496,
+          0.9891095981849244,
+          0.006337929321674549,
+          0.0009431358399726586
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:939",
+        "true_label": "epistemic-internal",
+        "avg_probs": [
+          0.003189511884404718,
+          0.9943032727848874,
+          0.0018020099538202051,
+          0.000705205376887656
+        ],
+        "pred_label": "epistemic-internal"
+      },
+      {
+        "id": "informal_fallacies:871",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.0026617420282475735,
+          0.0023486503186859325,
+          0.389040121634311,
+          0.6059494860187554
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1291",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.0011230302579608715,
+          0.0014359763038705447,
+          0.0055805220920661204,
+          0.9918604713461024
+        ],
+        "pred_label": "practical-internal"
+      },
+      {
+        "id": "informal_fallacies:1191",
+        "true_label": "practical-internal",
+        "avg_probs": [
+          0.001019610965343041,
+          0.001009990835019426,
+          0.010295023058432466,
+          0.9876753751412051
+        ],
+        "pred_label": "practical-internal"
+      }
+    ]
+  },
+  "track": "enhanced",
+  "wall_clock_s": 206.8
+}

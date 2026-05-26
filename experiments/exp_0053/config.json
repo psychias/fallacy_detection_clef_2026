@@ -1,0 +1,31 @@
+﻿{
+    "subtask":  "st3",
+    "hypothesis":  "Focal loss gamma=2 outperforms weighted_ce on ST3 322:93:50:8 imbalance",
+    "kind":  "train",
+    "track":  "base",
+    "data":  {
+                 "mix_ratio":  "real_plus_synth",
+                 "synth_versions":  [
+                                        "synth_v002_st3"
+                                    ],
+                 "real":  true
+             },
+    "time_budget_s":  1500,
+    "phase":  "3",
+    "train":  {
+                  "lr":  1E-05,
+                  "max_len":  256,
+                  "focal_gamma":  2,
+                  "batch_size":  8,
+                  "epochs":  15,
+                  "synth_weight":  0.5,
+                  "loss":  "focal",
+                  "patience":  3
+              },
+    "parent_id":  "exp_0026",
+    "depends_on":  [
+
+                   ],
+    "idea_ref":  "[P3] Focal loss gamma=2 for ST3 base extreme imbalance",
+    "backbone":  "roberta-large"
+}

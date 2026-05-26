@@ -1,0 +1,15 @@
+{
+  "kind": "diagnostic",
+  "script": "train.py",
+  "parent_id": "exp_0073",
+  "idea_ref": "[P2.THRESH] Per-class threshold sweep on ST3 dev probs - target pe recovery",
+  "phase": "2",
+  "hypothesis": "pe class probability never crosses argmax bar against ee/pi/ei, but pe may be second-most-probable. A per-class threshold of ~0.15 for pe (vs 0.5 for others) could surface those predictions and improve macro-F1.",
+  "depends_on": ["exp_0121"],
+  "time_budget_s": 300,
+  "subtask": "st3",
+  "track": "enhanced",
+  "source_exp": "exp_0073",
+  "calibrated_source": "exp_0121",
+  "priority": 89
+}

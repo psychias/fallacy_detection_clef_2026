@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": null,
+  "idea_ref": "[P0] DeBERTa-v3-base on ST3 base track (scheme classification 4-way)",
+  "phase": "0",
+  "depends_on": [],
+  "time_budget_s": 540,
+  "hypothesis": "DeBERTa-v3-base establishes the ST3 base-track baseline for scheme classification",
+  "subtask": "st3",
+  "track": "base",
+  "backbone": "microsoft/deberta-v3-base",
+  "data": {"real": true, "synth_versions": [], "mix_ratio": "real_only"},
+  "train": {"lr": 2e-5, "batch_size": 16, "epochs": 10, "loss": "weighted_ce", "max_len": 256}
+}

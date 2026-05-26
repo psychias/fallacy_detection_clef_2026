@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0035",
+  "idea_ref": "[R2.KITCHEN] ST1 enhanced + synth_v002 + pseudo_v001 @ max_len=256",
+  "phase": "2",
+  "hypothesis": "Kitchen sink: add pseudo-labeled test data to best ST1 config (exp_0035). Keeping max_len=256 since 384 regressed for ST1.",
+  "depends_on": ["exp_0070"],
+  "time_budget_s": 1800,
+  "subtask": "st1",
+  "track": "enhanced",
+  "backbone": "roberta-large",
+  "data": {"real": true, "synth_versions": ["synth_v002_st1st2", "pseudo_v001_st1"], "mix_ratio": "real_plus_synth"},
+  "train": {"lr": 1e-5, "max_len": 256, "batch_size": 8, "epochs": 12, "synth_weight": 0.5, "loss": "ce", "patience": 3}
+}

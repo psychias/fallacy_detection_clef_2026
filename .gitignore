@@ -1,0 +1,53 @@
+# Secrets / local config — never commit
+.secrets/
+*.env
+
+# LaTeX build artefacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.pdf
+
+# Backup files from the iterative writing pipeline
+*.bak
+*.bak2
+*.preBITUA.bak
+*.prePHASE2.bak
+*.preLENGTH.bak
+*.retired-PHASE2.bak
+
+# Editor / OS cruft
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Training artefacts produced by reproduction runs (do not commit)
+experiments/*/cache/
+experiments/*/ckpt/
+experiments/*/runs/
+experiments/*/wandb/
+experiments/*/status.json
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+
+# Hugging Face cache
+.cache/
+hf_cache/

@@ -1,0 +1,13 @@
+{
+  "kind": "diagnostic",
+  "script": "train.py",
+  "parent_id": null,
+  "idea_ref": "[T1.LLM] Qwen2.5-3B-Instruct zero-shot ST3 — LLM pipeline validation",
+  "phase": "3",
+  "hypothesis": "Validate the LLM pipeline on T4. Qwen2.5-3B-Instruct at float16 needs ~6GB VRAM. Zero-shot prompt asks the model to classify argument goal (practical/epistemic) and basis (internal/external). Even modest accuracy on basis axis would beat current pe F1=0. Also tests ST1 and ST2 zero-shot as baselines.",
+  "depends_on": [],
+  "time_budget_s": 1200,
+  "subtask": "st3",
+  "track": "enhanced",
+  "backbone": "Qwen/Qwen2.5-3B-Instruct"
+}

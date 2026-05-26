@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/fallacy_detection/experiments/exp_0143/generate.py", line 253, in main
+    metrics = evaluate(true_ids, pred_ids, id2label, subtask=subtask)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: evaluate() got multiple values for argument 'subtask'

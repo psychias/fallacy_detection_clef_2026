@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0073",
+  "idea_ref": "[T1.ARCH] ModernBERT-large ST3 enhanced — architecture comparison vs RoBERTa",
+  "phase": "3",
+  "hypothesis": "ModernBERT-large vs RoBERTa-large on ST3 enhanced. RoBERTa hit 0.735 (exp_0073). ModernBERT's longer context may capture parent/title context better for scheme classification. Same config as exp_0073 but @512.",
+  "depends_on": [],
+  "time_budget_s": 1200,
+  "subtask": "st3",
+  "track": "enhanced",
+  "backbone": "answerdotai/ModernBERT-large",
+  "data": {"real": true, "synth_versions": ["synth_v002_st3", "pseudo_v001_st3"], "mix_ratio": "real_plus_synth"},
+  "train": {"lr": 1e-5, "max_len": 1024, "batch_size": 8, "epochs": 15, "synth_weight": 0.3, "loss": "weighted_ce", "patience": 3}
+}

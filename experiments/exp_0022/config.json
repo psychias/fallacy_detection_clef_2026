@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0013",
+  "idea_ref": "[ENH-TRACK] RoBERTa-large on ST1 enhanced track",
+  "phase": "1",
+  "depends_on": [],
+  "time_budget_s": 720,
+  "hypothesis": "RoBERTa-large + enhanced fields should push ST1 enhanced even higher than base's 0.892",
+  "subtask": "st1",
+  "track": "enhanced",
+  "backbone": "roberta-large",
+  "data": {"real": true, "synth_versions": [], "mix_ratio": "real_only"},
+  "train": {"lr": 1e-5, "batch_size": 8, "epochs": 10, "loss": "ce", "max_len": 256}
+}

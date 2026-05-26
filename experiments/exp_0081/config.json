@@ -1,0 +1,13 @@
+{
+  "kind": "diagnostic",
+  "script": "train.py",
+  "parent_id": "exp_0072",
+  "idea_ref": "[T1.GATE] Pseudo-label leak audit — verify exp_0072's 0.970 ST2 is real",
+  "phase": "3",
+  "hypothesis": "exp_0072 trains with pseudo_v001_st2 (test-set entries pseudo-labeled by exp_0065). Check: (1) no text overlap between pseudo training entries and dev split, (2) cosine similarity distribution between dev and pseudo examples, (3) token-level Jaccard overlap. If dev/pseudo overlap is high, 0.970 may be partly leaked.",
+  "depends_on": [],
+  "time_budget_s": 600,
+  "subtask": "st2",
+  "track": "enhanced",
+  "backbone": "roberta-large"
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "diagnostic",
+  "script": "train.py",
+  "parent_id": null,
+  "idea_ref": "[P1.ENS] Post-hoc ensemble from existing best models — temperature-calibrated logit avg",
+  "phase": "3",
+  "hypothesis": "Temperature-calibrate dev logits from exp_0035 (ST1), exp_0072 (ST2), exp_0073 (ST3), then average logits across any saved seeds. Even single-model calibration should improve macro-F1 by fixing confidence miscalibration.",
+  "depends_on": [],
+  "time_budget_s": 600,
+  "source_exps": {
+    "st1": ["exp_0035"],
+    "st2": ["exp_0072"],
+    "st3": ["exp_0073"]
+  },
+  "nli_member": {"exp": "exp_0082", "weight": 0.18, "subtasks": ["st3"], "note": "uncorrelated NLI signal for ST3 ensemble at 0.15-0.20"},
+  "track": "enhanced"
+}

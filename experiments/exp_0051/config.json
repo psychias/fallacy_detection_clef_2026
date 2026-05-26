@@ -1,0 +1,32 @@
+﻿{
+    "subtask":  "st3",
+    "hypothesis":  "If DeBERTa-v3-large works on ST1, apply same recipe to ST3 base+synth",
+    "kind":  "train",
+    "track":  "base",
+    "data":  {
+                 "mix_ratio":  "real_plus_synth",
+                 "synth_versions":  [
+                                        "synth_v002_st3"
+                                    ],
+                 "real":  true
+             },
+    "time_budget_s":  1500,
+    "phase":  "3",
+    "train":  {
+                  "epochs":  12,
+                  "loss":  "weighted_ce",
+                  "synth_weight":  0.5,
+                  "grad_clip":  1,
+                  "precision":  "bf16",
+                  "max_len":  256,
+                  "lr":  5E-06,
+                  "batch_size":  8,
+                  "patience":  3
+              },
+    "parent_id":  "exp_0049",
+    "depends_on":  [
+                       "exp_0049"
+                   ],
+    "idea_ref":  "[P3] DeBERTa-v3-large ST3 base + synth with bf16 + lower LR",
+    "backbone":  "microsoft/deberta-v3-large"
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "diagnostic",
+  "script": "train.py",
+  "parent_id": null,
+  "idea_ref": "[P1.SUBMIT] Submission dry-run — generate JSONL, verify format, test TIRA upload",
+  "phase": "3",
+  "hypothesis": "Generate dummy predictions from best models for all 6 slots (ST1/ST2/ST3 × base/enhanced), write JSONL in official format, validate schema. Catches formatting bugs now, not on day 19.",
+  "depends_on": [],
+  "time_budget_s": 600,
+  "source_exps": {
+    "st1_enh": "exp_0035",
+    "st2_enh": "exp_0072",
+    "st3_enh": "exp_0073",
+    "st1_base": "exp_0035",
+    "st2_base": "exp_0072",
+    "st3_base": "exp_0069"
+  }
+}

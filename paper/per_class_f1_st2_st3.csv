@@ -1,0 +1,13 @@
+subtask,exp_id,track,label,precision,recall,f1,support
+ST2,exp_0072,enhanced,authority,0.972,0.986,0.979,72
+ST2,exp_0072,enhanced,black_white,0.967,0.967,0.967,30
+ST2,exp_0072,enhanced,hasty_generalization,0.964,0.958,0.961,72
+ST2,exp_0072,enhanced,natural,1.000,1.000,1.000,21
+ST2,exp_0072,enhanced,population,0.948,0.971,0.959,68
+ST2,exp_0072,enhanced,slippery_slope,1.000,0.957,0.978,46
+ST2,exp_0072,enhanced,tradition,0.971,0.971,0.971,35
+ST2,exp_0072,enhanced,worse_problems,0.940,0.957,0.948,47
+ST3,exp_0073,enhanced,epistemic-internal,0.755,0.833,0.792,48
+ST3,exp_0073,enhanced,epistemic-external,0.790,0.830,0.810,53
+ST3,exp_0073,enhanced,practical-internal,0.821,0.718,0.766,39
+ST3,exp_0073,enhanced,practical-external,0.563,0.583,0.573,24

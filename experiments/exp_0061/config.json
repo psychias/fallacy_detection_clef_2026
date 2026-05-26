@@ -1,0 +1,11 @@
+{
+    "kind": "diagnostic",
+    "subtask": "all",
+    "hypothesis": "Check if >5% of entries exceed max_len=256 with RoBERTa tokenizer, which would mean silent truncation in all experiments.",
+    "backbone": "roberta-large",
+    "thresholds": [128, 256, 384, 512],
+    "script": "diagnostic_token_lengths.py",
+    "time_budget_s": 300,
+    "depends_on": [],
+    "phase": "3"
+}

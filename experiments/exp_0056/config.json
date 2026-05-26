@@ -1,0 +1,28 @@
+{
+    "top_p":  0.95,
+    "parent_id":  "exp_0030",
+    "models":  [
+                   "qwen/qwen3-32b",
+                   "google/gemma-3-27b-it"
+               ],
+    "targets":  {
+                    "practical-external":  50,
+                    "practical-internal":  0,
+                    "epistemic-external":  100,
+                    "epistemic-internal":  0
+                },
+    "verify":  true,
+    "hypothesis":  "Rare-class top-up synth (ee=100, pe=50 pairs) fills the gap v002 missed; concat with v002 gives balanced augmentation",
+    "depends_on":  [
+
+                   ],
+    "idea_ref":  "[P3] Rare-class top-up synth (ee+pe) to complement v002",
+    "kind":  "synth",
+    "script":  "generate.py",
+    "synth_version":  "synth_v003_st3",
+    "mode":  "st3",
+    "phase":  "3",
+    "seed":  123,
+    "time_budget_s":  4500,
+    "temperature":  0.9
+}

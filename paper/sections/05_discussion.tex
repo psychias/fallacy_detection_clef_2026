@@ -1,0 +1,49 @@
+This year we would like to reflect on the structural shape of the Touch\'{e} 2026 evaluation, particularly the enhanced-track design and on what our submissions can and cannot say about it. The four subsections below take the encoder--LLM comparison, the enhanced-track leakage question, the rare-class ceiling we encountered on ST3, and the limitations of the present work in turn.
+
+\subsection{Why the encoder beat the LLM at this scale}
+\label{sec:disc-encoder}
+
+Across the cells we were able to validate under cross-validation, encoder fine-tuning outperformed every LLM track we evaluated. The most informative comparison is on ST3 enhanced, where the encoder's 5-fold CV mean of 0.875 sits inside the standard-deviation band of the Qwen2.5-7B CoT-LoRA comparator (0.851 $\pm$ 0.114); the single-run Qwen2.5-32B reached 0.841 on the same task. % from exp_0153 exp_0180 exp_0207
+The Qwen-7B std overlaps the encoder mean, so the apparent 0.024 gap is not statistically meaningful from a single 5-fold split; the strongest honest summary is that the LLM track did not show a benefit at this dataset scale, not that LLMs are categorically worse. We are careful to scope the claim to this dataset (roughly 473 ST3 examples), this label structure, and our compute budget; we would not extrapolate to larger labelled corpora or to richer reasoning targets.
+
+\subsection{The enhanced-track leakage question}
+\label{sec:disc-leakage}
+
+The 0.97 ST2-enhanced and 0.91 ST1-enhanced numbers carry our largest interpretive caveat, and we treat them in four steps. % from exp_0072 exp_0035
+
+\emph{(a) The concern.} The enhanced-track inputs \texttt{text\_enhanced} and \texttt{argument\_enhanced} were rewritten by the organisers with knowledge of the gold labels. Any classifier trained on those fields has direct access to features that an honest pipeline would have to extract from raw text, and the leakage source is structural rather than accidental.
+
+\emph{(b) A sanity check, and what it does not establish.} We ran a regex-mask sanity check on the masked enhanced fields that replaced known fallacy-name strings and obvious cue words and re-trained the ST2-enhanced classifier on the masked inputs. F1 was retained at 0.937 after masking, against the unmasked enhanced-track baseline of 0.937. % from exp_0062 exp_0036
+The mask deliberately covers the eight ST2 fallacy-class names and their morphological variants only, not the full semantic content of the rewritten fields; a null delta is therefore the expected outcome \emph{if} the classifier was not relying on those literal strings as a shortcut, and is the specific hypothesis the check rules out, not a general claim that the rewritten fields contain no label-carrying signal at all. We label this a sanity check rather than a diagnostic for exactly this reason: it rules out a hypothesis the rewriter's design made a priori unlikely, and therefore provides limited positive evidence about the harder semantic-leakage channel.
+
+\emph{(c) The interpretation.} A retained F1 of 0.937 under aggressive string masking means that trivial string-matching of fallacy labels in \texttt{text\_enhanced} is not the dominant signal the classifier relies on. That is useful evidence against the most superficial leakage story, but it is a narrow result, and the defence of the enhanced-track headline numbers therefore rests primarily on the commitment in part (d) rather than on this sanity check. We cannot rule out softer leakage from the rewriter's semantic choices, a paraphrase produced with label knowledge can carry the label in word choice, sentence structure, hedging, or topical framing without ever using a fallacy-name string.
+
+\emph{(d) The commitment (primary defence).} \textbf{Therefore}, we present base-track and enhanced-track numbers separately throughout this notebook and do not aggregate them into a single headline. Where the paper takes a position  e.g., on the ablation pattern, on the encoder vs LLM comparison, on the \textsf{pe} ceiling, we anchor that position on the base-track behaviour or on the 5-fold CV numbers, not on the enhanced-track point estimates. We note that the ST2-enhanced per-class F1 values (Appendix~\ref{app:perclass}) cluster between 0.948 and 1.000 with one cell at perfect 1.000, a tight distribution that is itself consistent with the leakage concern raised in (a). % per-class F1 from saved predictions of exp_0072
+
+The leak-audit gate of \S\ref{sec:pseudo} sits inside the same framing: it is one additional layer of defence specifically against the pseudo-label step amplifying any leakage that survived the rewrite, and it returned no detectable leak under the test we ran. % from exp_0081
+We name the limit of that gate explicitly too, it tests against the same kind of signal the masking diagnostic tests against, not against the softer semantic channel. A genuinely falsifiable extension of the diagnostic, training a classifier on base-only fields and evaluating it on enhanced fields, would isolate the marginal contribution of the rewriter and let us put a number on the residual semantic-leakage channel; we did not run this within our compute envelope and flag it as the most useful follow-up the leakage thread allows.
+
+\subsection{What \textsf{pe} taught us about rare-class limits}
+\label{sec:disc-pe}
+
+The practical-external (\textsf{pe}) class on ST3 was the binding constraint on macro-F1 throughout the project. The NLI-style basis probe found \textsf{pe}-F1 of 0.25 well before we trained the final classifier. % from exp_0082
+We responded with three interventions: a \textsf{pe}-targeted synthetic batch, a per-class threshold sweep that pushed the \textsf{pe} threshold to 0.05, and an LLM basis-axis meta-learner. % from exp_0103 exp_0145 exp_0146
+The practical-external cell sits at F1 = 0.573 on dev (precision 0.563, recall 0.583, n=24, \texttt{exp\_0073} under the per-class thresholds from \texttt{exp\_0145}), against 0.766--0.810 for the other three ST3 classes. The \textsf{pe} ceiling is a concrete 0.19--0.24 F1 gap that the targeted synth augmentation, the per-class threshold sweep, and the basis-axis meta-learner did not close. % from exp_0073 exp_0103 exp_0145 exp_0146 — per-class F1 from saved predictions, see Appendix~\ref{app:perclass}
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+Several limitations should accompany the numbers in this notebook.
+
+Test-set leaderboard results will be incorporated in the camera-ready version of this notebook; every number in this initial submission is from our held-out dev partition or from 5-fold cross-validation on it. Where a single 5-fold split was available (ST3 enhanced under our submitted recipe, the Qwen2.5-7B CoT-LoRA comparator, and the Qwen3-4B-Thinking comparators) we use the CV mean as the decision-relevant estimate; the other dev numbers in Tables~\ref{tab:headline}--\ref{tab:backbone} are single-run point estimates, and the ranking of close-together rows should be read with appropriate caution. % from exp_0153 exp_0180 exp_0217 exp_0218
+
+We did not run a separate seed-variance ablation. Several runs used the lab-default seed without separate seed-variance ablation; reported single-run dev numbers should be read as point estimates. % from senior P1
+For runs whose individual seeds are not recorded, we used the lab-default \texttt{seed=42}; CV runs used fold seeds 42--46.
+
+The enhanced-track results are subject to the leakage caveat developed in \S\ref{sec:disc-leakage}. The regex-mask diagnostic rules out the dominant trivial-string channel but does not clear the softer semantic channel, and we have flagged this everywhere the enhanced numbers appear. % from exp_0062
+
+The per-class F1 breakdown in Appendix~\ref{app:perclass} reflects two different decoding regimes: ST2 values are computed from default argmax over class logits, while ST3 values reflect the per-class threshold calibration also used for the headline ST3 numbers in Table~\ref{tab:headline}. Readers comparing per-class numbers across subtasks should keep this asymmetry in mind. % from exp_0145
+
+Taken together, these limitations do not invalidate the headline numbers, but the enhanced-track results in particular should be read as upper bounds on what a fair pipeline would extract from the same inputs.
+
+The most useful follow-ups the present work allows are concrete. A leakage-controlled re-evaluation on a future Touch\'{e} edition, one that ships a separate decoder for the rewritten fields, or that withholds the label-aware rewrite from training entirely, would let us decide more cleanly between the encoder and LLM tracks at this dataset scale. A larger compute budget on the Qwen2.5-32B fold split would let us close the comparison we left underpowered. A per-class threshold sweep on ST3 base, paralleling the sweep we ran on ST3 enhanced, would let us test whether the \textsf{pe} ceiling we observed is a property of the enhanced track or of the four-way label structure more broadly. And targeted \textsf{pe}-class data collection, rather than further synthetic augmentation, looks like the most useful intervention if the rare-class ceiling is to be broken at all.

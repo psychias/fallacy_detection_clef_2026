@@ -1,0 +1,13 @@
+{
+  "kind": "diagnostic",
+  "script": "train.py",
+  "parent_id": null,
+  "idea_ref": "[P1.INFRA] Stratified 5-fold CV splitter with pe-aware distribution",
+  "phase": "3",
+  "hypothesis": "Standard single dev split has only 1 pe example (practical-external). 5-fold CV with pe examples distributed (>=1 per fold) enables meaningful pe measurement instead of binary pass/fail on 1 sample.",
+  "depends_on": [],
+  "time_budget_s": 120,
+  "subtask": "st3",
+  "n_folds": 5,
+  "seed": 42
+}

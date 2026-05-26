@@ -1,0 +1,32 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0175",
+  "idea_ref": "[H100] Qwen2.5-7B CoT-LoRA on ST3 enhanced — retrieval-augmented, 3 epochs",
+  "phase": "4",
+  "hypothesis": "7B model with CoT supervision and kNN-retrieved few-shot examples learns structural reasoning patterns. Gate: CV F1 > 0.80 justifies scaling to 32B.",
+  "depends_on": ["exp_0175"],
+  "time_budget_s": 9000,
+  "priority": 51,
+  "subtask": "st3",
+  "track": "enhanced",
+  "backbone": "Qwen/Qwen2.5-7B-Instruct",
+  "data": {
+    "real": true,
+    "synth_versions": [],
+    "cot_data": "cot_v001_st3/data_enhanced.jsonl",
+    "use_knn_retrieval": true,
+    "knn_k": 3
+  },
+  "train": {
+    "lr": 2e-4,
+    "max_len": 1536,
+    "batch_size": 1,
+    "grad_accum": 16,
+    "epochs": 3,
+    "lora_r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "compute_dtype": "bf16",
+    "patience": 1
+  }
+}

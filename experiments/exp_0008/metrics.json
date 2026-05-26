@@ -1,0 +1,98 @@
+{
+  "precision": 0.01679,
+  "recall": 0.125,
+  "f1_macro": 0.02961,
+  "f1_per_class": {
+    "authority": 0.0,
+    "black-white": 0.0,
+    "hasty_generalization": 0.0,
+    "natural": 0.0,
+    "population": 0.0,
+    "slippery_slope": 0.0,
+    "tradition": 0.23684,
+    "worse_problems": 0.0
+  },
+  "support_per_class": {
+    "authority": 8,
+    "black-white": 8,
+    "hasty_generalization": 8,
+    "natural": 9,
+    "population": 7,
+    "slippery_slope": 9,
+    "tradition": 9,
+    "worse_problems": 9
+  },
+  "classification_report": {
+    "authority": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 8.0
+    },
+    "black-white": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 8.0
+    },
+    "hasty_generalization": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 8.0
+    },
+    "natural": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 9.0
+    },
+    "population": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 7.0
+    },
+    "slippery_slope": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 9.0
+    },
+    "tradition": {
+      "precision": 0.13432835820895522,
+      "recall": 1.0,
+      "f1-score": 0.23684210526315788,
+      "support": 9.0
+    },
+    "worse_problems": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 9.0
+    },
+    "accuracy": 0.13432835820895522,
+    "macro avg": {
+      "precision": 0.016791044776119403,
+      "recall": 0.125,
+      "f1-score": 0.029605263157894735,
+      "support": 67.0
+    },
+    "weighted avg": {
+      "precision": 0.01804410781911339,
+      "recall": 0.13432835820895522,
+      "f1-score": 0.03181461115475255,
+      "support": 67.0
+    }
+  },
+  "subtask": "st2",
+  "wall_clock_s": 397.2,
+  "peak_vram_mb": 14105.1,
+  "params": 435069960,
+  "track": "base",
+  "backbone": "microsoft/deberta-v3-large",
+  "status_flags": [],
+  "epochs_completed": 8,
+  "nan_batches": 0,
+  "best_train_loss": 2.08074
+}

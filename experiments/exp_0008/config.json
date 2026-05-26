@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": null,
+  "idea_ref": "[P1] DeBERTa-v3-large on ST2 base track",
+  "phase": "0",
+  "depends_on": [],
+  "time_budget_s": 540,
+  "hypothesis": "DeBERTa-v3-large may outperform -base on ST2 given more capacity for 8-way classification",
+  "subtask": "st2",
+  "track": "base",
+  "backbone": "microsoft/deberta-v3-large",
+  "data": {"real": true, "synth_versions": [], "mix_ratio": "real_only"},
+  "train": {"lr": 1e-5, "batch_size": 8, "epochs": 8, "loss": "ce", "max_len": 256}
+}

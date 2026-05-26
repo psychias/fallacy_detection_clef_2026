@@ -1,0 +1,22 @@
+{
+  "kind": "diagnostic",
+  "script": "generate.py",
+  "parent_id": null,
+  "idea_ref": "[P2.PE] Synthesize pe (propaganda vs. everything) instances via LLM API",
+  "phase": "3",
+  "hypothesis": "pe is chronically underrepresented (F1\u22480.17). Targeted synthetic generation of pe-like examples should improve recall. Uses OpenRouter LLM API to generate propaganda-themed fallacious texts.",
+  "depends_on": [
+    "exp_0082"
+  ],
+  "gate": "ONLY proceed if exp_0082 NLI pe-F1 < 0.40",
+  "time_budget_s": 7200,
+  "subtask": "st3",
+  "track": "enhanced",
+  "generation": {
+    "model": "openai/gpt-4o-mini",
+    "num_per_label": 50,
+    "temperature": 0.9,
+    "output_dir": "data_synth/pe_synth_v001_st3"
+  },
+  "priority": 92
+}

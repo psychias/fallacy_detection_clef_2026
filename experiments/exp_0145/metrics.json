@@ -1,0 +1,73 @@
+{
+  "subtask": "st3",
+  "source_exp": "exp_0073",
+  "calibrated_source": "exp_0121",
+  "best_strategy": "grid",
+  "best_thresholds": {
+    "epistemic-external": 0.1,
+    "epistemic-internal": 0.1,
+    "practical-external": 0.05,
+    "practical-internal": 0.4
+  },
+  "best_f1_macro": 0.76173,
+  "argmax_f1_macro": 0.73542,
+  "improvement": 0.02631,
+  "final_f1_per_class": {
+    "epistemic-external": 1.0,
+    "epistemic-internal": 0.97872,
+    "practical-external": 0.25,
+    "practical-internal": 0.81818
+  },
+  "strategies": {
+    "greedy": {
+      "thresholds": {
+        "epistemic-external": 0.05,
+        "epistemic-internal": 0.25,
+        "practical-external": 0.25,
+        "practical-internal": 0.25
+      },
+      "f1_macro": 0.73542
+    },
+    "pe_only": {
+      "thresholds": {
+        "epistemic-external": 0.25,
+        "epistemic-internal": 0.25,
+        "practical-external": 0.165,
+        "practical-internal": 0.25
+      },
+      "f1_macro": 0.73542
+    },
+    "grid": {
+      "thresholds": {
+        "epistemic-external": 0.1,
+        "epistemic-internal": 0.1,
+        "practical-external": 0.05,
+        "practical-internal": 0.4
+      },
+      "f1_macro": 0.76173
+    },
+    "argmax": {
+      "thresholds": {
+        "epistemic-external": 0.25,
+        "epistemic-internal": 0.25,
+        "practical-external": 0.25,
+        "practical-internal": 0.25
+      },
+      "f1_macro": 0.73542
+    }
+  },
+  "pe_analysis": {
+    "n_pe_examples": 1,
+    "pe_sweep_best": {
+      "pe_threshold": 0.165,
+      "f1_macro": 0.73542,
+      "f1_per_class": {
+        "epistemic-external": 1.0,
+        "epistemic-internal": 0.97872,
+        "practical-external": 0.0,
+        "practical-internal": 0.96296
+      }
+    }
+  },
+  "wall_clock_s": 16.3
+}

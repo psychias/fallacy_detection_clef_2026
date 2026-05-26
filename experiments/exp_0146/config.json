@@ -1,0 +1,16 @@
+{
+  "kind": "diagnostic",
+  "script": "train.py",
+  "parent_id": "exp_0073",
+  "idea_ref": "[P3.META] LLM basis-axis meta-learner: logistic regression on 0073 logits + 0091 basis prediction",
+  "phase": "3",
+  "hypothesis": "RoBERTa excels at goal axis (100%) but fails pe. Qwen-3B basis-only accuracy is 85.5%, complementary signal. A logistic regression stacker combining 0073 logit features + LLM binary basis prediction should improve macro-F1, especially pe recall.",
+  "depends_on": ["exp_0121", "exp_0091"],
+  "time_budget_s": 300,
+  "subtask": "st3",
+  "track": "enhanced",
+  "encoder_source": "exp_0073",
+  "llm_source": "exp_0091",
+  "calibrated_source": "exp_0121",
+  "priority": 91
+}

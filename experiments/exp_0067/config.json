@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0038",
+  "idea_ref": "[R2.MAXLEN] ST3 enhanced + synth_v002 with max_len=384 (was 256)",
+  "phase": "2",
+  "hypothesis": "Combining max_len=384 with synth augmentation on ST3 enhanced. exp_0038 hit 0.694 at max_len=256; truncation hurt rare classes disproportionately.",
+  "depends_on": [],
+  "time_budget_s": 1800,
+  "subtask": "st3",
+  "track": "enhanced",
+  "backbone": "roberta-large",
+  "data": {"real": true, "synth_versions": ["synth_v002_st3"], "mix_ratio": "real_plus_synth"},
+  "train": {"lr": 1e-5, "max_len": 384, "batch_size": 8, "epochs": 12, "synth_weight": 0.5, "loss": "weighted_ce", "patience": 3}
+}

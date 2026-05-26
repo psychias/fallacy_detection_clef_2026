@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/fallacy_detection/experiments/exp_0042/train.py", line 351, in <module>
+    main()
+  File "/content/drive/MyDrive/fallacy_detection/experiments/exp_0042/train.py", line 328, in main
+    metrics["wall_clock_s"] = round(guard.elapsed(), 1)
+    ^^^^^^^
+UnboundLocalError: cannot access local variable 'metrics' where it is not associated with a value

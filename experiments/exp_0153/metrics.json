@@ -1,0 +1,147 @@
+{
+  "subtask": "st3",
+  "n_folds": 5,
+  "macro_f1_mean": 0.87524,
+  "macro_f1_std": 0.08312,
+  "macro_f1_per_fold": [
+    0.77064,
+    0.95024,
+    0.80012,
+    0.86905,
+    0.98613
+  ],
+  "pe_f1_mean": 0.71333,
+  "pe_f1_std": 0.24909,
+  "pe_f1_per_fold": [
+    0.4,
+    1.0,
+    0.5,
+    0.66667,
+    1.0
+  ],
+  "pe_confidence_on_pe": [
+    0.54159,
+    0.00562,
+    0.44816,
+    0.93357,
+    0.52386,
+    0.00645,
+    0.90211,
+    0.99416
+  ],
+  "pe_rank_on_pe": [
+    1,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1
+  ],
+  "fold_details": [
+    {
+      "fold": 0,
+      "f1_macro": 0.77064,
+      "f1_per_class": {
+        "epistemic-external": 0.82353,
+        "epistemic-internal": 0.97015,
+        "practical-external": 0.4,
+        "practical-internal": 0.88889
+      },
+      "pe_confidence": [
+        0.541594922542572,
+        0.00561624625697732
+      ],
+      "pe_rank": [
+        1,
+        2
+      ],
+      "n_train": 779,
+      "n_dev": 96,
+      "dev_pe_count": 2
+    },
+    {
+      "fold": 1,
+      "f1_macro": 0.95024,
+      "f1_per_class": {
+        "epistemic-external": 0.82353,
+        "epistemic-internal": 0.97744,
+        "practical-external": 1.0,
+        "practical-internal": 1.0
+      },
+      "pe_confidence": [
+        0.44816091656684875,
+        0.9335721731185913
+      ],
+      "pe_rank": [
+        1,
+        1
+      ],
+      "n_train": 779,
+      "n_dev": 96,
+      "dev_pe_count": 2
+    },
+    {
+      "fold": 2,
+      "f1_macro": 0.80012,
+      "f1_per_class": {
+        "epistemic-external": 0.8,
+        "epistemic-internal": 0.95312,
+        "practical-external": 0.5,
+        "practical-internal": 0.94737
+      },
+      "pe_confidence": [
+        0.5238591432571411,
+        0.006450132466852665
+      ],
+      "pe_rank": [
+        1,
+        2
+      ],
+      "n_train": 780,
+      "n_dev": 95,
+      "dev_pe_count": 2
+    },
+    {
+      "fold": 3,
+      "f1_macro": 0.86905,
+      "f1_per_class": {
+        "epistemic-external": 0.95238,
+        "epistemic-internal": 0.96825,
+        "practical-external": 0.66667,
+        "practical-internal": 0.88889
+      },
+      "pe_confidence": [
+        0.9021084308624268
+      ],
+      "pe_rank": [
+        1
+      ],
+      "n_train": 782,
+      "n_dev": 93,
+      "dev_pe_count": 1
+    },
+    {
+      "fold": 4,
+      "f1_macro": 0.98613,
+      "f1_per_class": {
+        "epistemic-external": 0.95238,
+        "epistemic-internal": 0.99213,
+        "practical-external": 1.0,
+        "practical-internal": 1.0
+      },
+      "pe_confidence": [
+        0.9941593408584595
+      ],
+      "pe_rank": [
+        1
+      ],
+      "n_train": 782,
+      "n_dev": 93,
+      "dev_pe_count": 1
+    }
+  ],
+  "peak_vram_mb": 9089.68994140625,
+  "wall_clock_s": 4140.9759130477905
+}

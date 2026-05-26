@@ -1,0 +1,132 @@
+{
+  "subtask": "st3",
+  "track": "base",
+  "backbone": "Qwen/Qwen3-4B-Thinking-2507",
+  "n_folds": 5,
+  "macro_f1_mean": 0.44834,
+  "macro_f1_std": 0.02126,
+  "macro_f1_per_fold": [
+    0.48016,
+    0.46368,
+    0.4198,
+    0.43553,
+    0.44253
+  ],
+  "class_f1": {
+    "epistemic-external": {
+      "mean": 0.16494,
+      "std": 0.17411
+    },
+    "epistemic-internal": {
+      "mean": 0.87732,
+      "std": 0.02817
+    },
+    "practical-external": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "practical-internal": {
+      "mean": 0.7511,
+      "std": 0.08516
+    }
+  },
+  "fold_details": [
+    {
+      "fold": 0,
+      "f1_macro": 0.48016,
+      "f1_per_class": {
+        "epistemic-external": 0.47619,
+        "epistemic-internal": 0.8254,
+        "practical-external": 0.0,
+        "practical-internal": 0.61905
+      },
+      "n_train": 377,
+      "n_dev": 96,
+      "dev_dist": {
+        "practical-external": 2,
+        "epistemic-internal": 65,
+        "epistemic-external": 10,
+        "practical-internal": 19
+      }
+    },
+    {
+      "fold": 1,
+      "f1_macro": 0.46368,
+      "f1_per_class": {
+        "epistemic-external": 0.18182,
+        "epistemic-internal": 0.8951,
+        "practical-external": 0.0,
+        "practical-internal": 0.77778
+      },
+      "n_train": 377,
+      "n_dev": 96,
+      "dev_dist": {
+        "epistemic-internal": 65,
+        "practical-external": 2,
+        "epistemic-external": 10,
+        "practical-internal": 19
+      }
+    },
+    {
+      "fold": 2,
+      "f1_macro": 0.4198,
+      "f1_per_class": {
+        "epistemic-external": 0.0,
+        "epistemic-internal": 0.90141,
+        "practical-external": 0.0,
+        "practical-internal": 0.77778
+      },
+      "n_train": 378,
+      "n_dev": 95,
+      "dev_dist": {
+        "practical-internal": 19,
+        "epistemic-external": 10,
+        "epistemic-internal": 64,
+        "practical-external": 2
+      }
+    },
+    {
+      "fold": 3,
+      "f1_macro": 0.43553,
+      "f1_per_class": {
+        "epistemic-external": 0.16667,
+        "epistemic-internal": 0.86957,
+        "practical-external": 0.0,
+        "practical-internal": 0.70588
+      },
+      "n_train": 380,
+      "n_dev": 93,
+      "dev_dist": {
+        "epistemic-internal": 64,
+        "epistemic-external": 10,
+        "practical-internal": 18,
+        "practical-external": 1
+      }
+    },
+    {
+      "fold": 4,
+      "f1_macro": 0.44253,
+      "f1_per_class": {
+        "epistemic-external": 0.0,
+        "epistemic-internal": 0.8951,
+        "practical-external": 0.0,
+        "practical-internal": 0.875
+      },
+      "n_train": 380,
+      "n_dev": 93,
+      "dev_dist": {
+        "epistemic-external": 10,
+        "epistemic-internal": 64,
+        "practical-internal": 18,
+        "practical-external": 1
+      }
+    }
+  ],
+  "knn_retrieval": true,
+  "cot_examples": 404,
+  "seed": 42,
+  "lora_r": 32,
+  "knn_k": 3,
+  "peak_vram_mb": 13430.9,
+  "wall_clock_s": 6183.7
+}

@@ -1,0 +1,19 @@
+{
+  "f1_macro": 0.0,
+  "accuracy": 0.0,
+  "per_class": {},
+  "wall_clock_s": 21.7,
+  "peak_vram_mb": 11897.9,
+  "params": 435065860,
+  "track": "base",
+  "backbone": "microsoft/deberta-v3-large",
+  "status_flags": [
+    "excessive_nan"
+  ],
+  "epochs_completed": 1,
+  "nan_batches": 51,
+  "n_real": 404,
+  "n_synth": 282,
+  "synth_weight": 0.5,
+  "best_train_loss": -1.0
+}

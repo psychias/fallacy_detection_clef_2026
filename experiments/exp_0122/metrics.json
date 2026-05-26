@@ -1,0 +1,23 @@
+{
+  "enhanced": {
+    "n_predictions": 699,
+    "n_test_entries": 233,
+    "task_counts": {
+      "fallacy_detection": 233,
+      "fallacy_classification": 233,
+      "scheme_classification": 233
+    },
+    "validation_errors": [],
+    "n_errors": 0,
+    "valid": true
+  },
+  "base": {
+    "n_predictions": 0,
+    "n_test_entries": 233,
+    "task_counts": {},
+    "validation_errors": [],
+    "n_errors": 0,
+    "valid": true
+  },
+  "wall_clock_s": 29.8
+}

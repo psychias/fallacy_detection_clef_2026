@@ -1,0 +1,638 @@
+{
+  "basis_v1_simple": {
+    "accuracy": 0.5942,
+    "correct": 41,
+    "total": 69,
+    "pred_dist": {
+      "external": 32,
+      "internal": 37
+    },
+    "true_dist": {
+      "external": 8,
+      "internal": 61
+    }
+  },
+  "basis_v2_detailed": {
+    "accuracy": 0.7971,
+    "correct": 55,
+    "total": 69,
+    "pred_dist": {
+      "external": 18,
+      "internal": 51
+    },
+    "true_dist": {
+      "external": 8,
+      "internal": 61
+    }
+  },
+  "basis_v3_scheme": {
+    "accuracy": 0.3043,
+    "correct": 21,
+    "total": 69,
+    "pred_dist": {
+      "external": 56,
+      "internal": 13
+    },
+    "true_dist": {
+      "external": 8,
+      "internal": 61
+    }
+  },
+  "basis_v4_short": {
+    "accuracy": 0.7101,
+    "correct": 49,
+    "total": 69,
+    "pred_dist": {
+      "external": 22,
+      "internal": 47
+    },
+    "true_dist": {
+      "external": 8,
+      "internal": 61
+    }
+  },
+  "goal_nli": {
+    "accuracy": 0.8116,
+    "correct": 56,
+    "total": 69
+  },
+  "combined_oracle_goal_nli_basis": {
+    "hypothesis_set": "v2_detailed",
+    "basis_accuracy": 0.7971,
+    "f1_macro": 0.6351,
+    "f1_per_class": {
+      "epistemic-external": 0.5,
+      "epistemic-internal": 0.88889,
+      "practical-external": 0.33333,
+      "practical-internal": 0.81818
+    }
+  },
+  "full_nli_zeroshot": {
+    "f1_macro": 0.52763,
+    "f1_per_class": {
+      "epistemic-external": 0.55556,
+      "epistemic-internal": 0.75949,
+      "practical-external": 0.25,
+      "practical-internal": 0.54545
+    }
+  },
+  "dev_logits": [
+    {
+      "id": "informal_fallacies:853",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1117",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1333",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1389",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1342",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1252",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1195",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1236",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1353",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1179",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:963",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1017",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:833",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1084",
+      "true_label": "epistemic-external",
+      "true_goal": "epistemic",
+      "true_basis": "external",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1196",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1133",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:733",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:857",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:993",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:970",
+      "true_label": "epistemic-external",
+      "true_goal": "epistemic",
+      "true_basis": "external",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1417",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1171",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1300",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:976",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:996",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1298",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1073",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1041",
+      "true_label": "epistemic-external",
+      "true_goal": "epistemic",
+      "true_basis": "external",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1382",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1318",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:887",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1369",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1229",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1335",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:912",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1189",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:933",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1095",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:916",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1269",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1146",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1202",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1132",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:866",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1331",
+      "true_label": "epistemic-external",
+      "true_goal": "epistemic",
+      "true_basis": "external",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:797",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:955",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:958",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1404",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:792",
+      "true_label": "epistemic-external",
+      "true_goal": "epistemic",
+      "true_basis": "external",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1224",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1052",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1199",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:960",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1217",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1396",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:748",
+      "true_label": "epistemic-external",
+      "true_goal": "epistemic",
+      "true_basis": "external",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:816",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:961",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1049",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1249",
+      "true_label": "practical-external",
+      "true_goal": "practical",
+      "true_basis": "external",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1438",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1406",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1092",
+      "true_label": "epistemic-external",
+      "true_goal": "epistemic",
+      "true_basis": "external",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1043",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:939",
+      "true_label": "epistemic-internal",
+      "true_goal": "epistemic",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:871",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "internal",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1291",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    },
+    {
+      "id": "informal_fallacies:1191",
+      "true_label": "practical-internal",
+      "true_goal": "practical",
+      "true_basis": "internal",
+      "pred_basis_nli": "external",
+      "best_hyp_set": "v2_detailed"
+    }
+  ],
+  "best_hypothesis_set": "v2_detailed",
+  "best_basis_accuracy": 0.7971,
+  "subtask": "st3",
+  "track": "enhanced",
+  "nli_backbone": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli"
+}

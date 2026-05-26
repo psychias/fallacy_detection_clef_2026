@@ -1,0 +1,77 @@
+{
+  "subtask": "st3",
+  "best_strategy": "weighted_avg",
+  "best_f1_macro": 0.73542,
+  "best_f1_per_class": {
+    "epistemic-external": 1.0,
+    "epistemic-internal": 0.97872,
+    "practical-external": 0.0,
+    "practical-internal": 0.96296
+  },
+  "encoder_baseline_f1": 0.73542,
+  "llm_baseline_f1": 0.46711,
+  "improvement_over_encoder": 0.0,
+  "strategies": {
+    "logreg_loo": {
+      "f1_macro": 0.68389,
+      "f1_per_class": {
+        "epistemic-external": 0.92308,
+        "epistemic-internal": 0.97917,
+        "practical-external": 0.0,
+        "practical-internal": 0.83333
+      }
+    },
+    "rule_routing": {
+      "f1_macro": 0.53576,
+      "f1_per_class": {
+        "epistemic-external": 0.47059,
+        "epistemic-internal": 0.90323,
+        "practical-external": 0.0,
+        "practical-internal": 0.76923
+      }
+    },
+    "weighted_avg": {
+      "f1_macro": 0.73542,
+      "f1_per_class": {
+        "epistemic-external": 1.0,
+        "epistemic-internal": 0.97872,
+        "practical-external": 0.0,
+        "practical-internal": 0.96296
+      }
+    },
+    "encoder_only": {
+      "f1_macro": 0.73542,
+      "f1_per_class": {
+        "epistemic-external": 1.0,
+        "epistemic-internal": 0.97872,
+        "practical-external": 0.0,
+        "practical-internal": 0.96296
+      }
+    },
+    "llm_only": {
+      "f1_macro": 0.46711,
+      "f1_per_class": {
+        "epistemic-external": 0.42105,
+        "epistemic-internal": 0.83871,
+        "practical-external": 0.0,
+        "practical-internal": 0.6087
+      }
+    }
+  },
+  "logreg_details": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "n_features": 6,
+    "feature_names": [
+      "enc_ee",
+      "enc_ei",
+      "enc_pe",
+      "enc_pi",
+      "llm_goal",
+      "llm_basis"
+    ]
+  },
+  "weighted_avg_best_w": 0.1,
+  "n_aligned": 69,
+  "wall_clock_s": 1.2
+}

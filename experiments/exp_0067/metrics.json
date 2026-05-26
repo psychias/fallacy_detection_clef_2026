@@ -1,0 +1,69 @@
+{
+  "precision": 0.72214,
+  "recall": 0.67857,
+  "f1_macro": 0.69397,
+  "f1_per_class": {
+    "epistemic-external": 0.83333,
+    "epistemic-internal": 0.97959,
+    "practical-external": 0.0,
+    "practical-internal": 0.96296
+  },
+  "support_per_class": {
+    "epistemic-external": 7,
+    "epistemic-internal": 48,
+    "practical-external": 1,
+    "practical-internal": 13
+  },
+  "classification_report": {
+    "epistemic-external": {
+      "precision": 1.0,
+      "recall": 0.7142857142857143,
+      "f1-score": 0.8333333333333334,
+      "support": 7.0
+    },
+    "epistemic-internal": {
+      "precision": 0.96,
+      "recall": 1.0,
+      "f1-score": 0.9795918367346939,
+      "support": 48.0
+    },
+    "practical-external": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "practical-internal": {
+      "precision": 0.9285714285714286,
+      "recall": 1.0,
+      "f1-score": 0.9629629629629629,
+      "support": 13.0
+    },
+    "accuracy": 0.9565217391304348,
+    "macro avg": {
+      "precision": 0.7221428571428572,
+      "recall": 0.6785714285714286,
+      "f1-score": 0.6939720332577475,
+      "support": 69.0
+    },
+    "weighted avg": {
+      "precision": 0.944223602484472,
+      "recall": 0.9565217391304348,
+      "f1-score": 0.9474240581901036,
+      "support": 69.0
+    }
+  },
+  "subtask": "st3",
+  "wall_clock_s": 1037.1,
+  "peak_vram_mb": 9085.6,
+  "params": 355363844,
+  "track": "enhanced",
+  "backbone": "roberta-large",
+  "status_flags": [],
+  "epochs_completed": 12,
+  "nan_batches": 0,
+  "n_real": 404,
+  "n_synth": 282,
+  "synth_weight": 0.5,
+  "best_train_loss": 0.17212
+}

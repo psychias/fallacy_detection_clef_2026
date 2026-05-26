@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/fallacy_detection/experiments/exp_0032/train.py", line 344, in <module>
+    main()
+  File "/content/drive/MyDrive/fallacy_detection/experiments/exp_0032/train.py", line 83, in main
+    config = load_config(exp_dir)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/fallacy_detection/shared/train_utils.py", line 26, in load_config
+    return json.load(f)
+           ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 335, in loads
+    raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)

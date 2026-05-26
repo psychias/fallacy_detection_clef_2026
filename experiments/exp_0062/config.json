@@ -1,0 +1,26 @@
+{
+    "kind": "train",
+    "subtask": "st2",
+    "hypothesis": "If F1 drops from 0.937 to ~0.75 with fallacy-naming words masked, enhanced track is leakage. If holds at 0.92+, it's real signal.",
+    "track": "enhanced",
+    "backbone": "roberta-large",
+    "data": {
+        "mix_ratio": "real_plus_synth",
+        "synth_versions": ["synth_v002_st1st2"],
+        "real": true
+    },
+    "train": {
+        "lr": 1e-5,
+        "max_len": 256,
+        "batch_size": 8,
+        "epochs": 12,
+        "synth_weight": 0.5,
+        "loss": "weighted_ce",
+        "patience": 3
+    },
+    "time_budget_s": 1500,
+    "phase": "3",
+    "parent_id": "exp_0036",
+    "depends_on": [],
+    "idea_ref": "[R1b] Leakage diagnostic: regex-mask fallacy words in enhanced text"
+}

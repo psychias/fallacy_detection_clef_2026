@@ -1,0 +1,28 @@
+{
+  "kind": "diagnostic",
+  "script": "train.py",
+  "parent_id": "exp_0073",
+  "idea_ref": "[P2.CV] 5-fold CV baseline ST3 enhanced — true pe F1 distribution without pe synth",
+  "phase": 2,
+  "hypothesis": "Establishes pe F1 baseline across 5 folds (8 pe examples total), replacing n=1 dev measurement.",
+  "depends_on": ["exp_0124"],
+  "time_budget_s": 7200,
+  "priority": 76,
+  "seed": 42,
+  "subtask": "st3",
+  "track": "enhanced",
+  "backbone": "roberta-large",
+  "data": {
+    "real": true,
+    "synth_versions": ["synth_v002_st3", "pseudo_v001_st3"]
+  },
+  "train": {
+    "lr": 1e-5,
+    "max_len": 384,
+    "batch_size": 8,
+    "epochs": 15,
+    "loss": "weighted_ce",
+    "patience": 3,
+    "synth_weight": 0.5
+  }
+}

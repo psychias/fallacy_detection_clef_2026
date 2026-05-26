@@ -1,0 +1,29 @@
+{
+    "subtask":  "st2",
+    "hypothesis":  "Synth pairs + enhanced fields push ST2 enhanced beyond real-only roberta-large",
+    "kind":  "train",
+    "track":  "enhanced",
+    "data":  {
+                 "mix_ratio":  "real_plus_synth",
+                 "synth_versions":  [
+                                        "synth_v002_st1st2"
+                                    ],
+                 "real":  true
+             },
+    "time_budget_s":  720,
+    "phase":  "1",
+    "train":  {
+                  "lr":  1E-05,
+                  "max_len":  256,
+                  "batch_size":  8,
+                  "epochs":  12,
+                  "synth_weight":  0.5,
+                  "loss":  "weighted_ce"
+              },
+    "parent_id":  "exp_0023",
+    "depends_on":  [
+                       "exp_0025"
+                   ],
+    "idea_ref":  "[P1] RoBERTa-large ST2 enhanced + contrastive synth (0.5x weight)",
+    "backbone":  "roberta-large"
+}

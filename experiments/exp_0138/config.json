@@ -1,0 +1,14 @@
+{
+  "kind": "diagnostic",
+  "script": "build_index.py",
+  "parent_id": null,
+  "idea_ref": "[P2.EMB] Build bge-large-en-v1.5 embedding index for kNN retrieval",
+  "phase": "2",
+  "hypothesis": "Dense embeddings from bge-large enable kNN example retrieval for few-shot LLM prompting (exp_0143/0144) and similarity-based analysis.",
+  "depends_on": [],
+  "time_budget_s": 600,
+  "subtask": "all",
+  "track": "enhanced",
+  "backbone": "BAAI/bge-large-en-v1.5",
+  "priority": 91
+}

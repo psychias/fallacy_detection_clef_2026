@@ -1,0 +1,96 @@
+{
+  "subtask": "st3",
+  "track": "enhanced",
+  "backbone": "Qwen/Qwen2.5-7B-Instruct",
+  "n_folds": 5,
+  "macro_f1_mean": 0.85118,
+  "macro_f1_std": 0.11392,
+  "macro_f1_per_fold": [
+    0.75878,
+    0.92309,
+    0.67626,
+    0.92161,
+    0.97618
+  ],
+  "pe_f1_mean": 0.73333,
+  "pe_f1_std": 0.38873,
+  "pe_f1_per_fold": [
+    0.66667,
+    1.0,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "fold_details": [
+    {
+      "fold": 0,
+      "f1_macro": 0.75878,
+      "f1_per_class": {
+        "epistemic-external": 0.58824,
+        "epistemic-internal": 0.92308,
+        "practical-external": 0.66667,
+        "practical-internal": 0.85714
+      },
+      "n_train": 377,
+      "n_dev": 96,
+      "dev_pe_count": 2
+    },
+    {
+      "fold": 1,
+      "f1_macro": 0.92309,
+      "f1_per_class": {
+        "epistemic-external": 0.77778,
+        "epistemic-internal": 0.97015,
+        "practical-external": 1.0,
+        "practical-internal": 0.94444
+      },
+      "n_train": 377,
+      "n_dev": 96,
+      "dev_pe_count": 2
+    },
+    {
+      "fold": 2,
+      "f1_macro": 0.67626,
+      "f1_per_class": {
+        "epistemic-external": 0.82353,
+        "epistemic-internal": 0.97674,
+        "practical-external": 0.0,
+        "practical-internal": 0.90476
+      },
+      "n_train": 378,
+      "n_dev": 95,
+      "dev_pe_count": 2
+    },
+    {
+      "fold": 3,
+      "f1_macro": 0.92161,
+      "f1_per_class": {
+        "epistemic-external": 0.7619,
+        "epistemic-internal": 0.95312,
+        "practical-external": 1.0,
+        "practical-internal": 0.97143
+      },
+      "n_train": 380,
+      "n_dev": 93,
+      "dev_pe_count": 1
+    },
+    {
+      "fold": 4,
+      "f1_macro": 0.97618,
+      "f1_per_class": {
+        "epistemic-external": 0.94737,
+        "epistemic-internal": 0.98438,
+        "practical-external": 1.0,
+        "practical-internal": 0.97297
+      },
+      "n_train": 380,
+      "n_dev": 93,
+      "dev_pe_count": 1
+    }
+  ],
+  "gate_decision": "proceed",
+  "knn_retrieval": true,
+  "cot_examples": 404,
+  "peak_vram_mb": 18612.8,
+  "wall_clock_s": 4769.5
+}

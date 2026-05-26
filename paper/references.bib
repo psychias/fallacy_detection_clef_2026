@@ -1,0 +1,400 @@
+% =====================================================================
+% Touché 2026 Fallacy Detection — references.bib
+% Senior author: stelios.psychias@gmail.com
+% Generated: 2026-05-24
+% Audit trail: lit_review_candidates.md (same directory)
+%
+% Every entry has a verifiable locator: DOI, arXiv id, ACL Anthology id,
+% or Semantic Scholar paperId. Anti-hallucination contract per the
+% senior author's brief §1.4. Do not add or rewrite entries without
+% rerunning the verification step.
+%
+% Total: 32 entries (23 locked seed + 9 lit-review additions)
+% =====================================================================
+
+
+% ========== DIRECT TASK ==========
+
+@inproceedings{sahai2021invisiblewall,
+  title     = {Breaking Down the Invisible Wall of Informal Fallacies in Online Discussions},
+  author    = {Sahai, Saumya and Balalau, Oana and Horincar, Roxana},
+  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  pages     = {644--657},
+  year      = {2021},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2021.acl-long.53},
+  url       = {https://aclanthology.org/2021.acl-long.53}
+}
+
+@article{macagno2022argumentation,
+  title   = {Argumentation profiles and the manipulation of common ground: The arguments of populist leaders on {T}witter},
+  author  = {Macagno, Fabrizio},
+  journal = {Journal of Pragmatics},
+  volume  = {191},
+  pages   = {67--82},
+  year    = {2022},
+  doi     = {10.1016/j.pragma.2022.01.022}
+}
+
+@inproceedings{heinrich2026touche,
+  title     = {Overview of the {Touch\'{e}} Lab on Fallacy Detection at {CLEF} 2026},
+  author    = {Heinrich, Maximilian and Fr{\"o}be, Maik and Stein, Benno and Kiesel, Johannes},
+  booktitle = {Working Notes of {CLEF} 2026 -- Conference and Labs of the Evaluation Forum},
+  series    = {{CEUR} Workshop Proceedings},
+  publisher = {{CEUR}-{WS}.org},
+  year      = {2026},
+  note      = {To appear},
+  url       = {https://touche.webis.de/clef26/touche26-web/fallacy-detection.html}
+}
+
+
+% ========== ENCODER MODELS ==========
+
+@misc{liu2019roberta,
+  title         = {{RoBERTa}: A Robustly Optimized {BERT} Pretraining Approach},
+  author        = {Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi, Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and Zettlemoyer, Luke and Stoyanov, Veselin},
+  year          = {2019},
+  eprint        = {1907.11692},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/1907.11692}
+}
+
+@inproceedings{he2021debertav3,
+  title     = {{DeBERTaV3}: Improving {DeBERTa} using {ELECTRA}-Style Pre-Training with Gradient-Disentangled Embedding Sharing},
+  author    = {He, Pengcheng and Gao, Jianfeng and Chen, Weizhu},
+  booktitle = {Proceedings of the 11th International Conference on Learning Representations ({ICLR})},
+  year      = {2023},
+  eprint    = {2111.09543},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2111.09543}
+}
+
+@misc{warner2024modernbert,
+  title         = {Smarter, Better, Faster, Longer: A Modern Bidirectional Encoder for Fast, Memory Efficient, and Long Context Finetuning and Inference},
+  author        = {Warner, Benjamin and Chaffin, Antoine and Clavi{\'e}, Benjamin and Weller, Orion and Hallstr{\"o}m, Oskar and Taghadouini, Said and Gallagher, Alexis and Biswas, Raja and Ladhak, Faisal and Aarsen, Tom and Cooper, Nathan and Adams, Griffin and Howard, Jeremy and Poli, Iacopo},
+  year          = {2024},
+  eprint        = {2412.13663},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2412.13663}
+}
+
+@inproceedings{clark2020electra,
+  title     = {{ELECTRA}: Pre-training Text Encoders as Discriminators Rather Than Generators},
+  author    = {Clark, Kevin and Luong, Minh-Thang and Le, Quoc V. and Manning, Christopher D.},
+  booktitle = {International Conference on Learning Representations ({ICLR})},
+  year      = {2020},
+  eprint    = {2003.10555},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2003.10555}
+}
+
+
+% ========== LLM TRACK ==========
+
+@misc{qwen25,
+  title         = {{Qwen2.5} Technical Report},
+  author        = {{Qwen Team}},
+  year          = {2024},
+  eprint        = {2412.15115},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2412.15115}
+}
+
+@misc{qwen3,
+  title         = {{Qwen3} Technical Report},
+  author        = {{Qwen Team}},
+  year          = {2025},
+  eprint        = {2505.09388},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2505.09388}
+}
+
+@inproceedings{hu2022lora,
+  title     = {{LoRA}: Low-Rank Adaptation of Large Language Models},
+  author    = {Hu, Edward J. and Shen, Yelong and Wallis, Phillip and Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+  booktitle = {Proceedings of the 10th International Conference on Learning Representations ({ICLR})},
+  year      = {2022},
+  eprint    = {2106.09685},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2106.09685}
+}
+
+@inproceedings{wei2022cot,
+  title     = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  author    = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian and Xia, Fei and Chi, Ed H. and Le, Quoc V. and Zhou, Denny},
+  booktitle = {Advances in Neural Information Processing Systems ({NeurIPS})},
+  year      = {2022},
+  eprint    = {2201.11903},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2201.11903}
+}
+
+@inproceedings{dettmers2023qlora,
+  title     = {{QLoRA}: Efficient Finetuning of Quantized {LLM}s},
+  author    = {Dettmers, Tim and Pagnoni, Artidoro and Holtzman, Ari and Zettlemoyer, Luke},
+  booktitle = {Advances in Neural Information Processing Systems ({NeurIPS})},
+  year      = {2023},
+  eprint    = {2305.14314},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2305.14314}
+}
+
+
+% ========== TRAINING TECHNIQUES ==========
+
+@inproceedings{lee2013pseudolabel,
+  title     = {Pseudo-Label: The Simple and Efficient Semi-Supervised Learning Method for Deep Neural Networks},
+  author    = {Lee, Dong-Hyun},
+  booktitle = {{ICML} 2013 Workshop on Challenges in Representation Learning ({WREPL})},
+  year      = {2013},
+  note      = {Semantic Scholar paperId: 798d9840d2439a0e5d47bcf5d164aa46d5e7dc26. No DOI or arXiv id exists for this workshop manuscript.}
+}
+
+@inproceedings{lin2017focal,
+  title     = {Focal Loss for Dense Object Detection},
+  author    = {Lin, Tsung-Yi and Goyal, Priya and Girshick, Ross and He, Kaiming and Doll{\'a}r, Piotr},
+  booktitle = {Proceedings of the {IEEE} International Conference on Computer Vision ({ICCV})},
+  pages     = {2980--2988},
+  year      = {2017},
+  eprint    = {1708.02002},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/1708.02002}
+}
+
+@inproceedings{izmailov2018swa,
+  title     = {Averaging Weights Leads to Wider Optima and Better Generalization},
+  author    = {Izmailov, Pavel and Podoprikhin, Dmitrii and Garipov, Timur and Vetrov, Dmitry and Wilson, Andrew Gordon},
+  booktitle = {Proceedings of the 34th Conference on Uncertainty in Artificial Intelligence ({UAI})},
+  year      = {2018},
+  eprint    = {1803.05407},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/1803.05407}
+}
+
+@inproceedings{reimers2019sbert,
+  title     = {{Sentence-BERT}: Sentence Embeddings using {S}iamese {BERT}-Networks},
+  author    = {Reimers, Nils and Gurevych, Iryna},
+  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing ({EMNLP}-{IJCNLP})},
+  pages     = {3982--3992},
+  year      = {2019},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/D19-1410},
+  url       = {https://aclanthology.org/D19-1410}
+}
+
+
+% ========== FALLACY / ARGUMENTATION PRIOR WORK ==========
+
+@inproceedings{habernal2018arc,
+  title     = {The Argument Reasoning Comprehension Task: Identification and Reconstruction of Implicit Warrants},
+  author    = {Habernal, Ivan and Wachsmuth, Henning and Gurevych, Iryna and Stein, Benno},
+  booktitle = {Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies ({NAACL}-{HLT})},
+  pages     = {1930--1940},
+  year      = {2018},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/N18-1175},
+  url       = {https://aclanthology.org/N18-1175}
+}
+
+@inproceedings{dasanmartino2019propaganda,
+  title     = {Fine-Grained Analysis of Propaganda in News Articles},
+  author    = {Da San Martino, Giovanni and Yu, Seunghak and Barr{\'o}n-Cede{\~n}o, Alberto and Petrov, Rostislav and Nakov, Preslav},
+  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing ({EMNLP}-{IJCNLP})},
+  pages     = {5636--5646},
+  year      = {2019},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/D19-1565},
+  url       = {https://aclanthology.org/D19-1565}
+}
+
+@inproceedings{goffredo2022political,
+  title     = {Fallacious Argument Classification in Political Debates},
+  author    = {Goffredo, Pierpaolo and Haddadan, Shohreh and Vorakitphan, Vorakit and Cabrio, Elena and Villata, Serena},
+  booktitle = {Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence ({IJCAI})},
+  pages     = {4143--4149},
+  year      = {2022},
+  doi       = {10.24963/ijcai.2022/575},
+  url       = {https://www.ijcai.org/proceedings/2022/575}
+}
+
+@inproceedings{alhindi2022multitask,
+  title     = {Multitask Instruction-based Prompting for Fallacy Recognition},
+  author    = {Alhindi, Tariq and Chakrabarty, Tuhin and Musi, Elena and Muresan, Smaranda},
+  booktitle = {Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing ({EMNLP})},
+  pages     = {8172--8187},
+  year      = {2022},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2022.emnlp-main.560},
+  url       = {https://aclanthology.org/2022.emnlp-main.560},
+  eprint    = {2301.09992},
+  archivePrefix = {arXiv}
+}
+
+@book{walton2008schemes,
+  title     = {Argumentation Schemes},
+  author    = {Walton, Douglas and Reed, Chris and Macagno, Fabrizio},
+  publisher = {Cambridge University Press},
+  year      = {2008},
+  isbn      = {9780521897907},
+  doi       = {10.1017/CBO9780511802034}
+}
+
+
+% ========== INFRASTRUCTURE ==========
+
+@inproceedings{frobe2023tira,
+  title     = {Continuous Integration for Reproducible Shared Tasks with {TIRA}.io},
+  author    = {Fr{\"o}be, Maik and Wiegmann, Matti and Kolyada, Nikolay and Grahm, Bastian and Elstner, Theresa and Loebe, Frank and Hagen, Matthias and Stein, Benno and Potthast, Martin},
+  booktitle = {Advances in Information Retrieval ({ECIR} 2023)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {13981},
+  pages     = {236--241},
+  year      = {2023},
+  publisher = {Springer},
+  doi       = {10.1007/978-3-031-28241-6\_20}
+}
+
+% Alias for frobe2023tira using the Touché-workshop template-style key.
+% Duplicate-content entry; same paper, different cite key. Either key
+% works; sections/*.tex currently use frobe2023tira, the template body
+% conventionally cites froebe:2023b. Do not delete either.
+@inproceedings{froebe:2023b,
+  title     = {Continuous Integration for Reproducible Shared Tasks with {TIRA}.io},
+  author    = {Fr{\"o}be, Maik and Wiegmann, Matti and Kolyada, Nikolay and Grahm, Bastian and Elstner, Theresa and Loebe, Frank and Hagen, Matthias and Stein, Benno and Potthast, Martin},
+  booktitle = {Advances in Information Retrieval. 45th European Conference on {IR} Research ({ECIR} 2023)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {13981},
+  pages     = {236--241},
+  year      = {2023},
+  publisher = {Springer},
+  address   = {Berlin Heidelberg New York},
+  doi       = {10.1007/978-3-031-28241-6\_20}
+}
+
+@inproceedings{wolf2020transformers,
+  title     = {Transformers: State-of-the-Art Natural Language Processing},
+  author    = {Wolf, Thomas and Debut, Lysandre and Sanh, Victor and Chaumond, Julien and Delangue, Clement and Moi, Anthony and Cistac, Pierric and Rault, Tim and Louf, R{\'e}mi and Funtowicz, Morgan and Davison, Joe and Shleifer, Sam and von Platen, Patrick and Ma, Clara and Jernite, Yacine and Plu, Julien and Xu, Canwen and Le Scao, Teven and Gugger, Sylvain and Drame, Mariama and Lhoest, Quentin and Rush, Alexander},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations},
+  pages     = {38--45},
+  year      = {2020},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2020.emnlp-demos.6},
+  url       = {https://aclanthology.org/2020.emnlp-demos.6}
+}
+
+
+% ========== LIT-REVIEW ADDITIONS ==========
+
+% --- Gap A: recent (2023-2025) fallacy / argumentative-text classification ---
+
+@inproceedings{helwe2024mafalda,
+  title     = {{MAFALDA}: A Benchmark and Comprehensive Study of Fallacy Detection and Classification},
+  author    = {Helwe, Chadi and Calamai, Tom and Paris, Pierre-Henri and Clavel, Chlo{\'e} and Suchanek, Fabian},
+  booktitle = {Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)},
+  pages     = {4810--4845},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2024.naacl-long.270},
+  url       = {https://aclanthology.org/2024.naacl-long.270}
+}
+
+@inproceedings{pan2024zeroshotfallacy,
+  title     = {Are {LLM}s Good Zero-Shot Fallacy Classifiers?},
+  author    = {Pan, Fengjun and Wu, Xiaobao and Li, Zongrui and Luu, Anh Tuan},
+  booktitle = {Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing ({EMNLP})},
+  year      = {2024},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2024.emnlp-main.794}
+}
+
+% --- Gap B: Touché lab overview papers ---
+
+@inproceedings{bondarenko2022touche,
+  title     = {Overview of {Touch\'{e}} 2022: Argument Retrieval},
+  author    = {Bondarenko, Alexander and Fr{\"o}be, Maik and Kiesel, Johannes and Syed, Shahbaz and Gurcke, Timon and Beloucif, Meriem and Panchenko, Alexander and Biemann, Chris and Stein, Benno and Wachsmuth, Henning and Potthast, Martin and Hagen, Matthias},
+  booktitle = {Working Notes Papers of the {CLEF} 2022 Evaluation Labs},
+  series    = {{CEUR} Workshop Proceedings},
+  volume    = {3180},
+  year      = {2022},
+  publisher = {{CEUR}-{WS}.org},
+  url       = {https://ceur-ws.org/Vol-3180/paper-247.pdf}
+}
+
+@inproceedings{bondarenko2023touche,
+  title     = {Overview of {Touch\'{e}} 2023: Argument and Causal Retrieval},
+  author    = {Bondarenko, Alexander and Fr{\"o}be, Maik and Kiesel, Johannes and Syed, Shahbaz and Gurcke, Timon and Stahl, Maximilian and Anh Vu, Phan and Carnot, Max Pascal and Heinrich, Lorik and Merker, Nicolas and Schmidt, Alexander and Wolska, Magdalena and Beloucif, Meriem and Bevendorff, Janek and Biemann, Chris and Panchenko, Alexander and Stein, Benno and Wachsmuth, Henning and Potthast, Martin and Hagen, Matthias},
+  booktitle = {Working Notes Papers of the {CLEF} 2023 Evaluation Labs},
+  series    = {{CEUR} Workshop Proceedings},
+  volume    = {3497},
+  pages     = {3065--3089},
+  year      = {2023},
+  publisher = {{CEUR}-{WS}.org},
+  url       = {https://ceur-ws.org/Vol-3497/paper-259.pdf}
+}
+
+@inproceedings{kiesel2024touche,
+  title     = {Overview of {Touch\'{e}} 2024: Argumentation Systems},
+  author    = {Kiesel, Johannes and Fr{\"o}be, Maik and Gohsen, Marcel and Heinrich, Maximilian and Hagen, Matthias and Stein, Benno and Potthast, Martin},
+  booktitle = {Working Notes Papers of the {CLEF} 2024 Evaluation Labs},
+  series    = {{CEUR} Workshop Proceedings},
+  volume    = {3740},
+  pages     = {3341--3366},
+  year      = {2024},
+  publisher = {{CEUR}-{WS}.org},
+  url       = {https://ceur-ws.org/Vol-3740/paper-322.pdf}
+}
+
+@inproceedings{kiesel2025touche,
+  title     = {Overview of {Touch\'{e}} 2025: Argumentation Systems},
+  author    = {Kiesel, Johannes and {\c{C}}{\"o}ltekin, {\c{C}}a{\u{g}}r{\i} and Gohsen, Marcel and Heineking, Sebastian and Heinrich, Maximilian and Fr{\"o}be, Maik and Hagen, Tim and Aliannejadi, Mohammad and Anand, Sharat and Erjavec, Toma{\v{z}} and Hagen, Matthias and Kopp, Maty{\'a}{\v{s}} and Ljube{\v{s}}i{\'c}, Nikola and Meden, Katja and Mirzakhmedova, Nailia and Morkevi{\v{c}}ius, Vaidas and Scells, Harrisen and Wolter, Moritz and Zelch, Ines and Potthast, Martin and Stein, Benno},
+  booktitle = {Working Notes Papers of the {CLEF} 2025 Evaluation Labs},
+  series    = {{CEUR} Workshop Proceedings},
+  volume    = {4038},
+  pages     = {4536--4562},
+  year      = {2025},
+  publisher = {{CEUR}-{WS}.org},
+  url       = {https://ceur-ws.org/Vol-4038/paper_378.pdf}
+}
+
+% --- Gap C: LLM-generated synthetic data for text classification ---
+
+@inproceedings{li2023synthdata,
+  title     = {Synthetic Data Generation with Large Language Models for Text Classification: Potential and Limitations},
+  author    = {Li, Zhuoyan and Zhu, Hangxiao and Lu, Zhuoran and Yin, Ming},
+  booktitle = {Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing ({EMNLP})},
+  pages     = {10443--10461},
+  year      = {2023},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/2023.emnlp-main.647},
+  url       = {https://aclanthology.org/2023.emnlp-main.647}
+}
+
+% --- Gap D: pseudo-labeling / self-training for transformer classifiers ---
+
+@inproceedings{mukherjee2020ust,
+  title     = {Uncertainty-aware Self-training for Text Classification with Few Labels},
+  author    = {Mukherjee, Subhabrata and Awadallah, Ahmed Hassan},
+  booktitle = {Advances in Neural Information Processing Systems ({NeurIPS})},
+  year      = {2020},
+  eprint    = {2006.15315},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2006.15315}
+}
+
+% --- Gap E: argumentation-scheme NLP building on Walton-Reed-Macagno ---
+
+@article{jo2021schemes,
+  title   = {Classifying Argumentative Relations Using Logical Mechanisms and Argumentation Schemes},
+  author  = {Jo, Yohan and Bang, Seojin and Reed, Chris and Hovy, Eduard},
+  journal = {Transactions of the Association for Computational Linguistics},
+  volume  = {9},
+  pages   = {721--739},
+  year    = {2021},
+  doi     = {10.1162/tacl\_a\_00394},
+  eprint  = {2105.07571},
+  archivePrefix = {arXiv}
+}

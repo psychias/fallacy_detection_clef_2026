@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0005",
+  "idea_ref": "[ENH-TRACK] RoBERTa-base on ST2 enhanced track",
+  "phase": "1",
+  "depends_on": [],
+  "time_budget_s": 540,
+  "hypothesis": "Enhanced track fields give richer input for ST2 fallacy classification",
+  "subtask": "st2",
+  "track": "enhanced",
+  "backbone": "roberta-base",
+  "data": {"real": true, "synth_versions": [], "mix_ratio": "real_only"},
+  "train": {"lr": 2e-5, "batch_size": 16, "epochs": 10, "loss": "weighted_ce", "max_len": 256}
+}

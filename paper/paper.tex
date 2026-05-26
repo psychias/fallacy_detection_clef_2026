@@ -1,0 +1,417 @@
+%% =====================================================================
+%% Touché 2026 Fallacy Detection — paper.tex
+%% Built on the Touché-supplied ceurart scaffold (touche24-paper.tex).
+%% ceurart.cls in the project root is the workshop-supplied version
+%% (verified by md5 against the 2024 template folder; the 2026 lab
+%% reuses the 2024 class file).
+%%
+%% Year and conference fields updated for 2026; template's two-author
+%% \fnmark / \fntext "equal contribution" machinery removed (single
+%% author); Declaration on Generative AI added per CEUR-WS policy
+%% (mandatory since 2024-12-20); body sections enter via \input.
+%% =====================================================================
+
+\documentclass{ceurart}
+\sloppy
+
+%% Project additions. ceurart.cls already loads graphicx, booktabs,
+%% multirow, array, microtype, natbib, geometry, hyperref, xcolor —
+%% so we only add what the class does not provide.
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,fit,backgrounds,calc}
+
+\copyrightyear{2026}
+\copyrightclause{Copyright for this paper by its authors.
+  Use permitted under Creative Commons License Attribution 4.0
+  International (CC BY 4.0).}
+
+\conference{CLEF 2026: Conference and Labs of the Evaluation Forum,
+  September 21--24, 2026, Jena, Germany}
+
+\begin{document}
+
+%% ---------------------------------------------------------------------
+%% Title and sub-title (Touché lab convention)
+%% ---------------------------------------------------------------------
+\title{UZHCL\_for\_the\_win at Touch\'{e} 26: Encoder Fine-Tuning,
+  Synthetic Augmentation, and an LLM Detour}
+\title[mode=sub]{Notebook for the Touch\'{e} Lab at CLEF 2026}
+
+%% ---------------------------------------------------------------------
+%% Author block. ORCID remains a pre-camera-ready TODO.
+%% ---------------------------------------------------------------------
+\author[1]{Stylianos Psychias}[%
+  email=stylianos.psychias@uzh.ch,
+]
+\address[1]{University of Zurich, Zurich, Switzerland}
+
+%% ---------------------------------------------------------------------
+%% Abstract and keywords (both mandatory in ceurart)
+%% ---------------------------------------------------------------------
+\begin{abstract}
+Online discussions on platforms like Reddit are a productive testbed for fallacy detection: short texts, broad topical range, and the full inventory of informal fallacies catalogued by classical argumentation theory long before social media. The Touch\'{e} 2026 lab at CLEF formalises this as a shared task on a Reddit-derived corpus and provides a structured benchmark for systems that combine fallacy detection with argument-scheme classification. This paper describes our participation in the Touch\'{e} 2026 Fallacy Detection lab, covering all three subtasks (ST1 binary fallacy detection, ST2 eight-way fallacy classification, ST3 four-way argument-scheme classification) and both evaluation tracks. Our submitted systems are fine-tuned RoBERTa-large encoders with task-specific heads, augmented with a small batch of LLM-generated synthetic contrastive pairs. For ST2 and ST3 on the enhanced track we additionally extended training with a pseudo-labelled top-up of the published unlabelled pool, gated by a leak-audit step; we ran a wider backbone grid covering DeBERTa-v3, ModernBERT, and four Qwen variants (3B zero-shot/few-shot, 7B and 32B CoT-LoRA, and Qwen3-4B-Thinking) for comparison. A key consideration for this year's submission was the structural status of the enhanced-track fields, which were rewritten by the lab organisers with knowledge of the gold labels and which therefore shaped both our system design and our interpretation of results. On our held-out development partitions our systems perform competitively across all six (subtask, track) cells, with the strongest results on the enhanced track of ST2. We discuss these outcomes in light of the enhanced-track leakage question and the small-corpus limits of the encoder-vs-LLM comparison, and outline directions for future work. All code is publicly available at \url{https://github.com/psychias/fallacy_detection}.
+\end{abstract}
+
+\begin{keywords}
+  Fallacy detection \sep
+  Argument scheme classification \sep
+  Touch\'{e} 2026 \sep
+  RoBERTa \sep
+  Synthetic data augmentation \sep
+  Pseudo-labelling
+\end{keywords}
+
+\maketitle
+
+%% =====================================================================
+\section{Introduction}
+\label{sec:intro}
+\input{sections/01_introduction.tex}
+
+%% =====================================================================
+\section{Previous Work}
+\label{sec:background}
+\input{sections/02_previous_work.tex}
+
+%% =====================================================================
+\section{Methodology}
+\label{sec:system}
+\input{sections/03_methodology.tex}
+
+%% =====================================================================
+\section{Results}
+\label{sec:results}
+\input{sections/04_results.tex}
+
+%% =====================================================================
+\section{Discussion and Future Work}
+\label{sec:discussion}
+\input{sections/05_discussion.tex}
+
+%% =====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+\input{sections/06_conclusion.tex}
+
+%% =====================================================================
+%% Acknowledgments (ceurart environment; placed before back matter
+%% per the formatting-instructions PDF).
+%% =====================================================================
+\begin{acknowledgments}
+The author thanks the Touch\'{e} 2026 lab organizers for providing
+the dataset, evaluation infrastructure, and submission platform.
+\end{acknowledgments}
+
+%% =====================================================================
+%% AI Usage Declaration. CEUR-WS policy (mandatory since 2024-12-20)
+%% requires a Declaration on Generative AI; the section heading and
+%% wording below follow the author's preferred template.
+%% =====================================================================
+\section*{AI Usage Declaration}
+This text was proofread and improved with the assistance of
+Claude (Anthropic). The following prompt was used:
+
+\begin{quote}
+``Imagine you're an AI master student. Evaluate my text based on the
+task description and check if it correct or not, if not tell me which
+parts I should improve.''
+\end{quote}
+
+\noindent Claude was used to evaluate the text against the
+Touch\'{e} 2026 Fallacy Detection task description, identify missing
+elements (results coverage, leakage handling, methodology and ablation
+details) and suggest phrasing improvements. The author conceived and
+executed all experiments, made all submission decisions, and takes full
+responsibility for the publication's content.
+
+%% =====================================================================
+%% Bibliography
+%% =====================================================================
+\bibliography{references}
+
+%% =====================================================================
+\appendix
+
+\section{Prompts}
+\label{app:prompts}
+
+Synthetic contrastive pairs and pseudo-labelled examples contributed to
+the submitted systems (\S\ref{sec:synth}, \S\ref{sec:pseudo}). The system
+prompts that drove each generation batch are reproduced verbatim below;
+the matching user prompts are built per call from a topic seed, a
+subreddit, a small block of real exemplars from the train split, a
+sampled target length and number of supports, and (for ST1/ST2) a
+fallacy card or (for ST3) a scheme pair. Generated batches are released
+alongside this notebook in the TIRA submission package.
+
+\paragraph{Prompt 1: ST1/ST2 contrastive-pair generation
+(\texttt{synth\_v002} ST1/ST2; \texttt{synth\_v003} rare-class top-up).}
+System message:
+\begin{verbatim}
+You generate training data for a fallacy detection model. The data
+must read as authentic Reddit replies: informal register, hedges
+("idk", "tbh", "iirc"), occasional typos, no debate-club phrasing,
+no signposting. Never name the fallacy inside the generated text.
+
+The 'load-bearing signals' you'll be shown describe the LOGICAL
+PATTERN of the fallacy, not phrases to use verbatim. Express the
+same reasoning move with fresh wording. Do NOT use any of these
+stock formulations (fresh wording only): 'millions of people
+can't be wrong', 'people can't be wrong', 'everyone knows',
+'no middle ground', 'no in between', 'before you know it',
+'next thing you know', 'where does it end', 'it's a slippery
+slope', 'we've always done it', 'natural is better', 'chemicals
+are bad', 'yeah i agree', 'i agree it's'. If your draft contains
+any of these phrases, rewrite the draft.
+
+You will produce a CONTRASTIVE PAIR: one reply that commits the
+target fallacy, and one reply using structurally similar reasoning
+that does NOT commit it. Both replies must address the same topic
+with claims of similar polarity, so the only meaningful difference
+is the soundness of the inference.
+
+CRITICAL: Do NOT cite specific percentages, year-tagged studies
+(e.g. '2023 study'), polls, named institutions (Gallup, Pew, CDC,
+etc.), or made-up statistics in EITHER reply. Both replies must
+reason from lived experience, anecdote, observation, or general
+claims. The difference between them is the soundness of the
+inference, not the presence of evidence.
+\end{verbatim}
+The user prompt supplies a fallacy card (definition, load-bearing
+signals, legitimate counterpart), the topic and subreddit, a target
+length and per-reply support count, and a small block of real
+exemplars. The model returns a JSON object carrying \texttt{thread\_title},
+\texttt{parent}, and two replies (\texttt{fallacious} and
+\texttt{legitimate}), each with \texttt{text\_raw}, \texttt{text\_base},
+\texttt{claim}, and \texttt{supports}.
+
+\paragraph{Prompt 2: ST3 contrastive-pair generation
+(\texttt{synth\_v002} ST3).}
+Same shape as Prompt 1, but produces two NON-fallacious replies using
+different argumentation schemes. System message:
+\begin{verbatim}
+You generate training data for an argumentation scheme classifier.
+The data must read as authentic Reddit replies: informal register,
+hedges, occasional typos, natural conversation. No academic phrasing.
+
+[blocklist as in Prompt 1]
+
+You will produce a CONTRASTIVE PAIR: two non-fallacious replies to
+the same parent comment, on the same topic, with similar conclusions
+-- but using DIFFERENT argumentation schemes. The structural
+difference should be clear but natural.
+\end{verbatim}
+The user prompt specifies Scheme A (target) and Scheme B (contrast),
+each with goal axis (practical / epistemic), basis axis (internal /
+external), definition, and load-bearing signals, together with the
+topic, subreddit, target length, and exemplar block. JSON output is
+\texttt{scheme\_a} / \texttt{scheme\_b}, each with \texttt{scheme},
+\texttt{argument\_goal}, \texttt{argument\_basis}, \texttt{text\_raw},
+\texttt{text\_base}, \texttt{claim}, and \texttt{supports}.
+
+\paragraph{Prompt 3: \textsf{pe}-targeted generation (\texttt{exp\_0103}).}
+A separate, simpler prompt generated the pe-targeted batch (50
+examples per label, \texttt{openai/gpt-4o-mini}, temperature 0.9).
+System message:
+\begin{verbatim}
+You are an expert in argumentation theory and propaganda techniques.
+Generate realistic argumentative text snippets that contain propaganda
+or emotional manipulation techniques (loaded language, fear appeals,
+bandwagon, false dilemma, etc.) rather than logical reasoning.
+
+The text should be 2-4 sentences, resemble real-world political
+discourse or persuasive media, and clearly exemplify propaganda /
+emotional fallacies.
+\end{verbatim}
+Two user prompts, one per generated label:
+\begin{verbatim}
+[pe]  Generate a short argumentative text (2-4 sentences) that uses
+      propaganda or emotional manipulation. Include at least one of:
+      loaded language, appeal to fear, bandwagon appeal, false
+      dilemma, or emotional blackmail. Make it sound like real
+      political/media discourse.
+
+[pa]  Generate a short argumentative text (2-4 sentences) that
+      primarily appeals to emotion (pathos) rather than logic. Use
+      emotional language, fear, pity, or desire to persuade. Make it
+      realistic.
+\end{verbatim}
+
+\paragraph{Pseudo-label confidence selection (\texttt{exp\_0072},
+\texttt{exp\_0073}).}
+The pseudo-labelling step filtered the encoder classifier's own
+predictions at $\tau=0.9$ (see \S\ref{sec:pseudo}); it is not LLM-API
+driven and uses no prompt. We list it here for completeness rather
+than because there is a prompt to record.
+
+%% =====================================================================
+\section{Hyperparameter Grid}
+\label{app:hyper}
+
+Table~\ref{tab:hyper} summarises the configurations used for the six submitted runs.
+All runs share the RoBERTa-large backbone~\cite{liu2019roberta} and use the
+\texttt{transformers} library~\cite{wolf2020transformers}. Optimiser is AdamW with
+linear warmup over the first 10\% of steps. Loss is class-weighted cross-entropy for ST2 and ST3;
+ST1 uses unweighted cross-entropy. Where the experiment log does not separately record a seed,
+we used the lab default \texttt{seed=42}; 5-fold CV runs used fold seeds 42--46.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Submitted-run hyperparameter grid. \texttt{sw} is the loss weight applied to
+synthetic (and pseudo-labelled) examples relative to real examples. \texttt{max\_len}
+is the tokeniser truncation length.}
+\label{tab:hyper}
+\begin{tabular}{llcccccc}
+\toprule
+Subtask & Track & exp\_id & max\_len & batch & lr & epochs & extras \\
+\midrule
+ST1 & base     & exp\_0033 & 256 & 16 & 1e-5 & 15 & synth\_v002 sw=0.5 \\ % from exp_0033
+ST1 & enhanced & exp\_0035 & 256 & 16 & 1e-5 & 12 & synth\_v002 sw=0.5 \\ % from exp_0035
+ST2 & base     & exp\_0032 & 256 & 16 & 1e-5 & 15 & synth\_v002 sw=0.5 \\ % from exp_0032
+ST2 & enhanced & exp\_0072 & 384 & 16 & 1e-5 & 12 & synth + pseudo sw=0.7 \\ % from exp_0072
+ST3 & base     & exp\_0069 & 384 & 16 & 1e-5 & 15 & synth\_v002 \\ % from exp_0069
+ST3 & enhanced & exp\_0073 & 384 & 16 & 1e-5 & 12 & synth + pseudo sw=0.7 \\ % from exp_0073
+\bottomrule
+\end{tabular}
+\end{table}
+
+Synthetic generation used a frontier LLM via API (see \S\ref{sec:system});
+the prompt template and the generated pairs are released alongside this
+notebook in the TIRA submission package. Per-class decision thresholds for
+ST3 were swept on the dev partition; the best configuration was
+$\{\text{ee}{=}0.1, \text{ei}{=}0.1, \text{pe}{=}0.05, \text{pi}{=}0.4\}$
+(\texttt{exp\_0145}, $+1.0$\,pp F1 over default argmax on the dev partition). % from exp_0145
+
+%% =====================================================================
+\section{Per-Class F1 on the Dev Partition}
+\label{app:perclass}
+
+Table~\ref{tab:perclass} reports per-class precision, recall, F1, and
+support for the submitted enhanced-track systems on the held-out
+development partition. ST2 values are computed from default argmax
+predictions of \texttt{exp\_0072}; ST3 values are computed from
+\texttt{exp\_0073} under the per-class thresholds from \texttt{exp\_0145}
+($\text{ee}{=}0.1, \text{ei}{=}0.1, \text{pe}{=}0.05, \text{pi}{=}0.4$).
+Both macro-F1 values reconcile with Table~\ref{tab:headline}
+(\S\ref{sec:results}) within $\pm 0.001$ rounding.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Per-class precision, recall, F1, and support on the dev
+partition for ST2-enhanced (\texttt{exp\_0072}) and ST3-enhanced
+(\texttt{exp\_0073}). Computed from saved prediction artefacts. ST3
+cells reflect the per-class threshold calibration of \texttt{exp\_0145}.}
+\label{tab:perclass}
+\begin{tabular}{lcccc}
+\toprule
+Label & Precision & Recall & F1 & Support \\
+\midrule
+\multicolumn{5}{l}{\textit{ST2 (8-way; exp\_0072; argmax)}} \\ % from exp_0072
+authority             & 0.972 & 0.986 & 0.979 & 72 \\
+black\_white          & 0.967 & 0.967 & 0.967 & 30 \\
+hasty\_generalization & 0.964 & 0.958 & 0.961 & 72 \\
+natural               & 1.000 & 1.000 & 1.000 & 21 \\
+population            & 0.948 & 0.971 & 0.959 & 68 \\
+slippery\_slope       & 1.000 & 0.957 & 0.978 & 46 \\
+tradition             & 0.971 & 0.971 & 0.971 & 35 \\
+worse\_problems       & 0.940 & 0.957 & 0.948 & 47 \\
+\midrule
+\multicolumn{5}{l}{\textit{ST3 (4-way; exp\_0073; thresholds from exp\_0145)}} \\ % from exp_0073 + exp_0145
+ei (epistemic-internal) & 0.755 & 0.833 & 0.792 & 48 \\
+ee (epistemic-external) & 0.790 & 0.830 & 0.810 & 53 \\
+pi (practical-internal) & 0.821 & 0.718 & 0.766 & 39 \\
+pe (practical-external) & 0.563 & 0.583 & 0.573 & 24 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% =====================================================================
+\section{Citation Graph}
+\label{app:citgraph}
+
+Figure~\ref{fig:citgraph} traces the prior work that fed each component of
+our pipeline. The horizontal axis is left-to-right: citations on the left,
+the pipeline stages they motivated on the right. Solid arrows mark routes
+that ended up in the submitted system; dashed arrows mark routes we tried
+and abandoned (the DeBERTa-v3-large NaN failures, ModernBERT-large
+underperformance, and the LLM detour that did not validate under CV).
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  node distance = 5mm and 18mm,
+  font          = \footnotesize,
+  every node/.style = {align=center},
+  citebox/.style = {draw, rounded corners=2pt, inner sep=3pt,
+                    minimum width=40mm, minimum height=8mm,
+                    line width=0.4pt},
+  pipebox/.style = {draw, rounded corners=2pt, inner sep=3pt,
+                    minimum width=46mm, minimum height=10mm,
+                    line width=0.4pt},
+  blue/.style   = {citebox, fill=blue!8,   draw=blue!55!black},
+  teal/.style   = {citebox, fill=teal!10,  draw=teal!55!black},
+  gray/.style   = {citebox, fill=black!5,  draw=black!55},
+  purp/.style   = {citebox, fill=violet!8, draw=violet!55!black},
+  amber/.style  = {citebox, fill=orange!10,draw=orange!65!black},
+  ptl/.style    = {pipebox, fill=teal!10,  draw=teal!55!black},
+  pgr/.style    = {pipebox, fill=black!5,  draw=black!55},
+  pam/.style    = {pipebox, fill=orange!10,draw=orange!65!black},
+  ppu/.style    = {pipebox, fill=violet!8, draw=violet!55!black},
+  solid/.style  = {-{Latex[length=2mm]}, line width=0.5pt},
+  dropped/.style= {-{Latex[length=2mm]}, line width=0.5pt, dashed,
+                   draw=black!55},
+]
+
+% Left column: citations
+\node[blue]  (c1)                            {Sahai et al.\ 2021\\\textit{Source dataset}};
+\node[blue,  below=of c1] (c2)               {Macagno 2022\\\textit{Goal/basis axes}};
+\node[blue,  below=of c2] (c3)               {Heinrich et al.\ 2026\\\textit{Lab overview}};
+\node[teal,  below=8mm of c3] (c4)           {Liu et al.\ 2019 (RoBERTa)\\\textit{Chosen backbone}};
+\node[gray,  below=of c4] (c5)               {He et al.\ 2021 (DeBERTa-v3)\\\textit{Abandoned, NaN}};
+\node[gray,  below=of c5] (c6)               {Warner et al.\ 2024\\\textit{ModernBERT --- tried, lost}};
+\node[purp,  below=8mm of c6] (c7)           {Qwen 2024 / 2025\\\textit{Qwen2.5, Qwen3}};
+\node[purp,  below=of c7] (c8)               {Hu 2022 / Wei 2022\\\textit{LoRA + CoT}};
+\node[amber, below=8mm of c8] (c9)           {Lee 2013 / Mukherjee 2020\\\textit{Pseudo-labelling}};
+\node[gray,  below=of c9] (c10)              {Fr\"{o}be et al.\ 2023\\\textit{TIRA platform}};
+
+% Right column: pipeline
+\node[ptl, right=of c2, yshift=4mm]   (p1) {Data preparation\\\textit{base and enhanced fields}};
+\node[ptl, right=of c4, yshift=2mm]   (p2) {RoBERTa-large fine-tuning\\\textit{max\_len 384, lr 1e-5}};
+\node[pam, right=of c9, yshift=-3mm]  (p3) {Synth + pseudo augmentation\\\textit{sw 0.5--0.7}};
+\node[ppu, below=of p3]               (p4) {LLM exploration\\\textit{Qwen + CoT-LoRA, not shipped}};
+\node[pgr, below=of p4]               (p5) {TIRA submission\\\textit{6 slots, RoBERTa-large}};
+
+% Edges: chosen routes
+\draw[solid] (c1.east) -- (p1.west);
+\draw[solid] (c2.east) -- (p1.west);
+\draw[solid] (c3.east) -- (p1.west);
+\draw[solid] (c4.east) -- (p2.west);
+\draw[solid] (c9.east) -- (p3.west);
+\draw[solid] (c10.east) -- (p5.west);
+
+% Edges: dropped routes
+\draw[dropped] (c5.east) -- (p2.west);
+\draw[dropped] (c6.east) -- (p2.west);
+\draw[dropped] (c7.east) -- (p4.west);
+\draw[dropped] (c8.east) -- (p4.west);
+
+% Internal flow on the right
+\draw[solid] (p1.south) -- (p2.north);
+\draw[solid] (p2.south) -- (p3.north);
+\draw[solid] (p3.south) -- (p4.north);
+\draw[solid] (p4.south) -- (p5.north);
+\draw[solid] (p2.east) to[bend left=10] (p5.east);
+
+\end{tikzpicture}
+\caption{Which prior work fed which component of our pipeline. Solid
+arrows are routes that shipped; dashed arrows are routes we tried
+and dropped (DeBERTa-v3-large under NaN, ModernBERT-large
+underperforming RoBERTa-large, and the LLM detour that did not
+out-perform RoBERTa-large under cross-validation within our compute
+envelope).}
+\label{fig:citgraph}
+\end{figure}
+
+\end{document}

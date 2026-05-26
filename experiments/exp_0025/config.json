@@ -1,0 +1,32 @@
+{
+    "kind":  "synth",
+    "parent_id":  null,
+    "idea_ref":  "[P1] Contrastive synth for ST1+ST2: oversample weak classes (population, black-white, hasty_gen)",
+    "phase":  "1",
+    "depends_on":  [
+
+                   ],
+    "time_budget_s":  600,
+    "hypothesis":  "Contrastive pairs from dual models improve ST1 hard-negative discrimination and ST2 weak-class F1",
+    "mode":  "st1_st2",
+    "synth_version":  "synth_v002_st1st2",
+    "models":  [
+                   "qwen/qwen3-32b",
+                   "google/gemma-3-27b-it"
+               ],
+    "temperature":  0.9,
+    "top_p":  0.95,
+    "verify":  true,
+    "seed":  42,
+    "targets":  {
+                    "population":  25,
+                    "black-white":  25,
+                    "hasty_generalization":  20,
+                    "worse_problems":  15,
+                    "tradition":  15,
+                    "authority":  10,
+                    "natural":  10,
+                    "slippery_slope":  10
+                },
+    "script":  "generate.py"
+}

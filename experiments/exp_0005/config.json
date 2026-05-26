@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": null,
+  "idea_ref": "[P1] RoBERTa-base on ST2 base track",
+  "phase": "0",
+  "depends_on": [],
+  "time_budget_s": 540,
+  "hypothesis": "RoBERTa-base as alternative backbone for ST2 base-track fallacy classification",
+  "subtask": "st2",
+  "track": "base",
+  "backbone": "roberta-base",
+  "data": {"real": true, "synth_versions": [], "mix_ratio": "real_only"},
+  "train": {"lr": 2e-5, "batch_size": 16, "epochs": 10, "loss": "ce", "max_len": 256}
+}

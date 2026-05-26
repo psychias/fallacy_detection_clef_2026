@@ -1,0 +1,188 @@
+{
+  "subtask": "st2",
+  "track": "enhanced",
+  "backbone": "Qwen/Qwen3-4B-Thinking-2507",
+  "n_folds": 5,
+  "macro_f1_mean": 0.96262,
+  "macro_f1_std": 0.01328,
+  "macro_f1_per_fold": [
+    0.95674,
+    0.94842,
+    0.95737,
+    0.98747,
+    0.96309
+  ],
+  "class_f1": {
+    "authority": {
+      "mean": 0.96591,
+      "std": 0.0171
+    },
+    "black-white": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "hasty_generalization": {
+      "mean": 0.93354,
+      "std": 0.05281
+    },
+    "natural": {
+      "mean": 0.94121,
+      "std": 0.05843
+    },
+    "population": {
+      "mean": 0.94629,
+      "std": 0.04947
+    },
+    "slippery_slope": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "tradition": {
+      "mean": 0.93069,
+      "std": 0.07147
+    },
+    "worse_problems": {
+      "mean": 0.9833,
+      "std": 0.02048
+    }
+  },
+  "fold_details": [
+    {
+      "fold": 0,
+      "f1_macro": 0.95674,
+      "f1_per_class": {
+        "authority": 0.96,
+        "black-white": 1.0,
+        "hasty_generalization": 0.84211,
+        "natural": 0.88889,
+        "population": 1.0,
+        "slippery_slope": 1.0,
+        "tradition": 0.96296,
+        "worse_problems": 1.0
+      },
+      "n_train": 369,
+      "n_dev": 96,
+      "dev_dist": {
+        "authority": 12,
+        "black-white": 11,
+        "hasty_generalization": 11,
+        "natural": 13,
+        "population": 10,
+        "slippery_slope": 13,
+        "tradition": 13,
+        "worse_problems": 13
+      }
+    },
+    {
+      "fold": 1,
+      "f1_macro": 0.94842,
+      "f1_per_class": {
+        "authority": 0.95652,
+        "black-white": 1.0,
+        "hasty_generalization": 0.95652,
+        "natural": 0.85714,
+        "population": 1.0,
+        "slippery_slope": 1.0,
+        "tradition": 0.85714,
+        "worse_problems": 0.96
+      },
+      "n_train": 371,
+      "n_dev": 94,
+      "dev_dist": {
+        "authority": 12,
+        "black-white": 11,
+        "hasty_generalization": 11,
+        "natural": 12,
+        "population": 10,
+        "slippery_slope": 13,
+        "tradition": 13,
+        "worse_problems": 12
+      }
+    },
+    {
+      "fold": 2,
+      "f1_macro": 0.95737,
+      "f1_per_class": {
+        "authority": 0.95652,
+        "black-white": 1.0,
+        "hasty_generalization": 1.0,
+        "natural": 0.96,
+        "population": 0.90909,
+        "slippery_slope": 1.0,
+        "tradition": 0.83333,
+        "worse_problems": 1.0
+      },
+      "n_train": 372,
+      "n_dev": 93,
+      "dev_dist": {
+        "authority": 12,
+        "black-white": 11,
+        "hasty_generalization": 11,
+        "natural": 12,
+        "population": 10,
+        "slippery_slope": 12,
+        "tradition": 13,
+        "worse_problems": 12
+      }
+    },
+    {
+      "fold": 3,
+      "f1_macro": 0.98747,
+      "f1_per_class": {
+        "authority": 1.0,
+        "black-white": 1.0,
+        "hasty_generalization": 0.95238,
+        "natural": 1.0,
+        "population": 0.94737,
+        "slippery_slope": 1.0,
+        "tradition": 1.0,
+        "worse_problems": 1.0
+      },
+      "n_train": 373,
+      "n_dev": 92,
+      "dev_dist": {
+        "authority": 12,
+        "black-white": 11,
+        "hasty_generalization": 11,
+        "natural": 12,
+        "population": 9,
+        "slippery_slope": 12,
+        "tradition": 13,
+        "worse_problems": 12
+      }
+    },
+    {
+      "fold": 4,
+      "f1_macro": 0.96309,
+      "f1_per_class": {
+        "authority": 0.95652,
+        "black-white": 1.0,
+        "hasty_generalization": 0.91667,
+        "natural": 1.0,
+        "population": 0.875,
+        "slippery_slope": 1.0,
+        "tradition": 1.0,
+        "worse_problems": 0.95652
+      },
+      "n_train": 375,
+      "n_dev": 90,
+      "dev_dist": {
+        "authority": 11,
+        "black-white": 10,
+        "hasty_generalization": 11,
+        "natural": 12,
+        "population": 9,
+        "slippery_slope": 12,
+        "tradition": 13,
+        "worse_problems": 12
+      }
+    }
+  ],
+  "knn_retrieval": true,
+  "cot_examples": 0,
+  "seed": 42,
+  "lora_r": 32,
+  "knn_k": 3,
+  "peak_vram_mb": 13429.9,
+  "wall_clock_s": 4827.9
+}

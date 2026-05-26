@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0057",
+  "idea_ref": "[R2.MAXLEN] ST3 base + synth_v002+v003 with max_len=384 (was 256)",
+  "phase": "2",
+  "hypothesis": "21% of base inputs truncated at 256. max_len=384 on ST3 base with v002+v003 synth. Long structured arguments carry authority/scheme signals. Expecting improvement over exp_0057 (0.490).",
+  "depends_on": [],
+  "time_budget_s": 1800,
+  "subtask": "st3",
+  "track": "base",
+  "backbone": "roberta-large",
+  "data": {"real": true, "synth_versions": ["synth_v002_st3", "synth_v003_st3"], "mix_ratio": "real_plus_synth"},
+  "train": {"lr": 1e-5, "max_len": 384, "batch_size": 8, "epochs": 15, "synth_weight": 0.5, "loss": "weighted_ce", "patience": 3}
+}

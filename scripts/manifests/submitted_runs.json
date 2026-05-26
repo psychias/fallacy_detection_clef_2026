@@ -1,0 +1,56 @@
+{
+  "description": "The six runs in Table 1 of the paper (headline dev results). expected_dev_f1 is the macro-F1 reported in §4.1 Table 1; reproduction runs should land within seed noise of this value. Numbers verified against sections/04_results.tex lines 25-30.",
+  "runs": [
+    {
+      "exp_id": "exp_0033",
+      "subtask": "st1",
+      "track":   "base",
+      "expected_dev_f1": 0.734,
+      "depends_on_data": ["data_synth/synth_v002_st1st2"]
+    },
+    {
+      "exp_id": "exp_0035",
+      "subtask": "st1",
+      "track":   "enhanced",
+      "expected_dev_f1": 0.914,
+      "depends_on_data": ["data_synth/synth_v002_st1st2"]
+    },
+    {
+      "exp_id": "exp_0032",
+      "subtask": "st2",
+      "track":   "base",
+      "expected_dev_f1": 0.730,
+      "depends_on_data": ["data_synth/synth_v002_st1st2"]
+    },
+    {
+      "exp_id": "exp_0072",
+      "subtask": "st2",
+      "track":   "enhanced",
+      "expected_dev_f1": 0.970,
+      "depends_on_data": ["data_synth/synth_v002_st1st2", "data_synth/pseudo_v001_st2"]
+    },
+    {
+      "exp_id": "exp_0069",
+      "subtask": "st3",
+      "track":   "base",
+      "expected_dev_f1": 0.523,
+      "depends_on_data": ["data_synth/synth_v002_st3"]
+    },
+    {
+      "exp_id": "exp_0073",
+      "subtask": "st3",
+      "track":   "enhanced",
+      "expected_dev_f1": 0.735,
+      "expected_cv5_f1": 0.875,
+      "cv_note": "Single-fold dev F1 is 0.735 (Table 1). 5-fold CV mean is 0.875 with the same recipe (fold seeds 42-46); see §4.1 line 35. The CV mean is the decision-relevant number behind the final-submission rationale.",
+      "depends_on_data": ["data_synth/synth_v002_st3", "data_synth/pseudo_v001_st3"]
+    }
+  ],
+  "post_run": [
+    {
+      "exp_id": "exp_0145",
+      "description": "ST3 per-class threshold sweep on exp_0073 dev probabilities (ee=0.1, ei=0.1, pe=0.05, pi=0.4). Adds +1.0pp aggregate F1 over default argmax; see §4.7 and §6.3.",
+      "depends_on_exp": ["exp_0073"]
+    }
+  ]
+}

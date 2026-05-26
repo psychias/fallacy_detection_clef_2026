@@ -1,0 +1,13 @@
+{
+  "kind": "diagnostic",
+  "script": "train.py",
+  "parent_id": "exp_0078",
+  "idea_ref": "[T1.GATE] NLI zero-shot for ST3 basis axis — pe rescue via entailment",
+  "phase": "3",
+  "hypothesis": "ST3 errors are 100% on the basis axis (external vs internal). Only 8 pe training examples exist. NLI zero-shot with DeBERTa-v3-large-mnli can classify basis without fine-tuning: premise=argument text, hypothesis templates for external/internal. If basis accuracy > 80%, combine with perfect goal axis for pe F1 > 0.",
+  "depends_on": [],
+  "time_budget_s": 600,
+  "subtask": "st3",
+  "track": "enhanced",
+  "backbone": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli"
+}

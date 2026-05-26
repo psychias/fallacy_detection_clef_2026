@@ -1,0 +1,109 @@
+{
+  "subtask": "st3",
+  "n_folds": 5,
+  "n_total": 473,
+  "label_distribution": {
+    "epistemic-external": 50,
+    "epistemic-internal": 322,
+    "practical-internal": 93,
+    "practical-external": 8
+  },
+  "fold_stats": [
+    {
+      "fold": 0,
+      "n_dev": 96,
+      "n_train": 377,
+      "dev_labels": {
+        "epistemic-internal": 65,
+        "practical-internal": 19,
+        "epistemic-external": 10,
+        "practical-external": 2
+      },
+      "train_labels": {
+        "epistemic-internal": 257,
+        "epistemic-external": 40,
+        "practical-internal": 74,
+        "practical-external": 6
+      },
+      "pe_in_dev": 2,
+      "pe_in_train": 6
+    },
+    {
+      "fold": 1,
+      "n_dev": 96,
+      "n_train": 377,
+      "dev_labels": {
+        "epistemic-internal": 65,
+        "epistemic-external": 10,
+        "practical-internal": 19,
+        "practical-external": 2
+      },
+      "train_labels": {
+        "epistemic-internal": 257,
+        "epistemic-external": 40,
+        "practical-internal": 74,
+        "practical-external": 6
+      },
+      "pe_in_dev": 2,
+      "pe_in_train": 6
+    },
+    {
+      "fold": 2,
+      "n_dev": 95,
+      "n_train": 378,
+      "dev_labels": {
+        "epistemic-external": 10,
+        "epistemic-internal": 64,
+        "practical-internal": 19,
+        "practical-external": 2
+      },
+      "train_labels": {
+        "epistemic-internal": 258,
+        "practical-internal": 74,
+        "epistemic-external": 40,
+        "practical-external": 6
+      },
+      "pe_in_dev": 2,
+      "pe_in_train": 6
+    },
+    {
+      "fold": 3,
+      "n_dev": 93,
+      "n_train": 380,
+      "dev_labels": {
+        "epistemic-internal": 64,
+        "practical-internal": 18,
+        "epistemic-external": 10,
+        "practical-external": 1
+      },
+      "train_labels": {
+        "epistemic-internal": 258,
+        "epistemic-external": 40,
+        "practical-internal": 75,
+        "practical-external": 7
+      },
+      "pe_in_dev": 1,
+      "pe_in_train": 7
+    },
+    {
+      "fold": 4,
+      "n_dev": 93,
+      "n_train": 380,
+      "dev_labels": {
+        "practical-internal": 18,
+        "epistemic-internal": 64,
+        "epistemic-external": 10,
+        "practical-external": 1
+      },
+      "train_labels": {
+        "epistemic-internal": 258,
+        "epistemic-external": 40,
+        "practical-internal": 75,
+        "practical-external": 7
+      },
+      "pe_in_dev": 1,
+      "pe_in_train": 7
+    }
+  ],
+  "output_path": "/content/drive/MyDrive/fallacy_detection/shared/kfold_splits_st3.json"
+}

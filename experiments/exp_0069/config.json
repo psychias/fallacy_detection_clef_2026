@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0060",
+  "idea_ref": "[R2.MAXLEN] ST3 base + synth_v002 only with max_len=384 (was 256). Clean comparison to exp_0068 (v002+v003) to isolate v003 effect at 384.",
+  "phase": "2",
+  "hypothesis": "max_len=384 on ST3 base with v002-only synth. Lets us compare against exp_0068 (v002+v003@384) to see if v003's pi regression persists at longer context. Baseline exp_0060=0.484 at 256.",
+  "depends_on": [],
+  "time_budget_s": 1800,
+  "subtask": "st3",
+  "track": "base",
+  "backbone": "roberta-large",
+  "data": {"real": true, "synth_versions": ["synth_v002_st3"], "mix_ratio": "real_plus_synth"},
+  "train": {"lr": 1e-5, "max_len": 384, "batch_size": 8, "epochs": 15, "synth_weight": 0.5, "loss": "weighted_ce", "patience": 3}
+}

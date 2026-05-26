@@ -1,0 +1,29 @@
+{
+    "subtask":  "st1",
+    "hypothesis":  "Contrastive synth pairs improve ST1 base F1 over roberta-large baseline 0.716",
+    "kind":  "train",
+    "track":  "base",
+    "data":  {
+                 "mix_ratio":  "real_plus_synth",
+                 "synth_versions":  [
+                                        "synth_v002_st1st2"
+                                    ],
+                 "real":  true
+             },
+    "time_budget_s":  720,
+    "phase":  "1",
+    "train":  {
+                  "lr":  1E-05,
+                  "max_len":  256,
+                  "batch_size":  8,
+                  "epochs":  15,
+                  "synth_weight":  0.5,
+                  "loss":  "ce"
+              },
+    "parent_id":  "exp_0013",
+    "depends_on":  [
+                       "exp_0025"
+                   ],
+    "idea_ref":  "[P1] RoBERTa-large ST1 base + contrastive synth (0.5x weight)",
+    "backbone":  "roberta-large"
+}

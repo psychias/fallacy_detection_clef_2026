@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "G:\My Drive\fallacy_detection\experiments\exp_0030\generate.py", line 501, in <module>
+    main()
+  File "G:\My Drive\fallacy_detection\experiments\exp_0030\generate.py", line 438, in main
+    write_status(exp_dir, "running")
+  File "G:\My Drive\fallacy_detection\shared\train_utils.py", line 35, in write_status
+    status = json.load(f)
+  File "C:\Users\z004knva\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Users\z004knva\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\z004knva\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\z004knva\AppData\Local\Programs\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

@@ -1,0 +1,20 @@
+{
+  "kind": "train",
+  "subtask": "st3",
+  "track": "base",
+  "backbone": "microsoft/deberta-v3-large",
+  "time_budget_s": 540,
+  "depends_on": [],
+  "data": {
+    "real": true,
+    "synth_versions": ["synth_v002_st3"]
+  },
+  "train": {
+    "lr": 2e-5,
+    "batch_size": 16,
+    "epochs": 12,
+    "max_len": 256,
+    "loss": "weighted_ce",
+    "synth_weight": 0.5
+  }
+}

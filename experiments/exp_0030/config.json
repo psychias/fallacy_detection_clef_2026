@@ -1,0 +1,23 @@
+{
+  "kind": "synth",
+  "parent_id": null,
+  "idea_ref": "[P1] Contrastive synth for ST3: practical-ext pairs + epistemic-ext pairs",
+  "phase": "1",
+  "depends_on": [],
+  "time_budget_s": 600,
+  "hypothesis": "Contrastive basis-axis pairs improve ST3 practical-external (F1=0) and epistemic-external (F1=0.46)",
+  "mode": "st3",
+  "synth_version": "synth_v002_st3",
+  "models": ["qwen/qwen3-32b", "google/gemma-3-27b-it"],
+  "temperature": 0.9,
+  "top_p": 0.95,
+  "verify": true,
+  "seed": 42,
+  "targets": {
+    "practical-external": 50,
+    "practical-internal": 20,
+    "epistemic-external": 30,
+    "epistemic-internal": 0
+  },
+  "script": "generate.py"
+}

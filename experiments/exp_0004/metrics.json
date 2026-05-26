@@ -1,0 +1,49 @@
+{
+  "precision": 0.69566,
+  "recall": 0.6912,
+  "f1_macro": 0.68904,
+  "f1_per_class": {
+    "non-fallacy": 0.66667,
+    "fallacy": 0.71141
+  },
+  "support_per_class": {
+    "non-fallacy": 70,
+    "fallacy": 69
+  },
+  "classification_report": {
+    "non-fallacy": {
+      "precision": 0.7288135593220338,
+      "recall": 0.6142857142857143,
+      "f1-score": 0.6666666666666666,
+      "support": 70.0
+    },
+    "fallacy": {
+      "precision": 0.6625,
+      "recall": 0.7681159420289855,
+      "f1-score": 0.7114093959731543,
+      "support": 69.0
+    },
+    "accuracy": 0.6906474820143885,
+    "macro avg": {
+      "precision": 0.6956567796610169,
+      "recall": 0.6912008281573498,
+      "f1-score": 0.6890380313199105,
+      "support": 139.0
+    },
+    "weighted avg": {
+      "precision": 0.6958953176441898,
+      "recall": 0.6906474820143885,
+      "f1-score": 0.6888770862504627,
+      "support": 139.0
+    }
+  },
+  "subtask": "st1",
+  "wall_clock_s": 254.7,
+  "peak_vram_mb": 4032.6,
+  "params": 124647170,
+  "track": "base",
+  "backbone": "roberta-base",
+  "status_flags": [],
+  "epochs_completed": 10,
+  "best_train_loss": 0.00475
+}

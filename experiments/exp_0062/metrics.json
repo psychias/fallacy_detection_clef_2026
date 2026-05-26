@@ -1,0 +1,103 @@
+{
+  "precision": 0.95,
+  "recall": 0.93651,
+  "f1_macro": 0.93741,
+  "f1_per_class": {
+    "authority": 1.0,
+    "black-white": 0.88889,
+    "hasty_generalization": 1.0,
+    "natural": 0.94118,
+    "population": 0.83333,
+    "slippery_slope": 0.94118,
+    "tradition": 0.94737,
+    "worse_problems": 0.94737
+  },
+  "support_per_class": {
+    "authority": 8,
+    "black-white": 8,
+    "hasty_generalization": 8,
+    "natural": 9,
+    "population": 7,
+    "slippery_slope": 9,
+    "tradition": 9,
+    "worse_problems": 9
+  },
+  "classification_report": {
+    "authority": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "black-white": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1-score": 0.8888888888888888,
+      "support": 8.0
+    },
+    "hasty_generalization": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "natural": {
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1-score": 0.9411764705882353,
+      "support": 9.0
+    },
+    "population": {
+      "precision": 1.0,
+      "recall": 0.7142857142857143,
+      "f1-score": 0.8333333333333334,
+      "support": 7.0
+    },
+    "slippery_slope": {
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1-score": 0.9411764705882353,
+      "support": 9.0
+    },
+    "tradition": {
+      "precision": 0.9,
+      "recall": 1.0,
+      "f1-score": 0.9473684210526315,
+      "support": 9.0
+    },
+    "worse_problems": {
+      "precision": 0.9,
+      "recall": 1.0,
+      "f1-score": 0.9473684210526315,
+      "support": 9.0
+    },
+    "accuracy": 0.9402985074626866,
+    "macro avg": {
+      "precision": 0.95,
+      "recall": 0.9365079365079365,
+      "f1-score": 0.9374140006879944,
+      "support": 67.0
+    },
+    "weighted avg": {
+      "precision": 0.9492537313432836,
+      "recall": 0.9402985074626866,
+      "f1-score": 0.9393769028952246,
+      "support": 67.0
+    }
+  },
+  "subtask": "st2",
+  "wall_clock_s": 537.3,
+  "peak_vram_mb": 7388.0,
+  "params": 355367944,
+  "status_flags": [
+    "early_stopped"
+  ],
+  "epochs_completed": 10,
+  "nan_batches": 0,
+  "n_real": 398,
+  "n_synth": 130,
+  "mask_count_train": 115,
+  "mask_count_dev": 22,
+  "early_stopped": true,
+  "best_train_loss": 0.00269
+}

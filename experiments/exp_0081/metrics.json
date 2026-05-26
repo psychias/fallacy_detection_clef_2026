@@ -1,0 +1,154 @@
+{
+  "id_overlap": {
+    "dev_pseudo": [],
+    "dev_test": [],
+    "train_test": [],
+    "dev_pseudo_count": 0,
+    "dev_test_count": 0,
+    "train_test_count": 0
+  },
+  "exact_text_overlap": {
+    "dev_pseudo_count": 0,
+    "dev_test_count": 0
+  },
+  "token_jaccard": {
+    "min": 0.0216,
+    "max": 0.2992,
+    "mean": 0.1283,
+    "p95": 0.1667,
+    "p99": 0.1902,
+    "pairs_above_0.5": 0,
+    "high_overlap_pairs": []
+  },
+  "embedding_cosine": {
+    "overall_mean": 0.9905,
+    "overall_max": 0.9979,
+    "dev_max_sim_mean": 0.9965,
+    "dev_max_sim_p95": 0.9978,
+    "dev_max_sim_max": 0.9979,
+    "pseudo_max_sim_mean": 0.9962,
+    "suspicious_pairs_above_0.95": [
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:36",
+        "cosine": 0.992
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:14",
+        "cosine": 0.9918
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:19",
+        "cosine": 0.9947
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:12",
+        "cosine": 0.9872
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:64",
+        "cosine": 0.9924
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:87",
+        "cosine": 0.9877
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:764",
+        "cosine": 0.9944
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:5",
+        "cosine": 0.9941
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:82",
+        "cosine": 0.9861
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:4",
+        "cosine": 0.9942
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:13",
+        "cosine": 0.9897
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:1",
+        "cosine": 0.977
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:738",
+        "cosine": 0.9894
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:89",
+        "cosine": 0.9884
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:918",
+        "cosine": 0.9919
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:767",
+        "cosine": 0.995
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:88",
+        "cosine": 0.991
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:778",
+        "cosine": 0.9956
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:921",
+        "cosine": 0.9882
+      },
+      {
+        "dev_id": "informal_fallacies:648",
+        "pseudo_id": "pseudo_informal_fallacies:732",
+        "cosine": 0.9945
+      }
+    ],
+    "n_suspicious": 15532
+  },
+  "dev_split_info": {
+    "n_dev": 67,
+    "n_train": 398,
+    "label_dist": {
+      "worse_problems": 9,
+      "natural": 9,
+      "authority": 8,
+      "population": 7,
+      "tradition": 9,
+      "slippery_slope": 9,
+      "hasty_generalization": 8,
+      "black-white": 8
+    }
+  },
+  "verdict": {
+    "leak_detected": false,
+    "id_leak": false,
+    "text_leak": false,
+    "summary": "No direct leak found. exp_0072 dev F1 appears legitimate."
+  }
+}

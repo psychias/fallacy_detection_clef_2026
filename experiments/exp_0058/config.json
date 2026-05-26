@@ -1,0 +1,30 @@
+﻿{
+    "subtask":  "st3",
+    "hypothesis":  "Clean real-only baseline at epochs=15 to compare synth experiments against. exp_0015 used epochs=10; this matches exp_0026 hparams minus the synth.",
+    "kind":  "train",
+    "track":  "base",
+    "data":  {
+                 "mix_ratio":  "real_only",
+                 "synth_versions":  [
+
+                                    ],
+                 "real":  true
+             },
+    "time_budget_s":  1500,
+    "phase":  "3",
+    "train":  {
+                  "lr":  1E-05,
+                  "max_len":  256,
+                  "batch_size":  8,
+                  "epochs":  15,
+                  "synth_weight":  0,
+                  "loss":  "weighted_ce",
+                  "patience":  3
+              },
+    "parent_id":  "exp_0015",
+    "depends_on":  [
+
+                   ],
+    "idea_ref":  "[P3] RoBERTa-large ST3 base real-only baseline (same hparams as exp_0026, no synth)",
+    "backbone":  "roberta-large"
+}

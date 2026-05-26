@@ -1,0 +1,21 @@
+{
+  "kind": "diagnostic",
+  "script": "generate.py",
+  "parent_id": "exp_0091",
+  "idea_ref": "[P3.kNN] Qwen-3B kNN-retrieval few-shot ST3 enhanced - exploit bge-large embeddings",
+  "phase": "3",
+  "hypothesis": "kNN-retrieved examples (from exp_0138 embeddings) as few-shot context should outperform random few-shot. Each test example gets its 2 nearest neighbours per class as demonstrations. Targets ST3 basis axis improvement.",
+  "depends_on": [
+    "exp_0091",
+    "exp_0138"
+  ],
+  "time_budget_s": 1200,
+  "subtask": "st3",
+  "track": "enhanced",
+  "backbone": "Qwen/Qwen2.5-3B-Instruct",
+  "few_shot": {
+    "n_per_class": 2,
+    "retrieval": "knn",
+    "embedding_exp": "exp_0138"
+  }
+}

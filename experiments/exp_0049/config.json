@@ -1,0 +1,31 @@
+﻿{
+    "subtask":  "st1",
+    "hypothesis":  "DeBERTa-v3-large with bf16 + lr=5e-6 avoids NaN and produces competitive ST1 base F1",
+    "kind":  "train",
+    "track":  "base",
+    "data":  {
+                 "mix_ratio":  "real_only",
+                 "synth_versions":  [
+
+                                    ],
+                 "real":  true
+             },
+    "time_budget_s":  1500,
+    "phase":  "3",
+    "train":  {
+                  "grad_clip":  1,
+                  "precision":  "bf16",
+                  "lr":  5E-06,
+                  "max_len":  256,
+                  "batch_size":  8,
+                  "epochs":  12,
+                  "loss":  "ce",
+                  "patience":  3
+              },
+    "parent_id":  "exp_0007",
+    "depends_on":  [
+
+                   ],
+    "idea_ref":  "[P3] DeBERTa-v3-large ST1 base with bf16 + lower LR",
+    "backbone":  "microsoft/deberta-v3-large"
+}

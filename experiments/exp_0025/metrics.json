@@ -1,0 +1,14 @@
+{
+    "mode":  "st1_st2",
+    "cost_usd":  0,
+    "total_examples_written":  260,
+    "total_rejected":  4,
+    "total_verified":  130,
+    "synth_version":  "synth_v001_st1st2",
+    "total_pairs_generated":  130,
+    "models":  [
+                   "qwen/qwen3-32b",
+                   "google/gemma-3-27b-it"
+               ],
+    "reject_rate":  0.03
+}

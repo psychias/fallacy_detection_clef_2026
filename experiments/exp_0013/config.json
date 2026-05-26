@@ -1,0 +1,14 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0004",
+  "idea_ref": "[P0] RoBERTa-large on ST1 base track",
+  "phase": "0",
+  "depends_on": [],
+  "time_budget_s": 720,
+  "hypothesis": "RoBERTa-large should improve over base on ST1 (binary fallacy detection)",
+  "subtask": "st1",
+  "track": "base",
+  "backbone": "roberta-large",
+  "data": {"real": true, "synth_versions": [], "mix_ratio": "real_only"},
+  "train": {"lr": 1e-5, "batch_size": 8, "epochs": 10, "loss": "ce", "max_len": 256}
+}
