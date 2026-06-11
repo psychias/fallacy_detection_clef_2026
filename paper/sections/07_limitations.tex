@@ -1,0 +1,18 @@
+Several limitations should accompany the numbers in this notebook.
+
+First, the test-set leaderboard had not been released at the time of writing; every number in the paper is from our held-out dev partition or from 5-fold cross-validation on it. Where a single 5-fold split was available (ST3 enhanced under our submitted recipe, the Qwen2.5-7B CoT-LoRA comparator, and the Qwen3-4B-Thinking comparators) we use the CV mean as the decision-relevant estimate. % from exp_0153 exp_0180 exp_0217 exp_0218
+The other dev numbers in Tables~\ref{tab:headline}--\ref{tab:backbone} are single-run point estimates, and the ranking of close-together rows should be read with appropriate caution.
+
+Second, we did not run a separate seed-variance ablation. Several runs used the lab-default seed without separate seed-variance ablation; reported single-run dev numbers should be read as point estimates. % from senior P1
+For runs whose individual seeds are not recorded, we used the lab-default \texttt{seed=42}; CV runs used fold seeds 42--46.
+
+Third, the enhanced-track results are subject to the leakage caveat developed in \S\ref{sec:disc-leakage}. The regex-mask diagnostic rules out the dominant trivial-string channel but does not clear the softer semantic channel, and we have flagged this everywhere the enhanced numbers appear. % from exp_0062
+
+Fourth, the LLM comparison ended with a stale Qwen2.5-32B cross-validation: the single-run \texttt{exp\_0207} reached 0.841 on ST3 enhanced but the 5-fold CV was still running at the deadline, % from exp_0207 — exp_0207 kept: run id IS the entity being discussed (the deadline-stale 32B run)
+and we chose not to wait. This is a real opportunity cost --- it is possible the 32B model under CV would have come out ahead --- and a reader who cares about that comparison should treat the Qwen-32B row as undervalidated rather than dismissed.
+
+Fifth, the per-class F1 breakdown in Appendix~\ref{app:perclass} reflects two different decoding regimes: ST2 values are computed from default argmax over class logits, while ST3 values reflect the per-class threshold calibration also used for the headline ST3 numbers in Table~\ref{tab:headline}. Readers comparing per-class numbers across subtasks should keep this asymmetry in mind. % from exp_0145
+
+We note one further reproducibility caveat: several experiment-tracking rows in our internal log were marked \texttt{status=queued} during the writing window. We have either refreshed those rows or removed citations to them; the frozen \texttt{experiments.tsv} accompanying our TIRA submission is the authoritative reference.
+
+Taken together, these limitations do not invalidate the headline numbers, but the enhanced-track results in particular should be read as upper bounds on what a fair pipeline would extract from the same inputs.

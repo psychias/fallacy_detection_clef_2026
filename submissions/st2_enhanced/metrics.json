@@ -1,0 +1,101 @@
+{
+  "precision": 0.97049,
+  "recall": 0.97222,
+  "f1_macro": 0.97042,
+  "f1_per_class": {
+    "authority": 1.0,
+    "black-white": 1.0,
+    "hasty_generalization": 1.0,
+    "natural": 0.94118,
+    "population": 0.93333,
+    "slippery_slope": 1.0,
+    "tradition": 0.88889,
+    "worse_problems": 1.0
+  },
+  "support_per_class": {
+    "authority": 8,
+    "black-white": 8,
+    "hasty_generalization": 8,
+    "natural": 9,
+    "population": 7,
+    "slippery_slope": 9,
+    "tradition": 9,
+    "worse_problems": 9
+  },
+  "classification_report": {
+    "authority": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "black-white": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "hasty_generalization": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "natural": {
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1-score": 0.9411764705882353,
+      "support": 9.0
+    },
+    "population": {
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1-score": 0.9333333333333333,
+      "support": 7.0
+    },
+    "slippery_slope": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 9.0
+    },
+    "tradition": {
+      "precision": 0.8888888888888888,
+      "recall": 0.8888888888888888,
+      "f1-score": 0.8888888888888888,
+      "support": 9.0
+    },
+    "worse_problems": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 9.0
+    },
+    "accuracy": 0.9701492537313433,
+    "macro avg": {
+      "precision": 0.9704861111111112,
+      "recall": 0.9722222222222222,
+      "f1-score": 0.9704248366013072,
+      "support": 67.0
+    },
+    "weighted avg": {
+      "precision": 0.9720149253731343,
+      "recall": 0.9701492537313433,
+      "f1-score": 0.9702077846063798,
+      "support": 67.0
+    }
+  },
+  "subtask": "st2",
+  "wall_clock_s": 1050.6,
+  "peak_vram_mb": 9085.6,
+  "params": 355367944,
+  "track": "enhanced",
+  "backbone": "roberta-large",
+  "status_flags": [],
+  "epochs_completed": 12,
+  "nan_batches": 0,
+  "n_real": 398,
+  "n_synth": 362,
+  "synth_weight": 0.3,
+  "best_train_loss": 0.00072
+}

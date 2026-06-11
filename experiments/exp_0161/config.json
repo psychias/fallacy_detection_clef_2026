@@ -1,0 +1,16 @@
+{
+  "kind": "train",
+  "parent_id": "exp_0033",
+  "idea_ref": "[P3.BASE] ST1 base + text_raw concat (raw+base text), max_len=512",
+  "phase": "3",
+  "hypothesis": "Concatenating text_raw with text_base at max_len=512 gives the model both raw surface form and cleaned version. Free context, base-only lever.",
+  "depends_on": [],
+  "time_budget_s": 1200,
+  "priority": 93,
+  "subtask": "st1",
+  "track": "base",
+  "backbone": "roberta-large",
+  "data": {"real": true, "synth_versions": ["synth_v002_st1st2"], "mix_ratio": "real_plus_synth"},
+  "train": {"lr": 1e-5, "max_len": 512, "batch_size": 8, "epochs": 12, "synth_weight": 0.5, "loss": "ce", "patience": 3},
+  "input_mode": "raw_concat"
+}

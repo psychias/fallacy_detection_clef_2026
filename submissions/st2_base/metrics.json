@@ -1,0 +1,103 @@
+{
+  "precision": 0.74554,
+  "recall": 0.72768,
+  "f1_macro": 0.73025,
+  "f1_per_class": {
+    "authority": 0.82353,
+    "black-white": 0.6,
+    "hasty_generalization": 0.66667,
+    "natural": 0.88889,
+    "population": 0.61538,
+    "slippery_slope": 0.875,
+    "tradition": 0.66667,
+    "worse_problems": 0.70588
+  },
+  "support_per_class": {
+    "authority": 8,
+    "black-white": 8,
+    "hasty_generalization": 8,
+    "natural": 9,
+    "population": 7,
+    "slippery_slope": 9,
+    "tradition": 9,
+    "worse_problems": 9
+  },
+  "classification_report": {
+    "authority": {
+      "precision": 0.7777777777777778,
+      "recall": 0.875,
+      "f1-score": 0.8235294117647058,
+      "support": 8.0
+    },
+    "black-white": {
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1-score": 0.6,
+      "support": 8.0
+    },
+    "hasty_generalization": {
+      "precision": 0.7142857142857143,
+      "recall": 0.625,
+      "f1-score": 0.6666666666666666,
+      "support": 8.0
+    },
+    "natural": {
+      "precision": 0.8888888888888888,
+      "recall": 0.8888888888888888,
+      "f1-score": 0.8888888888888888,
+      "support": 9.0
+    },
+    "population": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5714285714285714,
+      "f1-score": 0.6153846153846154,
+      "support": 7.0
+    },
+    "slippery_slope": {
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1-score": 0.875,
+      "support": 9.0
+    },
+    "tradition": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 9.0
+    },
+    "worse_problems": {
+      "precision": 0.75,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.7058823529411765,
+      "support": 9.0
+    },
+    "accuracy": 0.7313432835820896,
+    "macro avg": {
+      "precision": 0.7455357142857142,
+      "recall": 0.7276785714285714,
+      "f1-score": 0.73025232528909,
+      "support": 67.0
+    },
+    "weighted avg": {
+      "precision": 0.7515399194503671,
+      "recall": 0.7313432835820896,
+      "f1-score": 0.7351821210688638,
+      "support": 67.0
+    }
+  },
+  "subtask": "st2",
+  "wall_clock_s": 662.8,
+  "peak_vram_mb": 7388.0,
+  "params": 355367944,
+  "track": "base",
+  "backbone": "roberta-large",
+  "status_flags": [
+    "time_exceeded"
+  ],
+  "epochs_completed": 13,
+  "nan_batches": 0,
+  "n_real": 398,
+  "n_synth": 130,
+  "synth_weight": 0.5,
+  "best_train_loss": 0.00081
+}

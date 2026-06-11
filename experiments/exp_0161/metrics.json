@@ -1,0 +1,50 @@
+{
+  "precision": 0.76937,
+  "recall": 0.76201,
+  "f1_macro": 0.76081,
+  "f1_per_class": {
+    "non-fallacy": 0.78146,
+    "fallacy": 0.74016
+  },
+  "support_per_class": {
+    "non-fallacy": 70,
+    "fallacy": 69
+  },
+  "classification_report": {
+    "non-fallacy": {
+      "precision": 0.7283950617283951,
+      "recall": 0.8428571428571429,
+      "f1-score": 0.7814569536423841,
+      "support": 70.0
+    },
+    "fallacy": {
+      "precision": 0.8103448275862069,
+      "recall": 0.6811594202898551,
+      "f1-score": 0.7401574803149606,
+      "support": 69.0
+    },
+    "accuracy": 0.762589928057554,
+    "macro avg": {
+      "precision": 0.769369944657301,
+      "recall": 0.762008281573499,
+      "f1-score": 0.7608072169786724,
+      "support": 139.0
+    },
+    "weighted avg": {
+      "precision": 0.7690751613268771,
+      "recall": 0.762589928057554,
+      "f1-score": 0.7609557762352458,
+      "support": 139.0
+    }
+  },
+  "subtask": "st1",
+  "wall_clock_s": 211.9,
+  "peak_vram_mb": 10767.7,
+  "params": 355361794,
+  "status_flags": [
+    "early_stopped"
+  ],
+  "input_mode": "raw_concat",
+  "n_real": 799,
+  "n_synth": 260
+}

@@ -2,11 +2,12 @@
   "description": "The six runs in Table 1 of the paper (headline dev results). expected_dev_f1 is the macro-F1 reported in §4.1 Table 1; reproduction runs should land within seed noise of this value. Numbers verified against sections/04_results.tex lines 25-30.",
   "runs": [
     {
-      "exp_id": "exp_0033",
+      "exp_id": "exp_0161",
       "subtask": "st1",
       "track":   "base",
-      "expected_dev_f1": 0.734,
-      "depends_on_data": ["data_synth/synth_v002_st1st2"]
+      "expected_dev_f1": 0.761,
+      "depends_on_data": ["data_synth/synth_v002_st1st2"],
+      "note": "Run actually uploaded to TIRA as st1_base (raw_concat input, max_len 512); see scripts/generate_submissions.py:48,57."
     },
     {
       "exp_id": "exp_0035",

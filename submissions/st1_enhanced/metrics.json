@@ -1,0 +1,55 @@
+{
+  "precision": 0.91656,
+  "recall": 0.91398,
+  "f1_macro": 0.91356,
+  "f1_per_class": {
+    "non-fallacy": 0.91045,
+    "fallacy": 0.91667
+  },
+  "support_per_class": {
+    "non-fallacy": 70,
+    "fallacy": 69
+  },
+  "classification_report": {
+    "non-fallacy": {
+      "precision": 0.953125,
+      "recall": 0.8714285714285714,
+      "f1-score": 0.9104477611940298,
+      "support": 70.0
+    },
+    "fallacy": {
+      "precision": 0.88,
+      "recall": 0.9565217391304348,
+      "f1-score": 0.9166666666666666,
+      "support": 69.0
+    },
+    "accuracy": 0.9136690647482014,
+    "macro avg": {
+      "precision": 0.9165625,
+      "recall": 0.9139751552795031,
+      "f1-score": 0.9135572139303483,
+      "support": 139.0
+    },
+    "weighted avg": {
+      "precision": 0.9168255395683453,
+      "recall": 0.9136690647482014,
+      "f1-score": 0.9135348437667775,
+      "support": 139.0
+    }
+  },
+  "subtask": "st1",
+  "wall_clock_s": 664.8,
+  "peak_vram_mb": 7387.9,
+  "params": 355361794,
+  "track": "enhanced",
+  "backbone": "roberta-large",
+  "status_flags": [
+    "time_exceeded"
+  ],
+  "epochs_completed": 7,
+  "nan_batches": 0,
+  "n_real": 799,
+  "n_synth": 260,
+  "synth_weight": 0.5,
+  "best_train_loss": 0.09023
+}

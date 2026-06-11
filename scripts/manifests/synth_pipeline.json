@@ -28,7 +28,7 @@
     }
   ],
   "pseudo_labels": {
-    "description": "Pseudo-labelling does not use an LLM API. The shared/pseudo_label.py CLI takes a trained checkpoint and emits top-K confident predictions on the unlabelled pool. The committed pseudo_v001_st{1,2,3} batches were produced from the leak-audited exp_0081 checkpoint at tau=0.9.",
-    "invocation_template": "python shared/pseudo_label.py --exp_dir experiments/exp_0081 --top_k 30 --output data_synth/pseudo_v001_stN/data.jsonl"
+    "description": "Pseudo-labelling does not use an LLM API. The shared/pseudo_label.py CLI takes a trained checkpoint and emits top-K confident self-predictions on the unlabelled pool. Each committed batch was produced from the matching real-only enhanced checkpoint (recorded in each record's source_exp field): pseudo_v001_st3 from exp_0066, pseudo_v001_st2 from exp_0065. NB the effective confidence floor is not a hard tau=0.9: pseudo_label.py:167-172 relaxes the floor to 0 for under-predicted classes, so the committed pseudo_v001_st3 batch contains some sub-0.9 records. NB also the candidate pool is the full unlabelled set, not pre-filtered to non-fallacious; for st3 the script stamps fallacy_exists=0 on every selected record (pseudo_label.py:208-214).",
+    "invocation_template": "python shared/pseudo_label.py --exp_dir experiments/exp_0066 --top_k 30 --output data_synth/pseudo_v001_st3/data.jsonl"
   }
 }
