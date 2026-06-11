@@ -51,4 +51,4 @@ experiments/*/status.json
 # Hugging Face cache
 .cache/
 hf_cache/
-docs/
+/docs/
