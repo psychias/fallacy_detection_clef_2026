@@ -127,15 +127,35 @@ def get_device():
 
 
 def set_seed(seed: int = 42):
-    """Set all random seeds for reproducibility."""
+    """Set all random seeds and request deterministic algorithms for
+    reproducibility.
+
+    cuDNN is pinned to its deterministic kernels and CUBLAS is configured for
+    reproducible matmuls. ``use_deterministic_algorithms`` is enabled with
+    ``warn_only=True`` so a run that hits an op without a deterministic CUDA
+    kernel degrades to a warning rather than crashing -- this keeps the setting
+    safe for every experiment in the repo. Bit-exact reproducibility still
+    requires the same GPU and library versions; across hardware, expect the
+    small run-to-run spread reported in the paper.
+    """
     import random
     import numpy as np
     import torch
+    # cuBLAS determinism must be requested before the CUDA context is created.
+    os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+    try:
+        torch.use_deterministic_algorithms(True, warn_only=True)
+    except Exception:
+        # Older torch without warn_only, or an env that refuses the switch;
+        # the cuDNN/CUBLAS settings above still apply.
+        pass
 
 
 def disk_free_gb(path: str = "/") -> float:
