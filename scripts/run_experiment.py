@@ -10,6 +10,11 @@ and in the other reproduce_*.py orchestrators.
 from __future__ import annotations
 
 import sys
+from pathlib import Path
+
+# Make the repo root importable so `scripts._lib` resolves when this file is run
+# directly (python scripts/run_experiment.py ...), not only as `python -m`.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts._lib import run_experiment
 

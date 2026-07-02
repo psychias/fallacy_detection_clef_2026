@@ -19,6 +19,11 @@ from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
+
+# Make the repo root importable so `scripts._lib` resolves when this file is run
+# directly (python scripts/reproduce_submitted.py ...), not only as `python -m`.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from scripts._lib import RunResult, load_manifest, run_experiment
 
