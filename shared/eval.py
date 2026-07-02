@@ -4,7 +4,11 @@ Computes precision, recall, macro-F1 per subtask.
 This is the ONLY scorer used across all experiments.
 """
 
-from sklearn.metrics import precision_recall_fscore_support, classification_report
+from sklearn.metrics import (
+    precision_recall_fscore_support,
+    classification_report,
+    confusion_matrix,
+)
 import json
 
 # ── Label vocabularies ────────────────────────────────────────────────
@@ -80,6 +84,50 @@ def evaluate(y_true: list[str], y_pred: list[str], subtask: str) -> dict:
         "classification_report": report,
         "subtask": subtask,
     }
+
+
+def confusion_dict(y_true: list[str], y_pred: list[str], subtask: str) -> dict:
+    """
+    Labelled confusion matrix for a subtask. Rows are the gold label, columns
+    are the predicted label, both in the canonical LABEL_MAPS[subtask] order
+    (also returned under "labels" so the matrix is self-documenting).
+    """
+    labels = LABEL_MAPS[subtask]
+    y_true = [normalize_label(y, subtask) for y in y_true]
+    y_pred = [normalize_label(y, subtask) for y in y_pred]
+    cm = confusion_matrix(y_true, y_pred, labels=labels)
+    return {
+        "labels": labels,
+        "matrix": cm.tolist(),
+        "axes": {"rows": "true", "cols": "pred"},
+        "subtask": subtask,
+    }
+
+
+def save_dev_logits(exp_dir, ids, label_ids, logits, id2label, subtask):
+    """
+    Persist per-example dev logits so the per-class breakdown and confusion
+    matrix are reconstructible from committed artefacts (the gap the paper's
+    §4.4 flags for exp_0073). Writes ``dev_logits.npz`` next to the run's
+    metrics. ``logits`` is an (N, num_labels) array; column j corresponds to
+    ``id2label[j]``. Returns the .npz path.
+    """
+    import numpy as np
+    from pathlib import Path
+
+    exp_dir = Path(exp_dir)
+    num_labels = len(id2label)
+    label_order = [id2label[i] for i in range(num_labels)]
+    out = exp_dir / "dev_logits.npz"
+    np.savez_compressed(
+        out,
+        ids=np.array(list(ids), dtype=object),
+        label_ids=np.array(list(label_ids), dtype=np.int64),
+        logits=np.asarray(logits, dtype=np.float32),
+        label_order=np.array(label_order, dtype=object),
+        subtask=np.array(subtask),
+    )
+    return str(out)
 
 
 def write_metrics(metrics: dict, path: str):

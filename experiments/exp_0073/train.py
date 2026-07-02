@@ -33,7 +33,7 @@ from shared.data_utils import (
     load_synth_data,
     make_splits,
 )
-from shared.eval import evaluate, write_metrics
+from shared.eval import confusion_dict, evaluate, save_dev_logits, write_metrics
 from shared.train_utils import (
     Heartbeat,
     WallClockGuard,
@@ -76,7 +76,12 @@ class TextDataset(Dataset):
 def main():
     exp_dir = script_dir
     config = load_config(exp_dir)
-    set_seed(42)
+    # Training seed defaults to 42 (the submitted run). It can be overridden via
+    # EXP_SEED for a seed-variance study; the dev split is unaffected because
+    # make_splits() uses its own fixed seed, so only training randomness varies.
+    seed = int(os.environ.get("EXP_SEED", "42"))
+    set_seed(seed)
+    print(f"[train] seed={seed}")
 
     # ── Status & guards ───────────────────────────────────────────
     write_status(exp_dir, "running")
@@ -258,25 +263,42 @@ def main():
             print(f"[train] New best dev F1: {best_dev_f1:.4f}, checkpoint saved")
 
     # ── Final metrics ─────────────────────────────────────────────
-    # Re-evaluate with best checkpoint if saved
+    # Re-evaluate with the best checkpoint if it was saved, then persist the
+    # per-example dev logits and a labelled confusion matrix so the per-class
+    # analysis is reconstructible from artefacts (the exp_0073 gap noted in the
+    # paper's §4.4 / §5.3). dev_loader is unshuffled, so row i of the logits
+    # matrix aligns with dev_entries[i].
     best_ckpt = exp_dir / "ckpt" / "best"
     if best_ckpt.exists():
         model = AutoModelForSequenceClassification.from_pretrained(
             str(best_ckpt), num_labels=num_labels
         ).to(device)
-        model.eval()
-        all_preds, all_labels = [], []
-        with torch.no_grad():
-            for batch in dev_loader:
-                input_ids = batch["input_ids"].to(device)
-                attention_mask = batch["attention_mask"].to(device)
-                outputs = model(input_ids=input_ids, attention_mask=attention_mask)
-                preds = outputs.logits.argmax(dim=-1).cpu().tolist()
-                all_preds.extend(preds)
-                all_labels.extend(batch["label"].tolist())
-        y_true = [id2label[l] for l in all_labels]
-        y_pred = [id2label[p] for p in all_preds]
-        metrics = evaluate(y_true, y_pred, subtask)
+    model.eval()
+    all_logits, all_preds, all_labels = [], [], []
+    with torch.no_grad():
+        for batch in dev_loader:
+            input_ids = batch["input_ids"].to(device)
+            attention_mask = batch["attention_mask"].to(device)
+            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+            logits = outputs.logits.float().cpu()
+            all_logits.append(logits)
+            all_preds.extend(logits.argmax(dim=-1).tolist())
+            all_labels.extend(batch["label"].tolist())
+    y_true = [id2label[l] for l in all_labels]
+    y_pred = [id2label[p] for p in all_preds]
+    metrics = evaluate(y_true, y_pred, subtask)
+
+    dev_ids = [e["id"] for e in dev_entries]
+    logits_matrix = torch.cat(all_logits, dim=0).numpy()
+    logits_path = save_dev_logits(
+        exp_dir, dev_ids, all_labels, logits_matrix, id2label, subtask
+    )
+    cm = confusion_dict(y_true, y_pred, subtask)
+    write_metrics(cm, str(exp_dir / "confusion_matrix.json"))
+    metrics["confusion_matrix"] = cm
+    metrics["dev_logits_path"] = os.path.relpath(logits_path, str(workspace))
+    print(f"[train] Saved dev logits -> {logits_path}")
+    print(f"[train] Saved confusion matrix -> {exp_dir / 'confusion_matrix.json'}")
 
     metrics["wall_clock_s"] = round(guard.elapsed(), 1)
     metrics["peak_vram_mb"] = round(get_peak_vram_mb(), 1)

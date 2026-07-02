@@ -61,8 +61,8 @@
 %% ---------------------------------------------------------------------
 %% Title and sub-title (Touché lab convention)
 %% ---------------------------------------------------------------------
-\title{UZHCL\_for\_the\_win at Touch\'{e} 26: EEncoder Fine-Tuning, Synthetic Augmentation, and an Underpowered Encoder--LLM Comparison}
-\title[mode=sub]{Notebook for the Touch\'{e} Lab at CLEF 2026}
+\title{UZHCL\_for\_the\_win at Touch\'{e}: Encoder Fine-Tuning, Synthetic Augmentation, and an Underpowered Encoder--LLM Comparison}
+\title[mode=sub]{Touch\'{e} at CLEF 2026}
 
 %% ---------------------------------------------------------------------
 %% Author block. ORCID remains a pre-camera-ready TODO.
@@ -76,7 +76,7 @@
 %% Abstract and keywords (both mandatory in ceurart)
 %% ---------------------------------------------------------------------
 \begin{abstract}
-Online discussions on platforms like Reddit are a productive testbed for fallacy detection: short texts, broad topical range, and the full inventory of informal fallacies catalogued by classical argumentation theory long before social media. The Touch\'{e} 2026 lab at CLEF formalises this as a shared task on a Reddit-derived corpus and provides a structured benchmark for systems that combine fallacy detection with argument-scheme classification. This paper describes our participation in the lab, covering all three subtasks (ST1 binary fallacy detection, ST2 eight-way fallacy classification, ST3 four-way argument-scheme classification) and both evaluation tracks. Our submitted systems are fine-tuned RoBERTa-large encoders with task-specific heads, augmented with a small batch of LLM-generated synthetic contrastive pairs; for ST2 and ST3 on the enhanced track we additionally extended training with a pseudo-labelled top-up of the published unlabelled pool, gated by a confidence-thresholded audit step. As an alternative to the submitted pipeline we ran a wider backbone comparison spanning additional encoders (DeBERTa-v3, ModernBERT) and an LLM track (four Qwen variants: 3B zero-shot and kNN few-shot, 7B and 32B CoT-LoRA, and Qwen3-4B-Thinking); under our compute envelope and at this corpus scale, none of these configurations showed a validated benefit over the submitted RoBERTa-large encoder, with a 5-fold standard deviation wide enough that we report the comparison as underpowered rather than settled. The enhanced track is the lab's designed difficulty setting: the organisers deliberately rewrote the input fields to surface fallacy and scheme structure, and base- and enhanced-track systems are evaluated separately. We characterise how much of the enhanced-track lift comes from the rewrite carrying label information versus genuine argument clarification, and we anchor cross-comparisons on base-track or 5-fold CV behaviour where the question matters. On our held-out development partitions the submitted systems perform competitively across all six (subtask, track) cells, with the strongest results on the enhanced track of ST2. We close on the practical-external rare-class ceiling on ST3, the limitations of the present work, and the most useful follow-ups. All code is publicly available at \url{https://github.com/psychias/fallacy_detection_clef_2026}.
+Online discussions on platforms like Reddit are a productive testbed for fallacy detection: short texts, broad topical range, and the full inventory of informal fallacies catalogued by classical argumentation theory long before social media. The Touch\'{e} 2026 lab at CLEF formalises this as a shared task on a Reddit-derived corpus and provides a structured benchmark for systems that combine fallacy detection with argument-scheme classification. This paper describes our participation in the lab, covering all three subtasks (ST1 binary fallacy detection, ST2 eight-way fallacy classification, ST3 four-way argument-scheme classification) and both evaluation tracks. Our submitted systems are fine-tuned RoBERTa-large encoders with task-specific heads, augmented with a small batch of LLM-generated synthetic contrastive pairs; for ST2 and ST3 on the enhanced track we additionally extended training with pseudo-labelled examples, extra training items that the encoder labels itself from the published unlabelled pool, kept only where it is most confident and only after a verification check has passed. As an alternative to the submitted pipeline we ran a wider backbone comparison spanning additional encoders (DeBERTa-v3, ModernBERT) and an LLM track (four Qwen variants: 3B zero-shot and kNN few-shot, 7B and 32B CoT-LoRA, and Qwen3-4B-Thinking); under our compute envelope and at this corpus scale, none of these configurations showed a validated benefit over the submitted RoBERTa-large encoder, with a 5-fold standard deviation wide enough that we report the comparison as underpowered rather than settled. The enhanced track is the lab's designed difficulty setting: the organisers deliberately rewrote the input fields to surface fallacy and scheme structure, and base- and enhanced-track systems are evaluated separately. We characterise how much of the enhanced-track lift comes from the rewrite carrying label information versus genuine argument clarification, and we anchor cross-comparisons on base-track or 5-fold CV behaviour where the question matters. On our held-out development partitions the submitted systems perform competitively across all six (subtask, track) cells, with the strongest results on the enhanced track of ST2. We close on the practical-external rare-class limitation on ST3, the limitations of the present work, and the most useful follow-ups. All code is publicly available at \url{https://github.com/psychias/fallacy_detection_clef_2026}.
 \end{abstract}
 
 \begin{keywords}
@@ -311,7 +311,7 @@ ST1 & enhanced & exp\_0035 & 256 & 8 & 1e-5 & 12 & synth\_v002 sw=0.5 \\ % from 
 ST2 & base     & exp\_0032 & 256 & 8 & 1e-5 & 15 & synth\_v002 sw=0.5 \\ % from exp_0032
 ST2 & enhanced & exp\_0072 & 384 & 8 & 1e-5 & 12 & synth + pseudo sw=0.3 \\ % from exp_0072
 ST3 & base     & exp\_0069 & 384 & 8 & 1e-5 & 15 & synth\_v002 sw=0.5 \\ % from exp_0069
-ST3 & enhanced & exp\_0073 & 384 & 8 & 1e-5 & 12 & synth + pseudo sw=1.0 \\ % from exp_0073
+ST3 & enhanced & exp\_0073 & 384 & 8 & 1e-5 & 15 & synth + pseudo sw=1.0 \\ % from exp_0073
 \bottomrule
 \end{tabular}
 \end{table}
@@ -373,6 +373,43 @@ pe (practical-external) & 0.000 & 0.000 & 0.000 & 1 \\
 \end{table}
 
 %% =====================================================================
+\section{ST3-Enhanced Confusion Matrix}
+\label{app:st3cm}
+
+Table~\ref{tab:st3cm} gives a representative dev confusion matrix for the
+ST3-enhanced system. The submitted run's logits were not checkpointed, so its
+exact matrix is unrecoverable; the training script now saves per-example dev
+logits (\texttt{dev\_logits.npz}), and we re-ran the \texttt{exp\_0073} recipe
+under five seeds on the same fixed dev split (\S\ref{sec:results-st3}). The
+matrix shown is the run nearest the five-seed mean (macro-F1 $0.722$). The
+qualitative structure is stable across seeds: \textsf{ei} and \textsf{pi} are
+recovered almost perfectly, the residual errors sit in the small \textsf{ee}
+class, and the single \textsf{pe} example is misclassified in every run
+(\S\ref{sec:disc-pe}).
+
+\begin{table}[h]
+\centering
+\small
+\caption{Representative dev confusion matrix for ST3-enhanced (\texttt{exp\_0073}
+recipe, seed nearest the five-seed mean; macro-F1 $0.722$, $n=69$). Rows are the
+gold label, columns the argmax prediction. Reconstructed from the released
+\texttt{dev\_logits.npz}.}
+\label{tab:st3cm}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{4}{c}{Predicted} \\
+\cmidrule(l){2-5}
+True & \textsf{ee} & \textsf{ei} & \textsf{pe} & \textsf{pi} \\
+\midrule
+\textsf{ee} (epistemic-external) & 6 & 0 & 1 & 0 \\
+\textsf{ei} (epistemic-internal) & 0 & 48 & 0 & 0 \\
+\textsf{pe} (practical-external) & 0 & 0 & 0 & 1 \\
+\textsf{pi} (practical-internal) & 0 & 0 & 0 & 13 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% =====================================================================
 \section{Citation Graph}
 \label{app:citgraph}
 
@@ -412,7 +449,7 @@ underperformance, and the LLM alternative that did not validate under CV).
 % Left column: citations
 \node[blue]  (c1)                            {Sahai et al.\ 2021\\\textit{Source dataset}};
 \node[blue,  below=of c1] (c2)               {Macagno 2022\\\textit{Goal/basis axes}};
-\node[blue,  below=of c2] (c3)               {Heinrich et al.\ 2026\\\textit{Lab overview}};
+\node[blue,  below=of c2] (c3)               {Kiesel et al.\ 2026\\\textit{Lab overview}};
 \node[teal,  below=8mm of c3] (c4)           {Liu et al.\ 2019 (RoBERTa)\\\textit{Chosen backbone}};
 \node[gray,  below=of c4] (c5)               {He et al.\ 2021 (DeBERTa-v3)\\\textit{Abandoned, NaN}};
 \node[gray,  below=of c5] (c6)               {Warner et al.\ 2024\\\textit{ModernBERT --- tried, lost}};

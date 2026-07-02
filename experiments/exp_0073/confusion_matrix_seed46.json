@@ -1,0 +1,39 @@
+{
+  "labels": [
+    "epistemic-external",
+    "epistemic-internal",
+    "practical-external",
+    "practical-internal"
+  ],
+  "matrix": [
+    [
+      6,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      48,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      13
+    ]
+  ],
+  "axes": {
+    "rows": "true",
+    "cols": "pred"
+  },
+  "subtask": "st3"
+}
