@@ -162,6 +162,17 @@ Reproduction targets (dev partition, §4.1 Table 1):
 Re-runs should land within seed noise; large divergences usually signal a
 `transformers`/`torch` version gap (see `requirements.txt`).
 
+**ST3-enhanced seed variance.** `exp_0073` is not bit-reproducible across GPUs or
+library versions even with a fixed seed. A five-seed re-run on the *same* fixed dev
+split (seeds 42–46) gives dev macro-F1 **0.720 ± 0.015** (range 0.700–0.741), so the
+submitted **0.735** is a favourable draw — see §4.4 / §5.3 of the paper. The per-seed
+scores and reconstructed confusion matrices are in
+`experiments/exp_0073/seed_results.jsonl`, and `scripts/colab_rerun_exp0073.ipynb`
+reproduces the recovery on a Colab GPU. `shared/train_utils.set_seed` now enables
+deterministic algorithms (`use_deterministic_algorithms(warn_only=True)` + cuDNN),
+which makes training bit-reproducible on fixed hardware; set `EXP_SEED` to vary only
+the training seed (the dev split is held fixed by `make_splits`).
+
 ### 5. (Optional) Regenerate synthetic / pseudo-label data
 
 The committed `data_synth/` artefacts back the reported numbers. Synthetic
@@ -203,3 +214,10 @@ python shared/pseudo_label.py \
 
 Initial working-notes submission. Test-set leaderboard results will be incorporated
 in the camera-ready version of the notebook.
+
+## License
+
+Code in this repository is released under the MIT License (see `LICENSE`). The
+notebook paper itself is licensed CC BY 4.0 per the CEUR-WS proceedings. The Reddit
+fallacy data under `data/` is redistributed by the Touché 2026 lab (originally Sahai
+et al., 2021) and remains subject to the lab's and the original dataset's terms.
