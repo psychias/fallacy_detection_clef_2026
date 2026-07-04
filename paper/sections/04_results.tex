@@ -80,14 +80,14 @@ The 0.15 base-to-enhanced gap on ST1 previews the enhanced-track signal discussi
 \subsection{Eight-Way Fallacy Classification (ST2)}
 \label{sec:results-st2}
 
-ST2 fallacy classification is comparably easy on the enhanced track (0.97) and substantially harder on the base track (0.73), the largest base-to-enhanced gap in Table~\ref{tab:headline}. On the base track the submitted +synth configuration reached 0.730 over a real-only baseline of 0.711 (+0.019). % from exp_0014 exp_0032
+Fallacy classification (ST2) is comparably easy on the enhanced track (0.97) and substantially harder on the base track (0.73), the largest base-to-enhanced gap in Table~\ref{tab:headline}. On the base track the submitted +synth configuration reached 0.730 over a real-only baseline of 0.711 (+0.019). % from exp_0014 exp_0032
 On the enhanced track, the +synth configuration alone reached 0.937 against a real-only enhanced baseline of 0.923 (+0.014), and the +synth+pseudo recipe at \texttt{max\_len=384} and \texttt{sw=0.3} added another +0.033 on top of that to reach 0.970. % from exp_0023 exp_0036 exp_0072
 Per-class precision and recall for ST2-enhanced are reported in Appendix~\ref{app:perclass}; on the $n=67$ dev split the eight classes range from 0.889 to 1.000 F1, with five of the eight at 1.000 --- a high, tight distribution consistent with the rewriter carrying strong label-bearing signal as discussed in \S\ref{sec:disc-leakage}.
 
 \subsection{Four-Way Argument Schemes (ST3)}
 \label{sec:results-st3}
 
-ST3 argument-scheme classification was the hardest on both tracks, at 0.523 base and 0.735 enhanced; the four-way scheme task absorbed the bulk of our experimental effort and is the cell where the per-class behaviour discussed in \S\ref{sec:disc-pe} matters most. On the base track, the +\texttt{synth\_v002} recipe at \texttt{max\_len=384} lifted F1 from a real-only baseline of 0.436 to 0.523 (+0.087, the largest single ablation gain in the paper). % from exp_0058 exp_0069
+Argument-scheme classification (ST3) was the hardest on both tracks, at 0.523 base and 0.735 enhanced; the four-way scheme task absorbed the bulk of our experimental effort and is the cell where the per-class behaviour discussed in \S\ref{sec:disc-pe} matters most. On the base track, the +\texttt{synth\_v002} recipe at \texttt{max\_len=384} lifted F1 from a real-only baseline of 0.436 to 0.523 (+0.087, the largest single ablation gain in the paper). % from exp_0058 exp_0069
 On the enhanced track, the +synth+pseudo recipe at the same window (with the augmented streams left at full weight, \texttt{sw=1.0}) reached 0.735 against a real-only enhanced baseline of 0.694 (+0.041); +synth alone tied the real-only baseline on this cell, so the gain only appeared once pseudo-labelling was added. % from exp_0024 exp_0067 exp_0073
 Two ST3-base recipes lost ground in the ablation: the \texttt{synth\_v002 + v003} stack at \texttt{max\_len=384} dropped to 0.478 ($-$0.045 against \texttt{synth\_v002} alone), and the focal-loss variant reached 0.505 ($-$0.018 against the same baseline). % from exp_0068 exp_0053
 
