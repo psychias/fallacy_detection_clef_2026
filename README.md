@@ -212,8 +212,8 @@ python shared/pseudo_label.py \
 
 ## Status
 
-Initial working-notes submission. Test-set leaderboard results will be incorporated
-in the camera-ready version of the notebook.
+Working-notes submission, updated with the official Touché 2026 test-set results
+(§4.2, Table 2): **first place on ST2-base and ST3-base**, second on both ST1 tracks.
 
 ## License
 

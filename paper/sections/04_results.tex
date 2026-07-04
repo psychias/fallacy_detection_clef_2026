@@ -1,10 +1,10 @@
-We report the dev-partition and cross-validation results for our submitted systems and the wider grid of backbones and recipes we evaluated. Every number in this initial submission is macro-averaged F1 on the held-out development partition or, where flagged, the mean of a 5-fold cross-validation on that partition; test-set leaderboard numbers will be incorporated in the camera-ready version of this notebook. The caveat is stated once here and not repeated in each table caption or subsection.
+We report both our held-out development results, on which all system-selection decisions were made, and the official Touch\'{e} 2026 test-set leaderboard results (\S\ref{sec:test}, Table~\ref{tab:test}). Development numbers are macro-averaged F1 on the held-out partition or, where flagged, the mean of a 5-fold cross-validation on that partition; all six submitted runs use recipes fixed before the test labels were released. Unless a number is explicitly labelled a test result, it is a development number.
 
 \subsection{Validation Results}
 \label{sec:headline}
 
-Following the official Touch\'{e} 2026 release, we hold out a stratified development partition from the published training data; the ST3 partition contains 473 examples. % from exp_0124
-The analogous stratified split for ST1 covers the full labelled release (938 examples), and the ST2 partition covers the fallacious subset only (465 examples). The ST3 partition is the one we use for the 5-fold cross-validation runs reported below. % from exp_0124 exp_0153
+Following the official Touch\'{e} 2026 release, we work from the published labelled pool for each subtask: 938 examples for ST1, the 465-example fallacious subset for ST2, and 473 non-fallacious examples for ST3. % from exp_0124
+From each pool we hold out a stratified 15\% development split (ST1 $n=139$, ST2 $n=67$, ST3 $n=69$) on which the single-run headline numbers in Table~\ref{tab:headline} are computed, training on the remainder; the 5-fold cross-validation runs instead cross-validate over the full ST3 pool. This distinction is load-bearing for ST3: the single dev split holds exactly one \textsf{pe} example (Appendix~\ref{app:perclass}), so its macro-F1 is dragged down by that one always-hard cell, whereas 5-fold CV distributes \textsf{pe} across folds. This is the main reason the ST3-enhanced CV mean ($0.875$, \S\ref{sec:final-submission}) sits well above the single-split dev and five-seed estimates ($0.735$ and $0.720 \pm 0.015$). % from exp_0124 exp_0153
 Class distributions follow the underlying Sahai et al.\ data and are long-tailed; the ST3 \textsf{pe} class in particular is small enough to be the binding constraint on macro-F1, which we revisit in \S\ref{sec:disc-pe}.
 
 Table~\ref{tab:headline} reports precision, recall, and F1-macro on our held-out development partition for the six submitted runs. Each row carries the precision, recall, and F1-macro for one (subtask, track) cell, with macro-averaging over the 8- and 4-class label sets for ST2 and ST3 respectively; the two enhanced-track values should be read in light of the rewriter-signal discussion in \S\ref{sec:disc-leakage}. % from R2-m1
@@ -34,6 +34,37 @@ ST3 & enhanced & 0.732 & 0.740 & 0.735 & exp\_0073 \\ % from exp_0073
 On ST3 we additionally ran 5-fold cross-validation under our submitted recipe (fold seeds 42--46), which gave mean F1 0.875 with the same configuration. % from exp_0073 exp_0153
 The Qwen2.5-7B CoT-LoRA alternative for ST3 enhanced gave 0.851 $\pm$ 0.114 over the same fold split. The standard deviation overlaps the RoBERTa CV mean, which is the decision-relevant fact behind the final-submission rationale we discuss below. % from exp_0180
 Of the six numbers, the ST2-enhanced cell is simultaneously the numerically strongest result in this paper and the one in which we have the least interpretive confidence. We address this directly in \S\ref{sec:disc-leakage}.
+
+\subsection{Official test-set results}
+\label{sec:test}
+
+Table~\ref{tab:test} reports the official Touch\'{e} 2026 test-set leaderboard scores for our six submitted runs, together with our placement among participating teams on each (subtask, track) cell. These are the final evaluation numbers; the recipes were fixed on the development evidence above before the test labels were released.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Official Touch\'{e} 2026 test-set results for the six submitted runs
+(macro-averaged precision, recall, F1). \emph{Rank} is our placement among
+participating teams on that (subtask, track) cell. Bold marks the two cells we
+ranked first on.}
+\label{tab:test}
+\begin{tabular}{llcccc}
+\toprule
+Subtask & Track & Precision & Recall & F1 & Rank \\
+\midrule
+ST1 & base     & 0.770 & 0.754 & 0.751          & 2 \\
+ST1 & enhanced & 0.946 & 0.945 & 0.944          & 2 \\
+ST2 & base     & 0.876 & 0.860 & \textbf{0.859} & \textbf{1} \\
+ST2 & enhanced & 0.958 & 0.954 & 0.954          & 6 \\
+ST3 & base     & 0.710 & 0.724 & \textbf{0.716} & \textbf{1} \\
+ST3 & enhanced & 0.716 & 0.933 & 0.748          & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Our uniform encoder pipeline ranked \emph{first} on both base-track classification cells --- ST2 base (0.859) and ST3 base (0.716) --- and \emph{second} on both binary-detection tracks (ST1 base 0.751, ST1 enhanced 0.944). On the two enhanced-track classification cells it placed lower (ST2 enhanced 0.954, sixth; ST3 enhanced 0.748, fifth), where the leading systems were a cascaded pipeline (\textsf{uzh-tt}, 0.991 on ST2 enhanced) and a multitask DeBERTa (\textsf{sevitha}, 0.976 on ST3 enhanced).
+
+Two patterns are worth drawing out. First, the base-track test numbers came in well above their development estimates: ST3 base rose from a dev 0.523 to a test 0.716, and ST2 base from 0.730 to 0.859, while the enhanced-track cells tracked their dev numbers closely (ST3 enhanced 0.735 dev vs.\ 0.748 test; ST2 enhanced 0.970 vs.\ 0.954). This is consistent with the small held-out dev splits (\S\ref{sec:headline}) underestimating base-track performance rather than with any test-time surprise. Second, the single-encoder recipe was most competitive exactly where the enhanced rewrite is unavailable --- the base tracks --- while on the enhanced tracks systems built to exploit the rewritten fields, by cascading or multitasking over them, pulled ahead; this is the same label-bearing signal we characterise in \S\ref{sec:disc-leakage}, seen from the leaderboard side.
 
 \subsection{Binary Fallacy Detection (ST1)}
 \label{sec:results-st1}
