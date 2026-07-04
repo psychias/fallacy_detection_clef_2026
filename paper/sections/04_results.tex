@@ -4,7 +4,7 @@ We report both our held-out development results, on which all system-selection d
 \label{sec:headline}
 
 Following the official Touch\'{e} 2026 release, we work from the published labelled pool for each subtask: 938 examples for ST1, the 465-example fallacious subset for ST2, and 473 non-fallacious examples for ST3. % from exp_0124
-From each pool we hold out a stratified 15\% development split (ST1 $n=139$, ST2 $n=67$, ST3 $n=69$) on which the single-run headline numbers in Table~\ref{tab:headline} are computed, training on the remainder; the 5-fold cross-validation runs instead cross-validate over the full ST3 pool. This distinction is load-bearing for ST3: the single dev split holds exactly one \textsf{pe} example (Appendix~\ref{app:perclass}), so its macro-F1 is dragged down by that one always-hard cell, whereas 5-fold CV distributes \textsf{pe} across folds. This is the main reason the ST3-enhanced CV mean ($0.875$, \S\ref{sec:final-submission}) sits well above the single-split dev and five-seed estimates ($0.735$ and $0.720 \pm 0.015$). % from exp_0124 exp_0153
+From each pool we hold out a stratified, roughly 15\% development split (ST1 $n=139$, ST2 $n=67$, ST3 $n=69$) on which the single-run headline numbers in Table~\ref{tab:headline} are computed, training on the remainder; the 5-fold cross-validation runs instead cross-validate over the full ST3 pool. This distinction is load-bearing for ST3: the single dev split holds exactly one \textsf{pe} example (Appendix~\ref{app:perclass}), so its macro-F1 is dragged down by that one always-hard cell, whereas 5-fold CV distributes \textsf{pe} across folds. This is the main reason the ST3-enhanced CV mean ($0.875$, \S\ref{sec:final-submission}) sits well above the single-split dev and five-seed estimates ($0.735$ and $0.720 \pm 0.015$). % from exp_0124 exp_0153
 Class distributions follow the underlying Sahai et al.\ data and are long-tailed; the ST3 \textsf{pe} class in particular is small enough to be the binding constraint on macro-F1, which we revisit in \S\ref{sec:disc-pe}.
 
 Table~\ref{tab:headline} reports precision, recall, and F1-macro on our held-out development partition for the six submitted runs. Each row carries the precision, recall, and F1-macro for one (subtask, track) cell, with macro-averaging over the 8- and 4-class label sets for ST2 and ST3 respectively; the two enhanced-track values should be read in light of the rewriter-signal discussion in \S\ref{sec:disc-leakage}. % from R2-m1
@@ -14,8 +14,11 @@ Across the six cells the easier binary task and the hardest scheme task differ b
 \centering
 \small
 \caption{Headline dev results for the six submitted runs. P, R, F1 are macro-averaged
-for ST2 and ST3. The two enhanced-track values should be read with the
-caveat of \S\ref{sec:disc-leakage} on the enhanced-track signal.}
+for ST2 and ST3. Precision and recall are omitted for ST3 base
+(\texttt{exp\_0069}), whose saved evaluation row has a corrupted precision
+column; its F1-macro is computed independently and is reliable. The two
+enhanced-track values should be read with the caveat of
+\S\ref{sec:disc-leakage} on the enhanced-track signal.}
 \label{tab:headline}
 \begin{tabular}{llcccl}
 \toprule
@@ -31,7 +34,7 @@ ST3 & enhanced & 0.732 & 0.740 & 0.735 & exp\_0073 \\ % from exp_0073
 \end{tabular}
 \end{table}
 
-On ST3 we additionally ran 5-fold cross-validation under our submitted recipe (fold seeds 42--46), which gave mean F1 0.875 with the same configuration. % from exp_0073 exp_0153
+On ST3 we additionally ran 5-fold cross-validation under our submitted recipe (fold seeds 42--46), which gave mean F1 $0.875 \pm 0.083$ (per-fold $0.77$--$0.99$) with the same configuration. % from exp_0073 exp_0153
 The Qwen2.5-7B CoT-LoRA alternative for ST3 enhanced gave 0.851 $\pm$ 0.114 over the same fold split. The standard deviation overlaps the RoBERTa CV mean, which is the decision-relevant fact behind the final-submission rationale we discuss below. % from exp_0180
 Of the six numbers, the ST2-enhanced cell is simultaneously the numerically strongest result in this paper and the one in which we have the least interpretive confidence. We address this directly in \S\ref{sec:disc-leakage}.
 
@@ -64,7 +67,7 @@ ST3 & enhanced & 0.716 & 0.933 & 0.748          & 5 \\
 
 Our uniform encoder pipeline ranked \emph{first} on both base-track classification cells --- ST2 base (0.859) and ST3 base (0.716) --- and \emph{second} on both binary-detection tracks (ST1 base 0.751, ST1 enhanced 0.944). On the two enhanced-track classification cells it placed lower (ST2 enhanced 0.954, sixth; ST3 enhanced 0.748, fifth), where the leading systems were a cascaded pipeline (\textsf{uzh-tt}, 0.991 on ST2 enhanced) and a multitask DeBERTa (\textsf{sevitha}, 0.976 on ST3 enhanced).
 
-Two patterns are worth drawing out. First, the base-track test numbers came in well above their development estimates: ST3 base rose from a dev 0.523 to a test 0.716, and ST2 base from 0.730 to 0.859, while the enhanced-track cells tracked their dev numbers closely (ST3 enhanced 0.735 dev vs.\ 0.748 test; ST2 enhanced 0.970 vs.\ 0.954). This is consistent with the small held-out dev splits (\S\ref{sec:headline}) underestimating base-track performance rather than with any test-time surprise. Second, the single-encoder recipe was most competitive exactly where the enhanced rewrite is unavailable --- the base tracks --- while on the enhanced tracks systems built to exploit the rewritten fields, by cascading or multitasking over them, pulled ahead; this is the same label-bearing signal we characterise in \S\ref{sec:disc-leakage}, seen from the leaderboard side.
+Two patterns are worth drawing out, both specific to the classification cells (ST2, ST3); the binary ST1 cells ranked second on both tracks and moved little between dev and test (0.761 vs.\ 0.751 base, 0.914 vs.\ 0.944 enhanced). First, the two base-track classification cells came in well above their development estimates: ST3 base rose from a dev 0.523 to a test 0.716, and ST2 base from 0.730 to 0.859, while the enhanced-track classification cells tracked their dev numbers closely (ST3 enhanced 0.735 dev vs.\ 0.748 test; ST2 enhanced 0.970 vs.\ 0.954). This is consistent with the small held-out dev splits (\S\ref{sec:headline}) underestimating base-track classification performance rather than with any test-time surprise. Second, the single-encoder recipe was most competitive on the base-track classification cells, where the enhanced rewrite is unavailable, while the enhanced-track classification cells were topped by systems built to exploit the rewritten fields, by cascading or multitasking over them; this is the same label-bearing signal we characterise in \S\ref{sec:disc-leakage}, seen from the leaderboard side.
 
 \subsection{Binary Fallacy Detection (ST1)}
 \label{sec:results-st1}
@@ -126,39 +129,56 @@ ST3 & enhanced & + synth + pseudo @384 (sw=1.0)     & exp\_0073 & 0.735 & +0.041
 \end{tabular}
 \end{table}
 
-Augmentation strategies are recipe-sensitive: synth alone gives consistent small gains on ST1/ST2 and the largest single gain on ST3 base, while pseudo-labelling unlocks the enhanced track for ST2 and ST3 but costs on ST1 enhanced under the pseudo recipe. The \texttt{synth\_v003} top-up on ST3 base and the focal-loss recipe on ST3 base illustrate the same lesson at smaller scale. We keep the losses in the same table rather than relegating them to a footnote.
+Augmentation strategies are recipe-sensitive: synth alone gives small gains on ST1/ST2 (the smallest within the measured seed variance) and the largest single gain on ST3 base, while pseudo-labelling unlocks the enhanced track for ST2 and ST3 but costs on ST1 enhanced under the pseudo recipe. The \texttt{synth\_v003} top-up on ST3 base and the focal-loss recipe on ST3 base illustrate the same lesson at smaller scale. We keep the losses in the same table rather than relegating them to a footnote.
 
-Table~\ref{tab:backbone} reports the most informative subset of the backbone runs we evaluated on ST3, with one ST3-base and one ST2-enhanced LLM row included for context. Each row is a single dev-partition F1 unless flagged otherwise. The cross-validated rows are 5-fold means. The cross-row variability is wide enough that the comparison should be read alongside the cross-validation evidence in the prose below, not as a clean ranking.
+Table~\ref{tab:backbone} reports the matched ST3-enhanced backbone comparison, and Table~\ref{tab:backbone-other} the off-track context rows (DeBERTa on ST3 base, and the Qwen3-4B-Thinking comparator on ST2 enhanced and ST3 base) that are \emph{not} directly comparable to it. Each row is a single dev-partition F1 unless flagged as a 5-fold mean. The cross-row variability is wide enough that the comparison should be read alongside the cross-validation evidence in the prose below, not as a clean ranking.
 
 \begin{table}[h]
 \centering
 \small
-\caption{Backbone comparison on ST3 enhanced (and one ST3 base + one ST2 enhanced
-LLM row for context). Single-run dev F1 unless otherwise noted. The submitted
-row is marked $\dagger$. \textsc{collapsed} = recipe failed to train.}
+\caption{Matched backbone comparison on ST3 enhanced. Single-run dev F1 unless
+marked as a 5-fold cross-validation mean$\pm$sd. The submitted row is marked
+$\dagger$ (its 5-fold CV mean is given alongside the single-run number).}
 \label{tab:backbone}
-\begin{tabular}{llllc}
+\begin{tabular}{llc}
 \toprule
-Backbone & Subtask & Track & exp\_id & F1 \\
+Backbone & exp\_id & F1 (ST3 enh) \\
 \midrule
-RoBERTa-base       & ST3 & enh  & exp\_0018 & 0.675 \\ % from exp_0018
-RoBERTa-large$^{\dagger}$  & ST3 & enh  & exp\_0073 & 0.735 \\ % from exp_0073
-DeBERTa-v3-base    & ST3 & base & exp\_0003 & 0.277 \\ % from exp_0003
-DeBERTa-v3-large   & ST3 & base & exp\_0009 & 0.205 \\ % from exp_0009 (collapsed)
-ModernBERT-large   & ST3 & enh  & exp\_0086 & 0.719 \\ % from exp_0086
-Qwen2.5-3B zero-shot      & ST3 & enh & exp\_0091 & 0.467 \\ % from exp_0091
-Qwen2.5-3B kNN few-shot   & ST3 & enh & exp\_0143 & 0.529 \\ % from exp_0143
-Qwen2.5-7B CoT-LoRA (5-fold CV)  & ST3 & enh  & exp\_0180 & 0.851 $\pm$ 0.114 \\ % from exp_0180
-Qwen2.5-32B CoT-LoRA (single)    & ST3 & enh  & exp\_0207 & 0.841 \\ % from exp_0207
-Qwen3-4B-Thinking (5-fold CV)    & ST2 & enh  & exp\_0217 & 0.963 \\ % from exp_0217
-Qwen3-4B-Thinking (5-fold CV)    & ST3 & base & exp\_0218 & 0.448 \\ % from exp_0218
+RoBERTa-base                      & exp\_0018 & 0.675 \\ % from exp_0018
+RoBERTa-large$^{\dagger}$         & exp\_0073 & 0.735 \; (CV $0.875 \pm 0.083$) \\ % from exp_0073 exp_0153
+ModernBERT-large                  & exp\_0086 & 0.719 \\ % from exp_0086
+Qwen2.5-3B zero-shot              & exp\_0091 & 0.467 \\ % from exp_0091
+Qwen2.5-3B kNN few-shot           & exp\_0143 & 0.529 \\ % from exp_0143
+Qwen2.5-7B CoT-LoRA (5-fold CV)   & exp\_0180 & $0.851 \pm 0.114$ \\ % from exp_0180
+Qwen2.5-32B CoT-LoRA (single)     & exp\_0207 & 0.841 \\ % from exp_0207
 \bottomrule
 \end{tabular}
 \end{table}
 
-Reading the table top to bottom, RoBERTa-large at the second row is the submitted system (the dagger marks it). RoBERTa-base sits 0.06 F1 below it, which is the empirical justification for paying the larger backbone's compute cost. Of all the routes we tried, the DeBERTa-v3 column was the most problematic: DeBERTa-v3-base reached only 0.277 on ST3 base, and DeBERTa-v3-large failed to train at all, collapsing to 0.205 with a NaN-explosion history we detail in \S\ref{sec:backbone}. ModernBERT-large at 0.719 is the next-best encoder route but loses 0.016 F1 on the cell we evaluated. The Qwen rows tell their own story: the 3B zero-shot configuration trails RoBERTa-large by 0.27 F1; kNN few-shot recovers some ground but still trails by 0.21; the fine-tuned 7B and 32B CoT-LoRA configurations close most of the gap on a single run, but the 7B 5-fold standard deviation of $\pm$0.114 is wide enough that the comparison is statistically inconclusive at our sample size. The Qwen3-4B-Thinking comparator is the mixed result that complicates a clean encoder-beats-LLM headline: competitive on ST2 enhanced under cross-validation, but below the RoBERTa baseline on ST3 base.
+\begin{table}[h]
+\centering
+\small
+\caption{Off-track context rows, reported for completeness and \emph{not}
+comparable to the ST3-enhanced column of Table~\ref{tab:backbone}: DeBERTa on
+ST3 base (the large collapsed under NaN, the base merely underperformed;
+\S\ref{sec:backbone}) and the Qwen3-4B-Thinking comparator on ST2 enhanced and
+ST3 base.}
+\label{tab:backbone-other}
+\begin{tabular}{lllc}
+\toprule
+Backbone & Subtask & Track & F1 \\
+\midrule
+DeBERTa-v3-base                & ST3 & base & 0.277 \\ % from exp_0003
+DeBERTa-v3-large (collapsed)   & ST3 & base & 0.205 \\ % from exp_0009
+Qwen3-4B-Thinking (5-fold CV)  & ST2 & enh  & 0.963 \\ % from exp_0217
+Qwen3-4B-Thinking (5-fold CV)  & ST3 & base & 0.448 \\ % from exp_0218
+\bottomrule
+\end{tabular}
+\end{table}
 
-The per-class F1 distribution for the submitted ST3-enhanced system is reported in Appendix~\ref{app:perclass} (\textsf{ee} 1.000, \textsf{ei} 0.979, \textsf{pi} 0.963, \textsf{pe} 0.000), computed under argmax on the $n=69$ dev split, and discussed in \S\ref{sec:disc-pe}. The \textsf{pe} cell rests on a single dev example and is therefore uninformative; we rely on the 5-fold cross-validation (\S\ref{sec:disc-pe}) for any \textsf{pe} characterisation. The submitted run's dev logits were not checkpointed, so its exact confusion matrix cannot be recovered. We have since added dev-logit checkpointing to the training script and re-ran the \texttt{exp\_0073} recipe under five seeds on the same fixed dev split, both to characterise run-to-run variance and to recover a representative confusion matrix (Table~\ref{tab:st3cm}). Across the five re-runs dev macro-F1 is $0.720 \pm 0.015$ (range $0.700$--$0.741$, all fifteen epochs completed), which places the submitted $0.735$ near the top of the observed range and is consistent with the single-run caveat of \S\ref{sec:limitations}. The per-class pattern is stable across seeds: \textsf{ei} ($0.98$--$1.00$) and \textsf{pi} ($0.963$) are recovered almost perfectly in every run, the variance concentrates in the seven-example \textsf{ee} class ($0.86$--$1.00$), and \textsf{pe} has recall $0$ in all five re-runs. % from exp_0073 exp_0153; seed-variance re-run seeds 42--46, experiments/exp_0073/seed_results.jsonl
+Within the matched ST3-enhanced comparison (Table~\ref{tab:backbone}), RoBERTa-large is the submitted system and RoBERTa-base sits 0.06 F1 below it, which is the empirical justification for paying the larger backbone's compute cost. ModernBERT-large at 0.719 is the next-best encoder route but loses 0.016 F1 on this cell. The Qwen rows tell their own story: the 3B zero-shot configuration trails RoBERTa-large by 0.27 F1, and kNN few-shot recovers some ground but still trails by 0.21. The fine-tuned 7B and 32B CoT-LoRA configurations close most of the gap on a single run, but under cross-validation the encoder and the LLM are not separable: the encoder's 5-fold mean of $0.875 \pm 0.083$ and the Qwen2.5-7B mean of $0.851 \pm 0.114$ have heavily overlapping standard-deviation bands, so the comparison is statistically inconclusive at our sample size. The off-track rows (Table~\ref{tab:backbone-other}) are context only: DeBERTa-v3 did not train usefully under any recipe we tried (0.277 on ST3 base, and 0.205 with the NaN-explosion history we detail in \S\ref{sec:backbone}), so its low numbers reflect a training failure rather than a track-matched loss, while the Qwen3-4B-Thinking comparator is competitive on ST2 enhanced under cross-validation (0.963) but below the RoBERTa baseline on ST3 base (0.448), which complicates a clean encoder-beats-LLM headline.
+
+The per-class F1 distribution for the submitted ST3-enhanced system is reported in Appendix~\ref{app:perclass} (\textsf{ee} 1.000, \textsf{ei} 0.979, \textsf{pi} 0.963, \textsf{pe} 0.000), computed under argmax on the $n=69$ dev split, and discussed in \S\ref{sec:disc-pe}. The \textsf{pe} cell rests on a single dev example and is therefore uninformative; we rely on the 5-fold cross-validation (\S\ref{sec:disc-pe}) for any \textsf{pe} characterisation. The submitted run's dev logits were not checkpointed, so its exact confusion matrix cannot be recovered. We have since added dev-logit checkpointing to the training script and re-ran the \texttt{exp\_0073} recipe under five seeds on the same fixed dev split, both to characterise run-to-run variance and to recover a representative confusion matrix (Table~\ref{tab:st3cm}). Across the five re-runs dev macro-F1 is $0.720 \pm 0.015$ (range $0.700$--$0.741$, all fifteen epochs completed), which places the submitted $0.735$ near the top of the observed range and is consistent with the single-run caveat of \S\ref{sec:limitations}. The per-class pattern is stable across seeds: \textsf{ei} ($0.98$--$1.00$) and \textsf{pi} ($0.963$ in every run) are recovered almost perfectly, the variance concentrates in the seven-example \textsf{ee} class ($0.86$--$1.00$), and \textsf{pe} has recall $0$ in all five re-runs. % from exp_0073 exp_0153; seed-variance re-run seeds 42--46, experiments/exp_0073/seed_results.jsonl
 We turn to the interpretation of the enhanced-track numbers and the rare-class behaviour we observed on ST3 in \S\ref{sec:discussion}.
 
 \subsection{Final submission rationale}
